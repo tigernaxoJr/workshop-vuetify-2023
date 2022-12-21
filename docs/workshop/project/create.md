@@ -1,13 +1,20 @@
+<script setup lang="ts">
+</script>
 # 建立專案
 ## 建立專案
-1. 輸入 ```npm create vuetify```
+1. 輸入指令建立專案   
+   ```bash
+   npm create vuetify
+   ```
 2. 如果提示要安裝 create-vuetify 選 **Y**。
-4. 輸入**專案名稱(這裡用 vue3-app)**、Use Typescript 選 **No**、安裝程式選 **npm**。  
+3. 設定項目：  
+   - 輸入**專案名稱(這裡用 vue3-app)**
+   - Use Typescript 選 **No**
+   - 安裝程式選 **npm** 或 **yarn**，若有。  
     ![](./create/create.jpg)  
 vuetify-cli 在建立完專案之後就會自動安裝套件  
     ![](./create//create2.jpg)
 
----
 ## 啟動專案
 1. 進入專案資料夾 
    ```bash
@@ -27,10 +34,8 @@ vuetify-cli 在建立完專案之後就會自動安裝套件
 5. 瀏覽器打開網址 http://127.0.0.1:3000/  
     ![](./create/create4.jpg)
 
----
 ## 專案架構
 ![](./create/structure.jpg)
 
----
 ## Reference
 - [Vuetify-next](https://next.vuetifyjs.com/en/getting-started/installation/)

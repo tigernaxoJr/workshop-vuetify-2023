@@ -24,9 +24,9 @@ export default createVuetify({
   },
 })
 ```
---- 
 ## Dark Mode
----
+## Todo
+顏色的意義
 ## Reference
 - [Vuetify-Features-Theme configuration](https://next.vuetifyjs.com/en/features/theme/)
 - [Vuetify-Style and animations-Material color palette](https://next.vuetifyjs.com/en/styles/colors/)
