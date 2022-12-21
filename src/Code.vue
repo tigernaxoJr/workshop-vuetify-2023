@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<textarea rows="5" 
 		:value="state.txt" 
 		@input="onInput(($event.target as HTMLTextAreaElement).value)"
@@ -30,4 +30,4 @@ const onInput = (val)=>{
 
 <style scoped lang="scss">
 @import 'node_modules\\highlight.js\\scss\\night-owl.scss';
-</style>
+</style> -->
