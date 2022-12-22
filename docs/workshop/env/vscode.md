@@ -1,4 +1,4 @@
-# VSCode 設置
+# VSCode 設置vscode
 ## 安裝 Extension
 ### 安裝套件的方式：
 - 在 VSCode 裡面 `ctrl-shift-x` 搜尋安裝。
