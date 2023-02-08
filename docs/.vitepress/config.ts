@@ -3,7 +3,7 @@ import sidebar from "./sidebar"
 export default defineConfig({
   title: 'Vuetify Workshop 2023',
   description: 'Just playing around.',
-  base: '/ktgh-vuetify-2022',
+  base: '/workshop-vuetify-2023',
   appearance: 'dark',
   cleanUrls: 'with-subfolders',
   themeConfig: {
