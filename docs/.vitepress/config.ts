@@ -5,7 +5,7 @@ export default defineConfig({
   description: 'Just playing around.',
   base: '/workshop-vuetify-2023',
   appearance: 'dark',
-  // cleanUrls: 'with-subfolders',
+  cleanUrls: false,
   themeConfig: {
     nav: [
       { text: 'Workshop', link: '/workshop/workshop' },
