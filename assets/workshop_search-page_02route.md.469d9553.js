@@ -1,0 +1,1 @@
+import{_ as e,c as t,o,a}from"./app.3a2fb99e.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/search-page/02route.md"}'),s={name:"workshop/search-page/02route.md"},r=a("p",null,"asdlfjtest",-1),c=[r];function n(p,_,d,i,l,h){return o(),t("div",null,c)}const m=e(s,[["render",n]]);export{f as __pageData,m as default};
