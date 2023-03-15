@@ -13,7 +13,7 @@ export default [
           items: [
             { text: '專案建立', link :'/workshop/project/create' },
             { text: '專案設置', link :'/workshop/project/configure' },
-            { text: '靜態資源', link :'/workshop/project/resource' },
+            // { text: '靜態資源', link :'/workshop/project/resource' },
             { text: '網站主題', link :'/workshop/project/theme' },
           ]
         },
