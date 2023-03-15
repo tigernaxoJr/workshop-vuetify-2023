@@ -32,7 +32,7 @@
    ```  
    結果：  
     ![](./create/create3.jpg)
-5. 瀏覽器打開網址 [http://localhost:3000/](http://localhost:3000/)
+5. 瀏覽器打開網址 `http://localhost:3000/`
    ![](./create/create4.jpg)
 
 ## 專案架構
