@@ -12,13 +12,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "highlight.js": "^11.7.0",
-    "vitepress": "^1.0.0-alpha.32",
-    "vue": "^3.2.45"
-  },
   "devDependencies": {
-    "sass": "~1.32.12",
-    "scss": "^0.2.4"
+    "vitepress": "^1.0.0-alpha.60"
   }
 }

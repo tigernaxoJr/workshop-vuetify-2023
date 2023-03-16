@@ -67,7 +67,7 @@ export default createVuetify({
 })
 ```
 ## 動態切換主題
-```html
+```vue
 <template>
   <v-app>
     <v-btn @click="toggleTheme">主題切換</v-btn>
