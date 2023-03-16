@@ -59,6 +59,13 @@ export default createVuetify({
   theme: {
     // 設置app預設主題，除了可用的主題選項還有 vuetify 內建的 light/dark
     defaultTheme: 'myCustomLightTheme',
+    // 讓 vuetify 自動建立 color variantions
+    // 例如這個設定會有:text-primary-lighten-1, text-primary-darken-1, text-primary-darken-2
+    variations: {
+      colors: ['primary', 'secondary'],
+      lighten: 1,
+      darken: 2,
+    },
     // 可用的主題選項
     themes: {
       myCustomLightTheme,
@@ -93,16 +100,42 @@ function toggleTheme(){
 ```
 ## 使用不同主題
 ### 使用 `theme="dark"`
+直接把指定組件的 theme props，會影響該下游組件的主題
+```vue
+<template>
+  <v-app>
+    <v-card theme="dark">
+      <!-- button uses dark theme -->
+      <v-btn>foo</v-btn>
+    </v-card>
+  </v-app>
+</template>
+```
+
 ### 使用 `<v-theme-provider>`
+使用 `<v-theme-provider>` 圈選要套用主題的區域
+```vue
+<template>
+  <v-app>
+    <!-- uses the current default theme -->
+    <v-card>...</v-card>
+
+    <v-theme-provider theme="high-contrast">
+      <!-- uses the high-contrast theme -->
+      <v-card>...</v-card>
+      <v-btn>...</v-btn>
+    </v-theme-provider>
+  </v-app>
+</template>
+```
 
 ## vuetify3/vuetify2 (較重要)差異： 
   - 雙主題(light/dark)改為多主題(Multiple themes)：捨棄元件的 light/dark props，改用類似 `theme="dark"` 的方式指定元件主題，一旦元件透過 `theme="dark"` 指定主題，下游元件會自動獲得該主題。
   - variant class 和 theme 結合：`class="primary darken-1"` 改為 `class="primary-darken-1"`
-## Todo
-顏色的意義
+
 ## Reference
-- [Vuetify-Features-Theme configuration](https://next.vuetifyjs.com/en/features/theme/)
-- [Vuetify-Style and animations-Material color palette](https://next.vuetifyjs.com/en/styles/colors/)
+- [Vuetify-Features-Theme configuration](https://vuetifyjs.com/en/features/theme/)
+- [Vuetify-Style and animations-Material color palette](https://vuetifyjs.com/en/styles/colors/)
 - [MATERIAL DESIGN 2](https://m2.material.io/)
 - [MATERIAL DESIGN 3](https://m3.material.io/)
 - [mui theme creator](https://bareynol.github.io/mui-theme-creator/)

@@ -23,9 +23,10 @@ export default [
           items: [
             { text: '頁面建立', link :'/workshop/search-page/01create' },
             { text: '前端路由', link :'/workshop/search-page/02route' },
-            { text: '搜尋區域', link :'/workshop/search-page/03query' },
-            { text: '搜尋結果', link :'/workshop/search-page/04result' },
-            { text: '編輯資料', link :'/workshop/search-page/05edit' },
+            { text: 'AJAX管理', link :'/workshop/search-page/03api' },
+            { text: '搜尋區域', link :'/workshop/search-page/04query' },
+            { text: '搜尋結果', link :'/workshop/search-page/05result' },
+            { text: '編輯資料', link :'/workshop/search-page/06edit' },
           ]
         },
         {

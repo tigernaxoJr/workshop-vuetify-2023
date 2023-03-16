@@ -1,8 +1,37 @@
-vuetify3 架構下沒有規定頁面要放在 views 資料夾下，建議將 layout、page 分開存放。
-新增檔案
-layouts/MainLayout.vue 
-pages/MainPage.vue 
-使用快捷鍵新增頁面模板 vbase
+vuetify3 下預設分 `layouts`、`views` 資料夾存放，新增。  
+## 新增 
+新增 `layouts/MainLayout.vue`
+```vue
+<template>
+  <v-app id="inspire">
+    <v-navigation-drawer v-model="drawer">
+      <!-- 這裡塞 Menu List  -->
+    </v-navigation-drawer>
+
+    <v-app-bar>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>應用程式名稱</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+const drawer = ref(null)
+</script>
+```
+P.S.需要其他現成模板可以到[Wireframes](https://vuetifyjs.com/en/getting-started/wireframes/)挑選
+
+## 新增查詢頁面
+- views/MainPage.vue   
+使用 `vbase` 快捷鍵新增頁面模板 
+
+## 引入 template
+
 composition api 
 架構 bll dal... etc
 資料流方向 (ex:table) 
