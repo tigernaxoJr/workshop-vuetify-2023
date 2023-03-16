@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,N as o}from"./chunks/framework.03ba4d3f.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/search-page/02route.md"}'),t={name:"workshop/search-page/02route.md"},s=o("",8),c=[s];function h(i,n,d,l,_,u){return r(),a("div",null,c)}const m=e(t,[["render",h]]);export{f as __pageData,m as default};

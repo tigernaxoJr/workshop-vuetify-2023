@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,N as l}from"./chunks/framework.03ba4d3f.js";const A=JSON.parse('{"title":"專案設置","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/project/configure.md"}'),o={name:"workshop/project/configure.md"},p=l("",11),e=[p];function t(r,c,D,F,y,i){return n(),a("div",null,e)}const d=s(o,[["render",t]]);export{A as __pageData,d as default};
