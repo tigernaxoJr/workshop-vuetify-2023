@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./app.3a2fb99e.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/env/index.md"}'),n={name:"workshop/env/index.md"};function r(a,s,c,p,d,i){return o(),t("div")}const f=e(n,[["render",r]]);export{m as __pageData,f as default};

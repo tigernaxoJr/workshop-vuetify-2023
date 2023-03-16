@@ -1,0 +1,1 @@
+import{_ as a,c as e,o,N as t}from"./chunks/framework.03ba4d3f.js";const m=JSON.parse('{"title":"部屬","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/other/deploy.md"}'),r={name:"workshop/other/deploy.md"},i=t("",8),n=[i];function l(c,s,d,h,_,p){return o(),e("div",null,n)}const f=a(r,[["render",l]]);export{m as __pageData,f as default};
