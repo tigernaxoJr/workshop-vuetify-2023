@@ -15,13 +15,15 @@ export default [
             { text: '專案設置', link :'/workshop/project/configure' },
             // { text: '靜態資源', link :'/workshop/project/resource' },
             { text: '網站主題', link :'/workshop/project/theme' },
+            { text: '版面配置', link :'/workshop/project/layout' },
+            { text: '路由配置', link :'/workshop/project/route' },
           ]
         },
         {
           text: '搜尋頁面',
           collapsible: true,
           items: [
-            { text: '頁面建立', link :'/workshop/search-page/01create' },
+            { text: '建立頁面', link :'/workshop/search-page/01create' },
             { text: '前端路由', link :'/workshop/search-page/02route' },
             { text: 'AJAX管理', link :'/workshop/search-page/03api' },
             { text: '搜尋區域', link :'/workshop/search-page/04query' },
