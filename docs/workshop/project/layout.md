@@ -6,60 +6,70 @@ import { h } from "vue";
 import { VList, VListGroup, VListItem } from "vuetify/components/VList";
 const component = {
   props:{
-    menus: Object,
+    menus: { type: Array, default: [] },
     depth: { type: Number, default: 0 },
+    opened: { type: Array, default: [] }
   },
   setup( props ) {
     const { menus, depth, opened } = props
-    const { id, label: title, icon: prependIcon, children, to, href } = menus;
-    const el = !!children?.length
-    ? h( VListGroup, {value: id},
-      {
-        default: () => children.map( x => h( component, { menus: x, depth: depth + 1})),
-        activator: (e) => h(VListItem, { title, ...e.props })
-      })
-    : h( VListItem, { title, prependIcon, to, href, target: "_blank" });
+    const el = menus.map((x)=>
+      x.children?.length > 0
+        ? h( VListGroup, { value: x.id },
+          {
+            default: () => h( component, { menus: x.children, depth: depth + 1}),
+            activator: (e) => h(VListItem, { title: x.title, ...e.props })
+          })
+        :h( VListItem, {  target: "_blank",...x })
+    )
     return depth === 0 ? () => h( VList, { opened }, () => el ) : () => el
-  }
+    }
 }
 export default component
 ```
 在 `src\styles\settings.scss` 加入以下 css，避免 inline padding 的縮排過多
 ```scss
-.v-list-group__items .v-list-item {
-    padding-inline-start: 16px !important;
+// 直接取消縮排
+// .v-list-group__items .v-list-item {
+//     padding-inline-start: 16px !important;
+// }
+// 讓縮排較溫和
+.v-list-group--prepend {
+    --parent-padding: calc(var(--indent-padding)) !important;
 }
 ```
 新增 `src/menus.js`
 ```js
-export default {
-  id: '0',
-  label: "Users",
-  icon: "",
-  children: [
+export default
+[
     {
       id: '01',
-      label: "Admins",
-      icon: "",
+      title: "第一層目錄A",
+      prependIcon: "",
       children: [
-        { id:'011', label: "Management", icon: "mdi-account-multiple-outline" },
-        { id:'012', label: "Settings", icon: "mdi-cog-outline" },
+        { id:'011', title: "Management", prependIcon: "mdi-account-multiple-outline" },
+        { id:'012', title: "Settings", prependIcon: "mdi-cog-outline" },
       ],
     },
     {
       id: '02',
-      label: "CRUDS",
-      icon: "",
+      title: "第一層目錄B",
+      prependIcon: "",
       children: [
-        {id: '021', label: "Create", icon: "mdi-plus-outline" },
-        {id: '022', label: "Read", icon: "mdi-file-outline" },
-        {id: '023', label: "Update", icon: "mdi-update" },
-        {id: '024', label: "Delete", icon: "mdi-delete", href: "https://google.com" },
+        {id: '021', title: "第二層目錄", prependIcon: "mdi-plus-outline" ,
+          children: [
+            {id: '0211', title: "第三層物件", prependIcon: "mdi-plus-outline" },
+            {id: '0212', title: "第三層物件", prependIcon: "mdi-file-outline" },
+            {id: '0213', title: "第三層物件", prependIcon: "mdi-update" },
+            {id: '0214', title: "第三層物件", prependIcon: "mdi-delete", href: "https://google.com" },
+          ]
+        },
+        {id: '022', title: "第二層物件", prependIcon: "mdi-file-outline" },
+        {id: '023', title: "第二層物件", prependIcon: "mdi-update" },
+        {id: '024', title: "第二層物件", prependIcon: "mdi-delete", href: "https://google.com" },
       ],
     },
-  ],
-}
-
+    {id: '03', title: "第一層物件", prependIcon: "mdi-delete", href: "https://google.com" },
+  ]
 ```
 新增 `layouts/MainLayout.vue`
 ```vue
