@@ -81,8 +81,8 @@ export default
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer">
-      <!-- 這裡塞 Menu List、預設打開的節點  -->
-      <SideMenu :menus="menus" :opened="['0', '01', '02']"></SideMenu>
+      <!-- 這裡塞 Menu List、以 opened 預設打開的節點  -->
+      <SideMenu :menus="menus" :opened="['01']"></SideMenu>
     </v-navigation-drawer>
 
     <v-main>

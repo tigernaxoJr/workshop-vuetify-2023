@@ -2,7 +2,10 @@
 - views/MainPage.vue   
 使用 `vbase` 快捷鍵新增頁面模板 
 
-## 引入 template
+## 路由設置
+
+## 新增搜尋區
+## Table
 
 composition api 
 架構 bll dal... etc

@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: Vuetify3
-  text: KTGH Vuetify3 Workshop 2023.
-  tagline: 123456, 不知道寫什麼
+  name: Vuetify3 Practice
+  text: Vue3、Vite...
+  tagline: A vuetify3 workshop.
   image:
     src: /logo.png
     alt: ImageNotFound
