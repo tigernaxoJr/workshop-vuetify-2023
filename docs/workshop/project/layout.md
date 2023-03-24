@@ -19,7 +19,6 @@ const render = ( props )=>{
         {
           default: () => h(component, { menus: x.children, depth: depth + 1}),
           activator: (e) => h(VListItem, { ...y, ...e.props })
-
         })
       :h( VListItem, y)
   })
