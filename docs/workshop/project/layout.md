@@ -4,26 +4,28 @@ vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。
 ```js
 import { h } from "vue";
 import { VList, VListGroup, VListItem } from "vuetify/components/VList";
-const component = {
-  props: {
-    menus: { type: Array, default: [] },
-    depth: { type: Number, default: 0 },
-    opened: { type: Array, default: [] }
-  },
-  setup( props ) {
-    const { menus, depth, opened } = props
-    const el = menus.map((x)=>
-      x.children?.length > 0
-        ? h( VListGroup, { value: x.id },
-          {
-            default: () => h(component, { menus: x.children, depth: depth + 1}),
-            activator: (e) => h(VListItem, { ...x, ...e.props, children: undefined })
-          })
-        :h( VListItem, { ...x })
-    )
-    return depth === 0 ? () => h( VList, { opened }, () => el ) : () => el
-  }
+const props = {
+  menus: { type: Array, default: [] },
+  depth: { type: Number, default: 0 },
+  opened: { type: Array, default: [] }
 }
+const render = ( props )=>{
+  const { menus, depth, opened } = props
+  const el = menus.map((x)=> {
+    const y = Object.assign({}, x);
+    delete y.children; // VListItem 不接受 chidlren，會報錯特別排除
+    return x.children?.length > 0
+      ? h( VListGroup, { value: x.id },
+        {
+          default: () => h(component, { menus: x.children, depth: depth + 1}),
+          activator: (e) => h(VListItem, { ...y, ...e.props })
+
+        })
+      :h( VListItem, y)
+  })
+  return depth === 0 ?  h( VList, { opened }, () => el ) :  el
+}
+const component = { props, render }
 export default component
 ```
 在 `src\styles\settings.scss` 加入以下 css，避免 inline padding 的縮排過多
