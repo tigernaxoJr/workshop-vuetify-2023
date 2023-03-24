@@ -5,7 +5,7 @@ vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。
 import { h } from "vue";
 import { VList, VListGroup, VListItem } from "vuetify/components/VList";
 const component = {
-  props:{
+  props: {
     menus: { type: Array, default: [] },
     depth: { type: Number, default: 0 },
     opened: { type: Array, default: [] }
@@ -16,13 +16,13 @@ const component = {
       x.children?.length > 0
         ? h( VListGroup, { value: x.id },
           {
-            default: () => h( component, { menus: x.children, depth: depth + 1}),
-            activator: (e) => h(VListItem, { title: x.title, ...e.props })
+            default: () => h(component, { menus: x.children, depth: depth + 1}),
+            activator: (e) => h(VListItem, { ...x, ...e.props, children: undefined })
           })
-        :h( VListItem, {  target: "_blank",...x })
+        :h( VListItem, { ...x })
     )
     return depth === 0 ? () => h( VList, { opened }, () => el ) : () => el
-    }
+  }
 }
 export default component
 ```
@@ -39,6 +39,7 @@ export default component
 ```
 新增 `src/menus.js`
 ```js
+// 每個物件可傳入 v-list-item 的屬性實現對 v-list-item 的控制
 export default
 [
     {
@@ -81,7 +82,7 @@ export default
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer">
-      <!-- 這裡塞 Menu List、以 opened 預設打開的節點  -->
+      <!-- 這裡塞 Menu List、以 opened 預設打開的節點 id 清單  -->
       <SideMenu :menus="menus" :opened="['01']"></SideMenu>
     </v-navigation-drawer>
 
