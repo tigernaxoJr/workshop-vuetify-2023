@@ -1,0 +1,1 @@
+import{_ as s,c as t,o as e,N as a}from"./chunks/framework.03ba4d3f.js";const F=JSON.parse('{"title":"VSCode 設置vscode","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/env/vscode.md"}'),n={name:"workshop/env/vscode.md"},l=a("",10),o=[l];function r(p,c,i,d,y,D){return e(),t("div",null,o)}const f=s(n,[["render",r]]);export{F as __pageData,f as default};
