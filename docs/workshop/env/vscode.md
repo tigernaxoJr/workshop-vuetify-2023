@@ -8,8 +8,11 @@
 | 套件名稱                      | 說明                       | 安裝連結                                                  |
 | :---------------------------- | :------------------------- | :-------------------------------------------------------- |
 | Vue Volar extension Pack      | 必要套件                   | [點我](vscode:extension/MisterJ.vue-volar-extention-pack) |
-| vscode-icons                  | 讓檔案有漂亮的 icon        | [點我](vscode:extension/vscode-icons-team.vscode-icons)   |
+| Vue 3 Support - All In One    | 必要套件                   | [點我](vscode:extension/Wscats.vue)                       |
+| Vue VSCode Snippets           | 必要套件                   | [點我](vscode:extension/sdras.vue-vscode-snippets)        |
 | TypeScript Vue Plugin (Volar) | Typescript 開發 Vue 專案用 | [點我](vscode:extension/Vue.vscode-typescript-vue-plugin) |
+| vscode-icons                  | 讓檔案有漂亮的 icon        | [點我](vscode:extension/vscode-icons-team.vscode-icons)   |
+| indent-rainbow                | 為縮進上色                 | [點我](vscode:extension/oderwat.indent-rainbow)           |
 
 
 ## 設置 settings.json
