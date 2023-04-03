@@ -85,7 +85,7 @@ export default
 
     <v-navigation-drawer v-model="drawer">
       <!-- 這裡塞 Menu List、以 opened 預設打開的節點 id 清單  -->
-      <SideMenu :menus="menus" :opened="['01']"></SideMenu>
+      <SideMenu :menus="menus" :opened="opened"></SideMenu>
     </v-navigation-drawer>
 
     <v-main>
@@ -99,6 +99,7 @@ import { ref } from "vue";
 import SideMenu from "@/components/SideMenu";
 import menus from "@/menus";
 const drawer = ref(null);
+const opened = ref(["01"]);
 </script>
 ```
 
