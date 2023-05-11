@@ -10,6 +10,7 @@ export default defineConfig({
     nav: [
       { text: 'Workshop', link: '/workshop/workshop' },
       { text: 'Todo', link: '/todo/todo' },
+      { text: 'Reference', link: '/reference/component' },
     ],
     sidebar
   }
