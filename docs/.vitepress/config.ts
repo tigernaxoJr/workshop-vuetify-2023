@@ -8,8 +8,8 @@ export default defineConfig({
   cleanUrls: false,
   themeConfig: {
     nav: [
+      { text: 'Vue3', link: '/vue3/vue3' },
       { text: 'Workshop', link: '/workshop/workshop' },
-      { text: 'Todo', link: '/todo/todo' },
       { text: 'Reference', link: '/reference/component' },
     ],
     sidebar

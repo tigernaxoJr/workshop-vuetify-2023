@@ -1,8 +1,8 @@
 # useful packages
-axios
-lodash
-moment.js
-exceljs
-file-saver.js
-jwt-check-expiration
-axios-mock-adapter
+ - axios
+ - lodash
+ - day.js
+ - exceljs
+ - file-saver.js
+ - jwt-check-expiration
+ - axios-mock-adapter

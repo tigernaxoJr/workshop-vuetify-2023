@@ -10,9 +10,10 @@
 | Vue Volar extension Pack      | 必要套件                   | [點我](vscode:extension/MisterJ.vue-volar-extention-pack) |
 | Vue 3 Support - All In One    | 必要套件                   | [點我](vscode:extension/Wscats.vue)                       |
 | Vue VSCode Snippets           | 必要套件                   | [點我](vscode:extension/sdras.vue-vscode-snippets)        |
+| Prettier                      | 必要套件                   | [點我](vscode:extension/esbenp.prettier-vscode)           |
 | TypeScript Vue Plugin (Volar) | Typescript 開發 Vue 專案用 | [點我](vscode:extension/Vue.vscode-typescript-vue-plugin) |
 | vscode-icons                  | 讓檔案有漂亮的 icon        | [點我](vscode:extension/vscode-icons-team.vscode-icons)   |
-| indent-rainbow                | 為縮進上色                 | [點我](vscode:extension/oderwat.indent-rainbow)           |
+| indent-rainbow                | 為縮排上色                 | [點我](vscode:extension/oderwat.indent-rainbow)           |
 
 
 ## 設置 settings.json
@@ -38,8 +39,12 @@
 	},
 	```
 
+## 注意事項
+請務必解除安裝 Vuter
+
 ## 同步帳號的擴充功能與設置
 點左下角 (Sign In to Sync Settings)，登入後開啟同步設置 。  
 目前接受 GitHub、Microsoft 帳號。  
 在新的電腦登入帳號後就直接可以使用環境，有點像手機 App Store 的概念.  
 詳細方法：康敏順。
+

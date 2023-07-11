@@ -1,8 +1,8 @@
 import workshop from "./workshop"
-import todo from "./todo"
+import vue3 from "./vue3.ts"
 import reference from "./reference"
 export default {
+	'/vue3/': vue3,
 	'/workshop/': workshop,
-	'/todo/': todo,
 	'/reference/': reference
 }
