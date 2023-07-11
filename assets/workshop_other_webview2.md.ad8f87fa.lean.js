@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as i,N as t}from"./chunks/framework.03ba4d3f.js";const m=JSON.parse('{"title":"WebView2","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/other/webview2.md"}'),r={name:"workshop/other/webview2.md"},o=t("",17),l=[o];function n(h,s,c,d,u,b){return i(),e("div",null,l)}const q=a(r,[["render",n]]);export{m as __pageData,q as default};
