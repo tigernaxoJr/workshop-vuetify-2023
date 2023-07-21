@@ -4,7 +4,7 @@ TypeScript 是一種由 Microsoft 開發的開源程式語言，它是 JavaScrip
 
 <!-- dependency UML -->
 
-## Why TS
+## Pros and Cons of TypeScript
 
 ### 優點
 
@@ -179,7 +179,40 @@ defineProps<IProps>();
 <style scoped></style>
 ```
 
-## class
+## Type/Interface
+
+ypeScript 中的 type 和 interface 是用來定義自定義型別的兩種主要方式。它們在定義型別的方法和使用時機上有一些異同。讓我們逐一介紹、比較並討論使用時機：
+
+介紹 type：
+
+type 是一種 TypeScript 的型別聲明方式，可以用來創建自定義型別。
+可以使用 type 關鍵字定義基本型別、聯合型別、交叉型別、函數型別等。
+type 也支援泛型。
+type 可以使用類型操作符，例如 Pick、Omit、Partial 等。
+介紹 interface：
+
+interface 是用來定義 TypeScript 的型別的另一種方式，同樣用於創建自定義型別。
+主要用於定義物件型別，用於描述物件的結構和形狀。
+interface 支援繼承，可以擴展其他 interface 或 class。
+比較異同：
+
+適用範圍： type 不僅可以用於定義物件型別，還可以用於定義其他型別，例如基本型別、聯合型別等。而 interface 主要用於定義物件型別，用於描述物件的結構和形狀。
+
+擴展性： interface 支援擴展，可以繼承其他 interface 或 class，而 type 不支援擴展。
+
+類型命名： type 可以使用任意的名稱來定義型別，而 interface 只能使用標識符來命名。
+
+泛型支援： type 支援泛型，可以使用泛型來創建更靈活的型別定義，而 interface 也支援泛型，但在某些情況下可能不如 type 靈活。
+
+使用時機：
+
+選擇使用 type 還是 interface 取決於你的需求和情況：
+
+使用 type：當你需要定義一個複雜的型別，或需要使用交叉型別、聯合型別、類型操作符等功能時，可以使用 type。
+使用 interface：當你主要需要定義物件型別，並且需要擴展其他 interface 或 class 時，可以使用 interface。
+通常來說，在物件型別的定義上，interface 是首選，因為它提供了更多物件型別相關的特性。而在其他型別的定義上，例如基本型別、聯合型別、交叉型別等，或需要使用較複雜的型別操作時，type 可能更適合。然而，這並不是絕對的規則，根據實際情況選擇最適合的型別聲明方式是最重要的。
+
+### Type
 
 可以使用 class 來定義類別，並且可以在類別中定義屬性和方法。
 
@@ -204,11 +237,11 @@ const person1 = new Person('John', 30);
 person1.sayHello(); // 輸出：Hello, my name is John, and I am 30 years old.
 ```
 
-## interface
+### Intrface
 
 介面在 TypeScript 中用於定義一個具有特定屬性和方法的結構。它只是一個用於描述物件的型別。
 
-```
+```ts
 interface Animal {
   name: string;
   age: number;
@@ -225,13 +258,12 @@ class Dog implements Animal {
   }
 
   speak() {
-    console.log("Woof!");
+    console.log('Woof!');
   }
 }
 
-const dog1 = new Dog("Buddy", 5);
+const dog1 = new Dog('Buddy', 5);
 dog1.speak(); // 輸出：Woof!
-
 ```
 
 ## 型別操作

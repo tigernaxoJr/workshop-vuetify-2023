@@ -5,7 +5,8 @@ export default [
     items: [
       { text: 'MVVM', link: '/vue3/456' },
       { text: 'Reactivity', link: '/vue3/456' },
-    ]
+      { text: '資料流', link: '/vue3/data-flow' },
+    ],
   },
   {
     text: 'Tools',
@@ -15,7 +16,7 @@ export default [
       { text: 'vue-router', link: '/vue3/vue-router' }, // vue-router
       { text: '集中式狀態管理', link: '/vue3/store' }, // Flux架構
       { text: 'pinia', link: '/vue3/pinia' },
-    ]
+    ],
   },
   {
     text: 'Vue3',
@@ -27,6 +28,6 @@ export default [
       { text: '屬性綁定', link: '/vue3/attribute' },
       { text: 'Composition API', link: '/vue3/composition' },
       { text: 'script-setup', link: '/vue3/scriptsetup' },
-    ]
+    ],
   },
-] 
+];
