@@ -1,1 +1,0 @@
-import{_ as e,c as t,o,N as r}from"./chunks/framework.03ba4d3f.js";const v=JSON.parse('{"title":"Vue DevTools","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/env/devtools.md"}'),a={name:"workshop/env/devtools.md"},n=r("",5),d=[n];function s(l,h,i,c,_,f){return o(),t("div",null,d)}const m=e(a,[["render",s]]);export{v as __pageData,m as default};

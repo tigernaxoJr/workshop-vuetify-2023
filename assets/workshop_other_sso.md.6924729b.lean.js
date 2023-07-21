@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as t,N as a}from"./chunks/framework.03ba4d3f.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/other/sso.md"}'),o={name:"workshop/other/sso.md"},i=a("",5),l=[i];function n(h,c,s,f,d,_){return t(),r("div",null,l)}const k=e(o,[["render",n]]);export{p as __pageData,k as default};

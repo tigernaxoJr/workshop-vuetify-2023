@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,N as o}from"./chunks/framework.03ba4d3f.js";const A=JSON.parse('{"title":"靜態資源","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/project/resource.md"}'),l={name:"workshop/project/resource.md"},p=o("",11),t=[p];function e(r,c,D,F,y,C){return n(),a("div",null,t)}const f=s(l,[["render",e]]);export{A as __pageData,f as default};

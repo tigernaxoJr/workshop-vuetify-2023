@@ -1,1 +1,0 @@
-import{_ as e,c as t,o,x as a}from"./chunks/framework.03ba4d3f.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/crud/add.md"}'),s={name:"workshop/crud/add.md"},r=a("p",null,"新增資料",-1),c=[r];function d(n,_,p,i,l,m){return o(),t("div",null,c)}const h=e(s,[["render",d]]);export{f as __pageData,h as default};
