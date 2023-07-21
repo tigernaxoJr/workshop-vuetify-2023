@@ -16,6 +16,7 @@ export default [
       { text: '專案設置', link :'/workshop/project/configure' },
       { text: '版面配置', link :'/workshop/project/layout' },
       { text: '路由配置', link :'/workshop/project/route' },
+      { text: 'API管理', link :'/workshop/project/api' },
     ]
   },
   {
@@ -23,7 +24,6 @@ export default [
     collapsible: true,
     items: [
       { text: '建立頁面', link :'/workshop/crud/create' },
-      { text: 'AJAX管理', link :'/workshop/crud/api' },
       { text: '搜尋區域', link :'/workshop/crud/query' },
       { text: '搜尋結果', link :'/workshop/crud/result' },
       { text: '編輯資料', link :'/workshop/crud/edit' },

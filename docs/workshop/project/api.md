@@ -1,7 +1,7 @@
 ## api 製作
 安裝 axios 
 ```bash
-npm i axios
+yarn add axios
 ```
 
 文件閱讀
