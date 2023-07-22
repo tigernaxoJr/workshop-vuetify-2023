@@ -1,1 +1,0 @@
-import{_ as t,o as d,c as e,U as r}from"./chunks/framework.c48658f6.js";const b=JSON.parse('{"title":"前端路由","description":"","frontmatter":{},"headers":[],"relativePath":"vue3/router.md","filePath":"vue3/router.md"}'),a={name:"vue3/router.md"},o=r("",6),h=[o];function s(i,_,n,c,l,p){return d(),e("div",null,h)}const m=t(a,[["render",s]]);export{b as __pageData,m as default};
