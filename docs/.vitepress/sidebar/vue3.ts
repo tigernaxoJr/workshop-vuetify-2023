@@ -1,22 +1,27 @@
 export default [
   {
-    text: 'Vue3',
+    text: 'Vue 基礎',
     collapsible: true,
     items: [
-      { text: '基礎', link: '/vue3/basic' },
-      { text: 'MVVM', link: '/vue3/mvvm' },
-      { text: 'Reactivity', link: '/vue3/456' },
-      { text: '資料流', link: '/vue3/data-flow' },
-      { text: '前端路由', link: '/vue3/router' }, // History modes 比較...
+      { text: 'MVVM 框架', link: '/vue3/mvvm' },
+      { text: '前端資料流', link: '/vue3/data-flow' },
+      { text: '前端路由', link: '/vue3/route' }, // History modes 比較...
       { text: '狀態管理', link: '/vue3/state' }, // Flux架構
       { text: '單一元件檔(SFC)', link: '/vue3/sfc' },
       { text: '屬性綁定', link: '/vue3/attribute' },
-      { text: 'Composition API', link: '/vue3/composition' },
-      { text: 'script-setup', link: '/vue3/scriptsetup' },
+      { text: '插槽', link: '/vue3/slot' },
     ],
   },
   {
-    text: '工具',
+    text: 'Vue3 改動',
+    collapsible: true,
+    items: [
+      { text: 'vite', link: '/vue3/vite' },
+      { text: '組合式 API', link: '/vue3/composition' },
+    ],
+  },
+  {
+    text: 'Vue3 工具',
     collapsible: true,
     items: [
       { text: 'vue-router', link: '/vue3/vue-router' }, // vue-router
