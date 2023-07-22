@@ -5,11 +5,11 @@ export default [
     items: [
       { text: 'MVVM 框架', link: '/vue3/mvvm' },
       { text: '前端資料流', link: '/vue3/data-flow' },
-      { text: '前端路由', link: '/vue3/route' }, // History modes 比較...
       { text: '狀態管理', link: '/vue3/state' }, // Flux架構
       { text: '單一元件檔(SFC)', link: '/vue3/sfc' },
       { text: '屬性綁定', link: '/vue3/attribute' },
       { text: '插槽', link: '/vue3/slot' },
+      { text: '前端路由', link: '/vue3/route' }, // History modes 比較...
     ],
   },
   {
