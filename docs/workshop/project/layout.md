@@ -1,79 +1,11 @@
 vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。  
-## 新增 Menus
-新增 `src/components/SideMenu.js`，先不需要嘗試理解這個部分。
-```js
-import { h } from "vue";
-import { VList, VListGroup, VListItem } from "vuetify/components";
-const props = {
-  menus: { type: Array, default: [] },
-  depth: { type: Number, default: 0 },
-  opened: { type: Array, default: [] }
-}
-const render = ( props )=>{
-  const { menus, depth, opened } = props
-  const el = menus.map((x)=> {
-    // 沒有 children 的情況
-    if(!x.children?.length) return h( VListItem, x)
-    // 有 children 的情況
-    const y = Object.assign({}, x);
-    delete y.children; // VListItem 不接受 chidlren，會報錯特別排除
-    return h( VListGroup, { value: x.id }, {
-      default: () => h(component, { menus: x.children, depth: depth + 1}),
-      activator: (e) => h(VListItem, { ...y, ...e.props })
-    })
+## Layout/Views
+**Layout（佈局）** 指**頁面上主要元素的擺放和排列方式**。基礎的佈局方式包含 Header、導航欄、側邊欄、主要內容區等等。
 
-  })
-  return depth === 0 ?  h( VList, { opened }, () => el ) :  el
-}
-const component = { props, render }
-export default component
-```
-在 `src\styles\settings.scss` 加入以下 css，避免 inline padding 的縮排過多
-```scss
-// 直接取消縮排
-// .v-list-group__items .v-list-item {
-//     padding-inline-start: 16px !important;
-// }
-// 讓縮排較溫和
-.v-list-group--prepend {
-    --parent-padding: calc(var(--indent-padding)) !important;
-}
-```
-新增 `src/menus.js`
-```js
-// 每個物件可傳入 v-list-item 的屬性實現對 v-list-item 的控制
-export default
-[
-    {
-      id: '01',
-      title: "第一層目錄A",
-      prependIcon: "",
-      children: [
-        { id:'011', title: "Management", prependIcon: "mdi-account-multiple-outline" },
-        { id:'012', title: "Settings", prependIcon: "mdi-cog-outline" },
-      ],
-    },
-    {
-      id: '02',
-      title: "第一層目錄B",
-      prependIcon: "",
-      children: [
-        {id: '021', title: "第二層目錄", prependIcon: "mdi-plus-outline" ,
-          children: [
-            {id: '0211', title: "第三層物件", prependIcon: "mdi-plus-outline" },
-            {id: '0212', title: "第三層物件", prependIcon: "mdi-file-outline" },
-            {id: '0213', title: "第三層物件", prependIcon: "mdi-update" },
-            {id: '0214', title: "第三層物件", prependIcon: "mdi-delete", href: "https://google.com" },
-          ]
-        },
-        {id: '022', title: "第二層物件", prependIcon: "mdi-file-outline" },
-        {id: '023', title: "第二層物件", prependIcon: "mdi-update" },
-        {id: '024', title: "第二層物件", prependIcon: "mdi-delete", href: "https://google.com" },
-      ],
-    },
-    {id: '03', title: "第一層物件", prependIcon: "mdi-delete", href: "https://google.com" },
-  ]
-```
+**Views（視圖）** 指應用程序中**不同頁面**。在單頁面應用程序（SPA）中，所有頁面的內容都在同一個頁面中動態地進行更改，而不需要像傳統的多頁面應用程序那樣每次切換頁面都要進行整個頁面的重新加載。"Views" 可以是一個單獨的Vue組件，它們根據路由的不同來展示不同的內容，從而實現在同一個頁面上切換不同的視圖。
+
+## 新增佈局
+
 新增 `layouts/MainLayout.vue`
 ```vue
 <template>
@@ -84,8 +16,6 @@ export default
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer">
-      <!-- 這裡塞 Menu List、以 opened 預設打開的節點 id 清單  -->
-      <SideMenu :menus="menus" :opened="opened"></SideMenu>
     </v-navigation-drawer>
 
     <v-main>

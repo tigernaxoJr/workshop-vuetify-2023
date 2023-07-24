@@ -1,7 +1,7 @@
 export default [
   {
     text: '元件',
-    collapsible: true,
+    collapsed: false,
     items: [
       { text: '元件', link: '/reference/component' },
     ]

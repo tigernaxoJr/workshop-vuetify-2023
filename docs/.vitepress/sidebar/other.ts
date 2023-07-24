@@ -1,7 +1,7 @@
 export default [
   {
     text: '其他',
-    collapsible: true,
+    collapsed: false,
     items: [
       { text: '容器部署', link: '/other/deploy' },
       { text: 'WebView2', link: '/other/webview2' },
