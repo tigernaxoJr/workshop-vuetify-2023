@@ -76,23 +76,7 @@ lang 屬性套用想要的 CSS 預處理器，但要先 npm 安裝對應的 CSS 
   }
 </style>
 ```
-## 插槽(slot)
-###  具名插槽
-###  匿名插槽
-scoped slot?
-## 組件溝通
-### event/props
-資料類型檢查
-預設值
-自訂驗證
-綁定 object ref 子元件直接賦值的資料汙染
-### v-model
-單向綁定/雙向綁定語法糖
-### provide/inject
-## 遞迴元件
-Recursive Component
-## 動態元件
-通常會直接用 render function
+
 ## Reference
 
 - [2020it 邦鐵人賽-30 天手把手的 Vue.js 教學 Day15 - 認識 Single file components(SFC)](https://ithelp.ithome.com.tw/articles/10245406)
