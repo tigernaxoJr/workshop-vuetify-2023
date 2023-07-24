@@ -37,4 +37,11 @@ export default [
       { text: '新增資料', link :'/workshop/crud/add' },
     ]
   },
+  {
+    text: '其他',
+    collapsed: true,
+    items: [
+      { text: '持續布署', link :'/workshop/crud/add' },
+    ]
+  },
 ]
