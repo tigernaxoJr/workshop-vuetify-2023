@@ -5,9 +5,18 @@ export default [
     items: [
       { text: 'MVVM 框架', link: '/vue3/basic/mvvm' },
       { text: '生命週期', link: '/vue3/basic/lifecycle' },
-      { text: '單一元件檔(SFC)', link: '/vue3/basic/sfc' },
-      { text: '前端資料流', link: '/vue3/basic/data-flow' },
       { text: '屬性綁定', link: '/vue3/basic/attribute' },
+      {
+        text: '元件系統',
+        collapsed: true,
+        items: [
+          { text: '單一元件檔(SFC)', link: '/vue3/basic/component/sfc' },
+          { text: '元件溝通', link: '/vue3/basic/component/interact' },
+          { text: '插槽', link: '/vue3/basic/component/slot' },
+          { text: '遞迴元件', link: '/vue3/basic/component/recursive' },
+          { text: '動態元件', link: '/vue3/basic/component/dynamic' },
+        ]
+      },
       { text: 'SPA/MPA', link: '/vue3/basic/spa-mpa' },
     ],
   },
@@ -28,6 +37,13 @@ export default [
       { text: '狀態管理', link: '/vue3/state' }, // Flux架構
       { text: 'pinia', link: '/vue3/pinia' }, // vue-router
       { text: 'UI 框架', link: '/vue3/uiframework' }, // Flux架構
+    ],
+  },
+  {
+    text: '其他',
+    collapsed: true,
+    items: [
+      { text: '前端資料流', link: '/vue3/basic/data-flow' },
     ],
   },
 ];
