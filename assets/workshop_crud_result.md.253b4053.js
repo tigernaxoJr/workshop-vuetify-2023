@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as r}from"./chunks/framework.2939a8e5.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/crud/result.md","filePath":"workshop/crud/result.md"}'),o={name:"workshop/crud/result.md"};function s(a,c,n,p,d,l){return t(),r("div")}const i=e(o,[["render",s]]);export{_ as __pageData,i as default};

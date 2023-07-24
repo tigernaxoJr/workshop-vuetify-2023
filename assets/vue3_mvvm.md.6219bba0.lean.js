@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as t,U as r}from"./chunks/framework.c48658f6.js";const v=JSON.parse('{"title":"Vue3 基礎","description":"","frontmatter":{},"headers":[],"relativePath":"vue3/mvvm.md","filePath":"vue3/mvvm.md"}'),i={name:"vue3/mvvm.md"},n=r("",5),o=[n];function c(s,l,h,m,_,u){return a(),t("div",null,o)}const f=e(i,[["render",c]]);export{v as __pageData,f as default};
