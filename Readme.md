@@ -8,3 +8,5 @@ npm run dev
 - [markdown-all-in-one document](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [Vitepress](https://vitepress.vuejs.org/guide/getting-started)
 - [Emojipedia](https://emojipedia.org/)
+
+-[crypto-js/doc](https://cryptojs.gitbook.io/docs/)

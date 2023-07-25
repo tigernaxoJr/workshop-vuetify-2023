@@ -13,6 +13,7 @@ export default [
       { text: '去耦合', link: '/other/decouple' },
       { text: '常用套件', link: '/other/packages' },
       { text: '節流與防抖', link: '/other/throttle-debounce' },
+      { text: 'Test', link: '/other/test' },
     ],
   },
 ];

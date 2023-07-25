@@ -44,7 +44,6 @@ export default [
     items: [
       { text: '前端資料流', link: '/vue3/basic/other/data-flow' },
       { text: 'SPA/MPA', link: '/vue3/basic/other/spa-mpa' },
-      { text: 'Test', link: '/vue3/basic/other/test' },
     ],
   },
 ];
