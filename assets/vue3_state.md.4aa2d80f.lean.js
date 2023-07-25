@@ -1,1 +1,0 @@
-import{_ as e,o as a,c as t,U as r}from"./chunks/framework.2939a8e5.js";const p=JSON.parse('{"title":"狀態管理","description":"","frontmatter":{},"headers":[],"relativePath":"vue3/state.md","filePath":"vue3/state.md"}'),n={name:"vue3/state.md"},s=r("",4),o=[s];function c(_,i,l,d,h,u){return a(),t("div",null,o)}const m=e(n,[["render",c]]);export{p as __pageData,m as default};
