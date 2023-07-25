@@ -31,11 +31,11 @@ export default [
     text: 'Vue3 生態圈',
     collapsed: false,
     items: [
-      { text: '前端路由', link: '/vue3/route' }, // History modes 比較...
-      { text: 'vue-router', link: '/vue3/vue-router' }, // vue-router
-      { text: '狀態管理', link: '/vue3/state' }, // Flux架構
-      { text: 'pinia', link: '/vue3/pinia' }, // vue-router
-      { text: 'UI 框架', link: '/vue3/uiframework' }, // Flux架構
+      { text: '前端路由', link: '/vue3/ecosystem/route' }, // History modes 比較...
+      { text: 'vue-router', link: '/vue3/ecosystem/vue-router' }, // vue-router
+      { text: '狀態管理', link: '/vue3/ecosystem/state' }, // Flux架構
+      { text: 'pinia', link: '/vue3/ecosystem/pinia' }, // vue-router
+      { text: 'UI 框架', link: '/vue3/ecosystem/uiframework' }, // Flux架構
     ],
   },
   {
@@ -44,6 +44,7 @@ export default [
     items: [
       { text: '前端資料流', link: '/vue3/basic/other/data-flow' },
       { text: 'SPA/MPA', link: '/vue3/basic/other/spa-mpa' },
+      { text: 'Test', link: '/vue3/basic/other/test' },
     ],
   },
 ];
