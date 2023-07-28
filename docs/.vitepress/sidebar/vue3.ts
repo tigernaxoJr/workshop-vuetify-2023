@@ -12,11 +12,14 @@ export default [
           { text: '單一元件檔', link: '/vue3/basic/component/sfc' },
           { text: 'Template', link: '/vue3/basic/component/template' },
           { text: '元件溝通', link: '/vue3/basic/component/interact' },
-          { text: '深度溝通', link: '/vue3/basic/component/interact-provide-inject' },
-          { text: '元件插槽', link: '/vue3/basic/component/slot' },
+          {
+            text: '深度溝通',
+            link: '/vue3/basic/component/interact-provide-inject',
+          },
+          { text: '元件插槽', link: '/vue3/basic/component/slots' },
           { text: '遞迴元件', link: '/vue3/basic/component/recursive' },
           { text: '動態元件', link: '/vue3/basic/component/dynamic' },
-        ]
+        ],
       },
     ],
   },
