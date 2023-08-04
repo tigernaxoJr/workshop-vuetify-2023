@@ -3,6 +3,7 @@ export default [
     text: '其他',
     collapsed: false,
     items: [
+      { text: '混和式應用', link: '/other/hybrid' },
       { text: '容器部署', link: '/other/deploy' },
       { text: 'WebView2', link: '/other/webview2' },
       { text: '網站主題', link: '/other/theme' },
