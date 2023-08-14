@@ -18,6 +18,10 @@ Webview2是由Microsoft開發的技術，它是一個嵌入式Web瀏覽器控件
 Webview2通常與.NET和C++應用程式一起使用，可在Windows平台上嵌入Web視圖。
 它適用於開發使用Windows API或.NET框架的應用程式，並具有完整的Windows集成能力。  
 
+需求：
+- Visual Studio 2017 (開發)
+- .Net Framework 4.7.2 以上
+
 單檔包裹體驗：
 ```bash
 git clone https://github.com/tigernaxoJr/WebView2.git
@@ -30,8 +34,16 @@ Tauri是一個用於構建桌面應用程式的工具集，它結合了Rust和We
 Tauri允許您使用Web技術來構建應用程式的前端，同時在桌面應用程式外殼中使用Rust來處理本機功能和系統調用。
 Tauri提供了跨平台支援，可在Windows、macOS和Linux等多個平台上運行。
 
+需求：
+- Rust (開發)
+- Microsoft C++ build tools (開發)
+- Visual Studio Desktop development with C++ (開發)
+- Windows 10 SDK (開發)
+- WebView2 (Windows 10 (1803)/ Windows 11 以後不需要)
 
 ## Reference
 - [MSDN - WebView2](https://learn.microsoft.com/en-us/microsoft-edge/webview2/)
 - [MSDN - Get started with WebView2 in WinForms apps](https://learn.microsoft.com/en-us/microsoft-edge/webview2/get-started/winforms)
 - [Github - tiernaxoJr/webview2](https://github.com/tigernaxoJr/WebView2)
+- [Tauri](https://tauri.app/)
+- [Tauri - Quick Start/Vite](https://tauri.app/v1/guides/getting-started/setup/vite)
