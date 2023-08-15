@@ -24,19 +24,26 @@ const normalizedSize = computed(() => props.size.trim().toLowerCase())
 ## v-model 語法糖
 使用事件觸發上游資料變更，不違反單向資料流實作 two-way binding 語法糖
 :::code-group
-```html [原始寫法]
-<input
-  :value="searchText"
-  @input="searchText = $event.target.value"
+```html [元件]
+<CustomInput
+  :modelValue="searchText"
+  @update:modelValue="newValue => searchText = newValue"
 />
 ```
 ```html [v-model]
 <input v-model="searchText" />
 ```
+```html [input]
+<!--input 在 vue 當中的地位比較特殊-->
+<input
+  :value="searchText"
+  @input="searchText = $event.target.value"
+/>
+```
 :::
 
-這時候子元件長這樣：  
-```html
+這時候子元件長這樣，使用 getter, setter 讓 value 看起來可以像是直接修改(實際上遵循單向資料流)：
+```html 
 <!-- CustomInput.vue -->
 <script setup>
 import { computed } from 'vue'
@@ -91,3 +98,5 @@ defineEmits(['update:firstName', 'update:lastName'])
 </template>
 ```
 ## v-model modifiers
+## Reference
+- [Vue.js-Component v-model](https://vuejs.org/guide/components/v-model.html)
