@@ -3,7 +3,8 @@
  - 避免讓元件和頁面選單產生耦合、避免修改通用元件產生一個需要維護的新元件。
  - 善用資料的 reactivity 簡化程式碼
  - computed data => rowdata + state 
- - 善用 object reference 減少 menu 大小
+ - 善用 object reference 減少 menu 大小  
+
 以病歷整合查詢選單為例：
 ##  計算資料
 ```html

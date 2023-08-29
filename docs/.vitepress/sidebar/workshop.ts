@@ -20,8 +20,9 @@ export default [
         items: [
           { text: '版面配置', link: '/workshop/project/layout/layout' },
           { text: '側邊選單', link: '/workshop/project/layout/menus' },
-          { text: '選單資料計算', link: '/workshop/project/layout/menus-data' },
+          { text: '選單資料', link: '/workshop/project/layout/menus-data' },
           { text: '路由配置', link: '/workshop/project/layout/route' },
+          { text: '控台切換', link: '/workshop/project/layout/switch' },
         ],
       },
       {
@@ -40,19 +41,36 @@ export default [
         text: '內嵌網頁',
         collapsed: true,
         items: [
-          { text: 'iframe', link: '/workshop/crud/api' },
-          { text: 'key傳遞', link: '/workshop/crud/create' },
+          { text: '使用iframe', link: '/workshop/iframe/iframe' },
+          { text: 'key傳遞', link: '/workshop/iframe/key' },
+          { text: '尺寸同步', link: '/workshop/iframe/size' },
         ],
       },
-      { text: '自動佈署', link: '/workshop/other/cicd' },
+      {
+        text: '登入',
+        collapsed: true,
+        items: [
+          { text: '接收KEY', link: '/workshop/login/key' },
+          { text: '取得token', link: '/workshop/login/token' },
+          { text: '登入頁面', link: '/workshop/iframe/iframe' },
+          { text: '登出', link: '/workshop/iframe/iframe' },
+        ],
+      },
+      {
+        text: '程式佈署',
+        collapsed: true,
+        items: [
+          { text: 'iis佈署', link: '/workshop/other/iis' },
+          { text: 'nginx佈署', link: '/workshop/other/nginx' },
+          { text: '自動佈署', link: '/workshop/other/cicd' },
+        ],
+      },
     ],
   },
   {
     text: '其他',
     collapsed: true,
     items: [
-      { text: '前後台切換', link: '/workshop/other/switch' },
-      // { text: '前後台切換', link: '/workshop/crud/api' },
       // { text: '前後台切換', link: '/workshop/crud/api' },
     ],
   },
