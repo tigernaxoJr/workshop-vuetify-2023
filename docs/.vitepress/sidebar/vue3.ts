@@ -3,7 +3,7 @@ export default [
     text: 'Vue 基礎',
     collapsed: false,
     items: [
-      { text: 'MVVM 框架', link: '/vue3/basic/00mvvm' },
+      { text: 'MVVM 架構', link: '/vue3/basic/00mvvm' },
       { text: '元件生命週期', link: '/vue3/basic/01lifecycle' },
       { text: '單一元件檔', link: '/vue3/basic/10sfc' },
       { text: '元件屬性綁定', link: '/vue3/basic/20attrs' },
