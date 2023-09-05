@@ -11,13 +11,19 @@ export default [
       { text: '單向資料流', link: '/vue3/basic/40oneWayDataFlow' },
       { text: 'Provide/Inject', link: '/vue3/basic/50interactProvideInject' },
       { text: '元件插槽', link: '/vue3/basic/60slots' },
+    ],
+  },
+  {
+    text: 'Vue 進階',
+    collapsed: true,
+    items: [
       { text: '動態元件', link: '/vue3/basic/80dynamic' },
       { text: 'Render Function', link: '/vue3/basic/70render' },
     ],
   },
   {
     text: 'Vue3 改動',
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: 'vite', link: '/vue3/vite' },
       { text: '組合式 API', link: '/vue3/composition' },
@@ -25,7 +31,7 @@ export default [
   },
   {
     text: 'Vue3 生態圈',
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: '前端路由', link: '/vue3/ecosystem/route' }, // History modes 比較...
       { text: 'vue-router', link: '/vue3/ecosystem/vue-router' }, // vue-router
