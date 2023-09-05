@@ -19,6 +19,7 @@ export default [
         collapsed: true,
         items: [
           /* 介紹 flex、GridSystem */
+          { text: '網格系統', link: '/workshop/project/layout/grid' },
           { text: '版面配置', link: '/workshop/project/layout/layout' },
           /* recursive component(可能先跳過) */
           { text: '側邊選單', link: '/workshop/project/layout/menus' },
