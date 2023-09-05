@@ -11,8 +11,8 @@ export default [
       { text: '單向資料流', link: '/vue3/basic/40oneWayDataFlow' },
       { text: 'Provide/Inject', link: '/vue3/basic/50interactProvideInject' },
       { text: '元件插槽', link: '/vue3/basic/60slots' },
-      { text: '遞迴元件', link: '/vue3/basic/70recursive' },
       { text: '動態元件', link: '/vue3/basic/80dynamic' },
+      { text: 'Render Function', link: '/vue3/basic/70render' },
     ],
   },
   {
@@ -34,12 +34,12 @@ export default [
       { text: 'UI 框架', link: '/vue3/ecosystem/uiframework' }, // Flux架構
     ],
   },
-  {
-    text: '其他',
-    collapsed: true,
-    items: [
-      { text: '前端資料流', link: '/vue3/basic/other/data-flow' },
-      { text: 'SPA/MPA', link: '/vue3/basic/other/spa-mpa' },
-    ],
-  },
+  // {
+  //   text: '其他',
+  //   collapsed: true,
+  //   items: [
+  //     { text: '前端資料流', link: '/vue3/basic/other/data-flow' },
+  //     { text: 'SPA/MPA', link: '/vue3/basic/other/spa-mpa' },
+  //   ],
+  // },
 ];
