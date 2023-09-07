@@ -15,6 +15,16 @@
 使用Flex佈局的基本設置：  
  1. 設置容器的display屬性為flex或inline-flex，將容器元素定義為Flex容器（flex container）。
  2. 將容器內的元素設置為Flex項目（flex item），並指定它們的佈局規則。
+
+|css 屬性|預設值| 說明 |
+|-|-|-|
+|flex-grow<br>增長因子|0<br>不增長|每個網格元素依照增長因子比例分配剩餘可用空間。|
+|flex-basis<br>基礎大小|auto<br>由元素內容決定|指定網格元素初始大小。|
+|flex-shrink<br>收縮因子|1|指定初始大小相加超出可用空間時，每個網格元素等比例縮小的權重。|
+
+[MDN-flex grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
+[MDN-flex shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
+
 ```css
 /*
  ====== 1. 將容器元素定義為Flex容器（flex container）======
@@ -26,51 +36,24 @@
 /*
  ====== 2. 指定容器內的元素的佈局規則。======
 */
-.item1 {
-  /* 百分比在Flex Grid System中用於定義網格列的寬度。每個列可以指定一個百分比，表示該列在容器內所佔的比例。
-  例如，如果有一個包含三個元素的容器，並且每個元素的寬度都設置為33%，那麼它們將平均佔據容器的寬度的33%。 */
-  flex: 50%; /* 寬度為父容器寬度的50% */
-}
-.item2 {
-  /* 固定寬度為100像素 */
-  width: 100px; 
-}
-.item3 {
-  /* 不指定的情況下，增長因子為0，不分配額外空間 */
-}
+/* 佔去固定寬度100像素 */
+.item1 { width: 100px; }
+/* 佔去固定比例 1/12 */
+.item2 { width: 8.333333%; }
+/*
+  增長因子(flex-grow)
+  如果一個元素的增長設置為1；而其他元素設置為0，當有剩餘空間時，該元素增長而其他元素保持不變。
+  如果所有列都設置為1，它們將平均分享額外的空間。
+*/
+.item3 { flex-grow: 1; }
+/* 
+  收縮因子(flex-shrink)
+  如果一個列的收縮因子設置為1，而其他列都設置為0，當可用空間不足時該列將縮小，其他列將保持不變。
+  如果所有列都設置為1，它們將平均收縮以適應缺少的空間。 
+*/
+.item4 { flex-shrink: 0; } /* 不允許收縮 */
+
 ```
-
-### 增長因子(flex-grow)
-Grow屬性指定了每個網格列在可用空間超過其實際寬度時，如何分配額外的空間。這是一個非負整數。
-如果一個列的Grow屬性設置為1，而其他列的Grow屬性都設置為0，那麼當有額外空間時，該列將會增長，而其他列將保持不變。如果所有列都設置為1，它們將平均分享額外的空間。
-```css
-.item1 {
-  flex-grow: 0; /* 不允許增長 */
-}
-
-.item2, .item3 {
-  flex-grow: 1; /* 增長因子為1 */
-}
-```
-
-[MDN-flex grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
-### 收縮因子(flex-shrink)
-Shrink屬性指定了每個網格列在可用空間小於其實際寬度時，如何分配缺少的空間。這也是一個非負整數。
-如果一個列的Shrink屬性設置為1，而其他列的Shrink屬性都設置為0，那麼當可用空間不足時，該列將縮小，而其他列將保持不變。如果所有列都設置為1，它們將平均分享缺少的空間。
-```css
-.item1 {
-  flex-shrink: 1; /* 收縮因子為1 */
-}
-
-.item2, .item3 {
-  flex-shrink: 0; /* 不允許收縮 */
-}
-```
-[MDN-flex shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
-
-### flex-basis
-用於指定項目的基礎大小，即項目在沒有額外空間或超過它的空間時的初始大小。默認值為auto，表示由項目的內容決定。
-
 ### flex shorthand property
 ```css
 .item {
