@@ -1,11 +1,11 @@
 # 網格系統(Grid System)
 網格系統用於網頁版面的分割、組織，目前前端UI框架(例如 Bootstrap、Vuetify 等)的網格系統多數採用了Flex布局，三種主要的布局方式分別是：
 
-|布局方式|概念|相容性|
-|-|-|-|
-|Float|將元素浮動到左側或右側實現多列布局。|較早的網頁佈局技術，可以支援較古老的瀏覽器(甚至包括IE 9)。|
-|Flex|基於「彈性盒子」概念，使得元素在**一個維度**上靈活排列、對齊和分佈。|當前**主流布局技術**|
-|Grid|基於網格和單元格的概念的**多維度***布局方式，元素可以在水平和垂直方向上同時進行精確的位置控制和大小調整。|現代瀏覽器中得到廣泛支援，但在舊版本的瀏覽器上相容性可能較差。然而，它被視為未來的主要布局方式，因為它提供了更大的彈性和控制。|
+| 布局方式 | 概念                                                                                                      | 相容性                                                                                                                         |
+| -------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Float    | 將元素浮動到左側或右側實現多列布局。                                                                      | 較早的網頁佈局技術，可以支援較古老的瀏覽器(甚至包括IE 9)。                                                                     |
+| Flex     | 基於「彈性盒子」概念，使得元素在**一個維度**上靈活排列、對齊和分佈。                                      | 當前**主流布局技術**                                                                                                           |
+| Grid     | 基於網格和單元格的概念的**多維度***布局方式，元素可以在水平和垂直方向上同時進行精確的位置控制和大小調整。 | 現代瀏覽器中得到廣泛支援，但在舊版本的瀏覽器上相容性可能較差。然而，它被視為未來的主要布局方式，因為它提供了更大的彈性和控制。 |
 
 ## 彈性佈局模式(Flexbox)
 ### flex-direction: 
@@ -68,7 +68,7 @@ Shrink屬性指定了每個網格列在可用空間小於其實際寬度時，�
 ```
 [MDN-flex shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
 
-### (flex-basis)
+### flex-basis
 用於指定項目的基礎大小，即項目在沒有額外空間或超過它的空間時的初始大小。默認值為auto，表示由項目的內容決定。
 
 ### flex shorthand property
@@ -80,8 +80,10 @@ Shrink屬性指定了每個網格列在可用空間小於其實際寬度時，�
 [MDN-Shorthand Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 
 ## 彈性網格系統(Flex Grid System)
-以 bootstrap 為例：
+以 bootstrap 為例，經典的網格系統長這樣：
 ```css
+.col { flex: 1 0 0%; } /*增長因子為 1，會長大*/ 
+/* col-1 ~ col-12 固定百分比 */
 .col-auto{flex:0 0 auto;width:auto}
 .col-1{flex:0 0 auto;width:8.33333333%}
 .col-2{flex:0 0 auto;width:16.66666667%}
@@ -98,14 +100,18 @@ Shrink屬性指定了每個網格列在可用空間小於其實際寬度時，�
 ```
 ## Vuetify 網格系統
 
-v-row
-v-col
-spacer
-Nested grid
-RWD
+| 元件     | 作用                                                                                                                                                               | 重要屬性          | 替代 1.x 的內容 |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | --------------- |
+| v-row    | 宣告 flex 容器，包裝v-col                                                                                                                                          | dense, no-gutters | v-layout        |
+| v-col    | 必須是 v-row 的直接子元素                                                                                                                                          |                   | v-flex          |
+| v-spacer | 分配剩餘的寬度，子元件之前或之後放置單個 v-spacer 時，這些元件將推向其容器的右側和左側。當在多個元件之間使用多個 v-spacer 時，剩餘的寬度將均勻分佈在每個間距之間。 |                   |                 |
+
 ## 對齊
-相關的 css class
-https://vuetifyjs.com/en/styles/flex/#auto-margins
+### [Align](https://vuetifyjs.com/en/components/grids/#align)
+### [Justify](https://vuetifyjs.com/en/components/grids/#justify)
+### [Align Self](https://vuetifyjs.com/en/styles/flex/#flex-align-self)
+### [Auto Margins](https://vuetifyjs.com/en/styles/flex/#auto-margins)
+
 ## Reference
 - [MDN-Basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
