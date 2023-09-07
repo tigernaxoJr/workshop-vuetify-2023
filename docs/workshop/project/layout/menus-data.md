@@ -1,12 +1,19 @@
-# 選單資料練習
-複雜資料處理方式：
- - 避免讓元件和頁面選單產生耦合、避免修改通用元件產生一個需要維護的新元件。
+# 選單資料
+原則：以 Data 控制元件表現，而不是將商業邏輯寫入元件！！！
+- 相較修改 ViewModel，使用程式控制資料（javascript 物件）的形狀容易許多。
+- 與特定商業邏輯耦合的元件也無法復用。
+
+## 固定選單資料
+寫死為 javascript 物件即可。
+
+## 動態選單資料
+處理技巧：
  - 善用資料的 reactivity 簡化程式碼
- - computed data => rowdata + state 
- - 善用 object reference 減少 menu 大小  
+ - 概念為：`data = computed(()=>(rowdata + state))`
+ - 善用 javascript object reference 減少 menu 大小  
 
 以病歷整合查詢選單為例：
-##  計算資料
+<!-- todo 把程式完成-->
 ```html
 <template>
   <!-- other tag -->
