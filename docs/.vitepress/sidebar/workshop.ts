@@ -34,14 +34,15 @@ export default [
         text: '搜尋頁面',
         collapsed: true,
         items: [
-          { text: 'API管理', link: '/workshop/crud/api' },
           { text: '建立頁面', link: '/workshop/crud/create' },
           /* 介紹 flex、GridSystem */
           { text: '網格系統', link: '/workshop/crud/grid' },
           { text: 'RWD', link: '/workshop/crud/rwd' },
           { text: '搜尋區域', link: '/workshop/crud/search' },
+          { text: 'API管理', link: '/workshop/crud/api' },
           /* 透過對頁面對APP的相依性講述觀察者模式 */
           { text: '初始化頁面', link: '/workshop/crud/init' },
+          { text: 'Store', link: '/workshop/crud/store' },
           { text: '搜尋結果', link: '/workshop/crud/result' },
           // todo dialog
           // { text: 'Dialog', link: '/workshop/crud/dialog' },

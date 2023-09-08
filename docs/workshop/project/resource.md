@@ -2,23 +2,24 @@
 院內無法連外網的電腦讀不到外部 cdn 資源，因此 font、icon、等等...都要放在專案內，或使用院內的資源
 
 ## Icon
-```bash
-$ yarn add @mdi/font -D
-// OR
-$ npm install @mdi/font -D
-```
-
-### src/plugins/vuetify.js
-```js
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
-import { createVuetify } from 'vuetify'
-
-export default createVuetify({
-  icons: {
-    defaultSet: 'mdi', // This is already the default value - only for display purposes
-  },
-})
-```
+1. 把資源安裝到 locale 端
+  ```bash
+  $ yarn add @mdi/font -D
+  // OR
+  $ npm install @mdi/font -D
+  ```
+2. import 安裝的資源，vite 會一起打包
+  ```js
+  // src/plugins/vuetify.js
+  import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+  import { createVuetify } from 'vuetify'
+  
+  export default createVuetify({
+    icons: {
+      defaultSet: 'mdi', // This is already the default value - only for display purposes
+    },
+  })
+  ```
 ## 顯示光田自造字
 到 `index.html` 裡面的 `<header>` 區塊中加入這一段，會不定時更新。
 ```html
