@@ -13,13 +13,12 @@ export default [
     collapsed: false,
     items: [
       { text: '專案建立', link: '/workshop/project/create' },
-      { text: '專案設置', link: '/workshop/project/configure' },
+      { text: '開發設置', link: '/workshop/project/configure' },
+      { text: '資源設置', link: '/workshop/project/resource' },
       {
         text: '版面配置',
         collapsed: true,
         items: [
-          /* 介紹 flex、GridSystem */
-          { text: '網格系統', link: '/workshop/project/layout/grid' },
           { text: '版面配置', link: '/workshop/project/layout/layout' },
           /* recursive component(可能先跳過) */
           { text: '側邊選單', link: '/workshop/project/layout/menus' },
@@ -37,12 +36,24 @@ export default [
         items: [
           { text: 'API管理', link: '/workshop/crud/api' },
           { text: '建立頁面', link: '/workshop/crud/create' },
-          { text: '搜尋區域', link: '/workshop/crud/query' },
+          /* 介紹 flex、GridSystem */
+          { text: '網格系統', link: '/workshop/crud/grid' },
+          { text: 'RWD', link: '/workshop/crud/rwd' },
+          { text: '搜尋區域', link: '/workshop/crud/search' },
           /* 透過對頁面對APP的相依性講述觀察者模式 */
           { text: '初始化頁面', link: '/workshop/crud/init' },
           { text: '搜尋結果', link: '/workshop/crud/result' },
+          // todo dialog
+          // { text: 'Dialog', link: '/workshop/crud/dialog' },
           { text: '編輯資料', link: '/workshop/crud/edit' },
           { text: '新增資料', link: '/workshop/crud/add' },
+        ],
+      },
+      {
+        text: '路由',
+        collapsed: true,
+        items: [
+          // { text: 'API管理', link: '/workshop/crud/api' },
         ],
       },
       {

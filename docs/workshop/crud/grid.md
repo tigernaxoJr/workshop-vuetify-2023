@@ -8,6 +8,10 @@
 | Grid     | 基於網格和單元格的概念的**多維度***布局方式，元素可以在水平和垂直方向上同時進行精確的位置控制和大小調整。 | 現代瀏覽器中得到廣泛支援，但在舊版本的瀏覽器上相容性可能較差。然而，它被視為未來的主要布局方式，因為它提供了更大的彈性和控制。 |
 
 ## 彈性佈局模式(Flexbox)
+口訣：
+ 1. 決定列方向。
+ 2. 指定行大小、百分比。
+ 3. 剩餘/不足空間，行伸縮。
 ### flex-direction: 
  ![](./flex.png)
 
@@ -18,8 +22,8 @@
 
 |css 屬性|預設值| 說明 |
 |-|-|-|
-|flex-grow<br>增長因子|0<br>不增長|每個網格元素依照增長因子比例分配剩餘可用空間。|
 |flex-basis<br>基礎大小|auto<br>由元素內容決定|指定網格元素初始大小。|
+|flex-grow<br>增長因子|0<br>不增長|每個網格元素依照增長因子比例分配剩餘可用空間。|
 |flex-shrink<br>收縮因子|1|指定初始大小相加超出可用空間時，每個網格元素等比例縮小的權重。|
 
 [MDN-flex grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
@@ -90,10 +94,12 @@
 | v-spacer | 分配剩餘的寬度，子元件之前或之後放置單個 v-spacer 時，這些元件將推向其容器的右側和左側。當在多個元件之間使用多個 v-spacer 時，剩餘的寬度將均勻分佈在每個間距之間。 |                   |                 |
 
 ## 對齊
-### [Align](https://vuetifyjs.com/en/components/grids/#align)
-### [Justify](https://vuetifyjs.com/en/components/grids/#justify)
-### [Align Self](https://vuetifyjs.com/en/styles/flex/#flex-align-self)
-### [Auto Margins](https://vuetifyjs.com/en/styles/flex/#auto-margins)
+|項目|對象|說明|
+|-|-|-|
+|[Align](https://vuetifyjs.com/en/components/grids/#align)|flexbox|把 flexbox 內的元素垂直對齊|
+|[Align Self](https://vuetifyjs.com/en/styles/flex/#flex-align-self)|flexitem| 指定 flexbox 內的元素垂直對齊|
+|[Justify](https://vuetifyjs.com/en/components/grids/#justify)|flexbox|水平對齊|
+|[Auto Margins](https://vuetifyjs.com/en/styles/flex/#auto-margins) |flexitem|自動留空|
 
 ## Reference
 - [MDN-Basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)

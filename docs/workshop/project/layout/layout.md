@@ -1,3 +1,4 @@
+# Layouts、Views
 vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁：  
 - #### **Layout（佈局）** 
   指**頁面上主要元素的擺放和排列方式**。基礎的佈局方式包含 Header、導航欄、側邊欄、主要內容區等等。
@@ -39,3 +40,6 @@ const drawer = ref(null);
 const opened = ref(["01"]);
 </script>
 ```
+
+## Reference
+- [Vuetify-Application Layout](https://vuetifyjs.com/en/features/application-layout/)

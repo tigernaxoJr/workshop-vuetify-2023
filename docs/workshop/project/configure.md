@@ -5,7 +5,8 @@
   server: {
     port: 3000,
     proxy: {
-      // http://localhost:3000/api -> http://localhost:4567api/
+      // 呼叫 http://localhost:3000/api 會代理到 http://localhost:4567/api/
+      // 注意，會自動添加 /api，跟 nginx 設置反向代理不太一樣
       '/api': 'http://localhost:4567',
     }
   },

@@ -6,6 +6,7 @@ export default [
       { text: 'MVVM 架構', link: '/vue3/basic/00mvvm' },
       { text: '元件生命週期', link: '/vue3/basic/01lifecycle' },
       { text: '單一元件檔', link: '/vue3/basic/10sfc' },
+      // todo: component reference
       { text: '元件屬性綁定', link: '/vue3/basic/20attrs' },
       { text: '元件Props', link: '/vue3/basic/30props' },
       { text: '單向資料流', link: '/vue3/basic/40oneWayDataFlow' },
@@ -20,6 +21,7 @@ export default [
     items: [
       { text: '動態元件', link: '/vue3/basic/80dynamic' },
       { text: 'Render Function', link: '/vue3/basic/70render' },
+      // { text: 'Wrapper Component', link: '/vue3/basic/?' },
     ],
   },
   {
