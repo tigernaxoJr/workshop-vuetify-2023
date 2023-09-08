@@ -6,6 +6,21 @@ const props = defineProps(['foo'])
 // ❌ 不可直接變更 props!
 props.foo = 'bar'
 ```
+## Flux
+Flux 是一種設計模式。這個概念由 Facebook 提出，最核心的思想就是確保資料在應用程序中的流動方向是單向的。以避免雙向資料流所可能帶來的維護問題。
+
+![](./assert/flux.png)
+
+Flux 明確定義不同角色的職責和互動方式，幫助開發者更清晰地管理應用程序的狀態和資料流：
+- ##### Action(動作)
+  表示某個事件或操作，通常由使用者或系統事件觸發，用來更新應用程序的狀態，所有改變資料的動作必須在這裡被定義和觸發
+- ##### Dispatcher(分發器)
+  將目前發生的 Action 通知給所有已註冊的 Store。它充當一個中央管理器，確保 Actions 被適當地傳遞給相關的 Stores。
+- ##### Store(資料儲存)
+  每個 Store 存儲特定部分的應用程序狀態，重要的是，Store 是唯讀的，提供 getter 方法供 View 存取，只能通過 Actions 來修改它的狀態。
+- ##### View(視圖)
+  根據資料渲染使用者界面，同時它也監聽事件並將事件映射到適當的 Actions。當使用者與 View 互動時，View 會生成對應的 Action 來觸發相應的變更。
+
 ## Props 依賴變數
 ### 有修改需求：以 props 初始化
 在 setup 裡面直接取用一次
@@ -100,3 +115,4 @@ defineEmits(['update:firstName', 'update:lastName'])
 ## v-model modifiers
 ## Reference
 - [Vue.js-Component v-model](https://vuejs.org/guide/components/v-model.html)
+- [Medium-深入淺出 Flux](https://medium.com/4cats-io/%E6%B7%B1%E5%85%A5%E6%B7%BA%E5%87%BA-flux-44a48c320e11)

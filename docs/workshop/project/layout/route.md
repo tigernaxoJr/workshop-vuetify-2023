@@ -27,7 +27,7 @@ const routes = [
 ];
 
 const router = createRouter({
-   history: createWebHistory(process.env.BASE_URL), // 錯誤的寫法
+  history: createWebHistory(process.env.BASE_URL), // 錯誤的寫法
   routes,
 });
 export default router;
