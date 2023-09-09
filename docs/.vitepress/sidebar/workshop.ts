@@ -26,8 +26,6 @@ export default [
           { text: '選單資料', link: '/workshop/project/layout/menus-data' },
           /* 路由配置方式 */
           { text: '路由配置', link: '/workshop/project/layout/route' },
-          /* 控台切換概念 */
-          { text: '切換控台', link: '/workshop/project/layout/switch' },
         ],
       },
       {
@@ -53,10 +51,15 @@ export default [
       {
         text: '路由',
         collapsed: true,
-        items: [
-          // { text: 'API管理', link: '/workshop/crud/api' },
-        ],
+        items: [{ text: '路由', link: '/workshop/route/router' }],
       },
+      // {
+      //   text: '個案細節',
+      //   collapsed: true,
+      //   items: [
+      //     // { text: 'API管理', link: '/workshop/crud/api' },
+      //   ],
+      // },
       {
         text: '內嵌網頁',
         collapsed: true,

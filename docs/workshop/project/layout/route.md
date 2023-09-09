@@ -8,12 +8,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/MainLayout.vue'), // 新增這行
+    component: () => import('@/layouts/MasterLayout.vue'), // 新增這行
     children: [
       {
         path: '',
-        name: 'MainHome',
-        component: () => import('@/views/MainHome.vue'),
+        name: 'MasterHome',
+        component: () => import('@/views/MasterHome.vue'),
       },
       // 新增 Search 頁面路由設置
       {

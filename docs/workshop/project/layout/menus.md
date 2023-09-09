@@ -1,4 +1,59 @@
 vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。  
+## VLIst
+![](./vlist.png)
+```vue
+<template>
+  <v-card class="mx-auto" width="300" >
+    <v-list v-model:opened="open">
+      <!-- 單純 list item -->
+      <v-list-item prepend-icon="mdi-home" title="Home"></v-list-item>
+      <v-list-item prepend-icon="mdi-trash" title="回收桶"></v-list-item>
+
+      <!-- 可開合清單 -->
+      <v-list-group value="Users">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props" title="Users" ></v-list-item>
+        </template>
+
+      <!-- 巢狀可開合清單 -->
+        <v-list-group value="Admin">
+          <template v-slot:activator="{ props }">
+            <v-list-item v-bind="props" title="Admin" ></v-list-item>
+          </template>
+
+          <template v-for="([title, icon], i) in admins">
+            <v-list-item
+            :key="i"
+            :title="title"
+            :prepend-icon="icon"
+            :value="title"
+            ></v-list-item>
+          </template>
+        </v-list-group>
+      </v-list-group>
+    </v-list>
+  </v-card>
+</template>
+<script>
+  export default {
+    data: () => ({
+      open: ['Users'],
+      admins: [
+        ['Management', 'mdi-account-multiple-outline'],
+        ['Settings', 'mdi-cog-outline'],
+      ],
+      cruds: [
+        ['Create', 'mdi-plus-outline'],
+        ['Read', 'mdi-file-outline'],
+        ['Update', 'mdi-update'],
+        ['Delete', 'mdi-delete'],
+      ],
+    }),
+  }
+</script>
+```
+## [插槽](../../../vue3/basic/60slots)
+## [activator 插槽](https://vuetifyjs.com/en/api/v-list-group/#slots-activator)
 ## 新增 Menus
 新增 `src/components/SideMenu.js`，先不需要嘗試理解這個部分。
 ```js
