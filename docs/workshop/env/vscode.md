@@ -15,6 +15,16 @@
 | vscode-icons                  | 讓檔案有漂亮的 icon        | [點我](vscode:extension/vscode-icons-team.vscode-icons)   |
 | indent-rainbow                | 為縮排上色                 | [點我](vscode:extension/oderwat.indent-rainbow)           |
 
+- [Vue Volar extension Pack](https://marketplace.visualstudio.com/items?itemName=MisterJ.vue-volar-extention-pack)
+	- [Vue Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+	- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) - Visual Studio Code plugin that auto completes filenames
+	- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text
+	- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - Auto rename paired HTML/XML tag
+	- [ESLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
+	- [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented) - Indented Sass syntax Highlighting, Autocomplete & Formatter
+	- [SCSS](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter) Formatter - A Visual Studio Code Extension to format SCSS
+	- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter - Code formatter using prettier
+	- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Language support for Vue 3
 
 ## 設置 settings.json
 1. `Ctrl-Shift-P` 輸入 json 搜尋，選擇 `Preference: Open User Settings (JSON)`
@@ -46,5 +56,4 @@
 點左下角 (Sign In to Sync Settings)，登入後開啟同步設置 。  
 目前接受 GitHub、Microsoft 帳號。  
 在新的電腦登入帳號後就直接可以使用環境，有點像手機 App Store 的概念.  
-詳細方法：康敏順。
 
