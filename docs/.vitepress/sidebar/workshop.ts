@@ -24,8 +24,15 @@ export default [
           { text: '側邊選單', link: '/workshop/project/layout/menus' },
           /* computed、reactivity 使用技巧 */
           { text: '選單資料', link: '/workshop/project/layout/menus-data' },
+        ],
+      },
+      {
+        text: '前端路由',
+        collapsed: true,
+        items: [
           /* 路由配置方式 */
-          { text: '路由配置', link: '/workshop/project/layout/route' },
+          { text: '路由配置', link: '/workshop/route/route' },
+          { text: '路由', link: '/workshop/route/router' },
         ],
       },
       {
@@ -47,11 +54,6 @@ export default [
           { text: '編輯資料', link: '/workshop/crud/edit' },
           { text: '新增資料', link: '/workshop/crud/add' },
         ],
-      },
-      {
-        text: '路由',
-        collapsed: true,
-        items: [{ text: '路由', link: '/workshop/route/router' }],
       },
       // {
       //   text: '個案細節',
