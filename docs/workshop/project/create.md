@@ -57,7 +57,7 @@ export default defineConfig({
 })
 ```
 
-### `src\router\index.js`   
+<!-- ### `src\router\index.js`   
 vuetify 原先使用 webpack ，webpack 依賴 node 作為運行環境，因此是從 ndoe 環境變數取得 `BASE_URL`，但 cli 從 webpack 改成 vite 之後應該改從 vite 管理的配置取得。
 應該將錯誤的寫法`process.env.BASE_URL`()，替換為`import.meta.env.BASE_URL`。
 ```js
@@ -66,7 +66,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL), // 正確的寫法
   routes,
 })
-```
+``` -->
 
 重啟專案，瀏覽器打開網址 `http://localhost:3000/app/`，應用程式已正確設置為子目錄。
 
