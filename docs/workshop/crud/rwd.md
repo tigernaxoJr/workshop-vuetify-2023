@@ -30,6 +30,13 @@
   <div :class="col">清空按鈕</div>
 </div>
 
+## 常用表格 RWD 策略
+ - 大螢幕 => 完整表格  
+ - 中螢幕 => 減少不重要欄位  
+ - 小螢幕 => 卡片清單、可展開細節
+
+<!-- 螢幕寬度 {{width}}，效果： -->
+
 <script setup> 
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue'
 
