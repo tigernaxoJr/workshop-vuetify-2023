@@ -30,6 +30,7 @@ export default [
         text: '前端路由',
         collapsed: true,
         items: [
+          { text: '前端路由', link: '/workshop/route/front-route' },
           /* 路由配置方式 */
           { text: '路由配置', link: '/workshop/route/route' },
           { text: '路由', link: '/workshop/route/router' },
@@ -40,19 +41,19 @@ export default [
         collapsed: true,
         items: [
           { text: '建立頁面', link: '/workshop/crud/create' },
+          /* 透過對頁面對APP的相依性講述觀察者模式 */
+          { text: '頁面初始化', link: '/workshop/crud/init' },
           /* 介紹 flex、GridSystem */
           { text: '網格系統', link: '/workshop/crud/grid' },
           { text: 'RWD', link: '/workshop/crud/rwd' },
           { text: '搜尋區域', link: '/workshop/crud/search' },
           { text: 'API管理', link: '/workshop/crud/api' },
-          /* 透過對頁面對APP的相依性講述觀察者模式 */
-          { text: '初始化頁面', link: '/workshop/crud/init' },
-          { text: 'Store', link: '/workshop/crud/store' },
           { text: '搜尋結果', link: '/workshop/crud/result' },
           // todo dialog
           // { text: 'Dialog', link: '/workshop/crud/dialog' },
           { text: '編輯資料', link: '/workshop/crud/edit' },
           { text: '新增資料', link: '/workshop/crud/add' },
+          { text: 'Store', link: '/workshop/crud/store' },
         ],
       },
       // {
@@ -93,7 +94,18 @@ export default [
     text: '其他',
     collapsed: true,
     items: [
-      // { text: '常用套件', link: '/workshop/other/packages' }
+      { text: 'Vue 生態圈', link: '/workshop/other/ecosystem' },
+      { text: '動態元件', link: '/workshop/other/dynamic' },
+      { text: 'Render Function', link: '/workshop/other/render' },
+      // {
+      //   text: 'Vue3 改動',
+      //   collapsed: true,
+      //   items: [
+      //     { text: 'vite', link: '/vue3/vite' },
+      //     { text: '組合式 API', link: '/vue3/composition' },
+      //   ],
+      // },
+      // { text: 'SPA/MPA', link: '/vue3/basic/other/spa-mpa' },
     ],
   },
 ];

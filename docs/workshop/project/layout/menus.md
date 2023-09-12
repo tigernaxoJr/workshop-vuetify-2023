@@ -1,6 +1,6 @@
 vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。  
 ## VLIst
-![](./vlist.png)
+![](/vlist.png)
 ```vue
 <template>
   <v-card class="mx-auto" width="300" >
@@ -52,8 +52,19 @@ vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。
   }
 </script>
 ```
-## [插槽](../../../vue3/basic/60slots)
-## [activator 插槽](https://vuetifyjs.com/en/api/v-list-group/#slots-activator)
+## 插槽
+### [插槽](../../../vue3/basic/60slots)
+假設有一輛普通的汽車內飾，它包括座椅、方向盤、控制面板等元素。更換這輛汽車的內飾讓汽車看起來與眾不同。可以解釋插槽思想：
+1. 座椅插槽：不同顏色、材質的座椅套件插入這個插槽中。例如：插入紅色皮革套件，使座椅變成紅色；插入藍色絲綢套件，使座椅變成藍色。
+2. 方向盤插槽：在方向盤插槽中插入不同樣式的方向盤套，例如：木質紋理、碳纖維材質等，以改變方向盤的外觀。
+3. 內飾顏色插槽：在內飾顏色插槽中插入不同的顏色選項，例如黑色、銀色或金色，以改變整個內飾的主要色調。
+
+### [activator 插槽](https://vuetifyjs.com/en/api/v-list-group/#slots-activator)
+activator 插槽允許你在組件中插入一個自定義元素，通常是按鈕、icon 或其他可點擊的元素，以觸發特定事件或操作(例如 VList開合、彈出 Dialog、彈出 Menu)。
+
+### 作用域插槽(scoped slot)
+![](https://vuejs.org/assets/scoped-slots.1c6d5876.svg)
+
 ## 新增 Menus
 新增 `src/components/SideMenu.js`，先不需要嘗試理解這個部分。
 ```js

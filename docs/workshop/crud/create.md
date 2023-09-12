@@ -1,5 +1,72 @@
 ## 新增查詢頁面
-- views/MainPage.vue   
-使用 `vbase` 快捷鍵新增頁面模板 
-
+1. 新增檔案 `src\views\Front\IndexPage.vue`   
+2. 使用 `vbase` 快捷鍵新增頁面模板 
+  ![](/vbase.png)
 ## 路由設置
+設置前台路由
+```js
+const routes = [
+  {
+    path: '/',
+    component: () => import('@/layouts/FrontLayout/FrontLayout.vue'),
+    children: [
+      {
+        path: '',
+        name: 'FrontIndex',
+        component: () => import('@/views/Front/IndexPage.vue'),
+      },
+    ],
+  },
+]
+```
+
+## 頁面元件
+1. 撰寫 pseudocode：
+  我習慣將頁面拆分成不同部分：
+   - IndexPage：負責排版、事件處理和維護頁面狀態。
+   - SearchSection：管理搜尋條件，傳遞搜尋事件。
+   - TableSection：接收並渲染結果清單、傳遞使用者操作事件。
+   - FormSection：填寫資料區塊，通常被包在 Dialog 裡面，可用於新增、修改單筆資料。
+  ```vue
+<template>
+  <div>
+    <!-- 搜尋區 -->
+    <SearchSection v-model="query" @query="onQuery" />
+    <!-- 搜尋結果區 -->
+    <TableSection :items="items" />
+	<!-- Dialog -->
+    <v-dialog v-model="dialog" persistent width="1024">
+      <FormSection @submit="onSubmit" />
+    </v-dialog>
+  </div>
+</template>
+
+<script setup>
+import { reactive } from 'vue'
+import SearchSection from './SearchSection.vue'
+import TableSection from './TableSection.vue'
+
+//#region 處理搜尋區的狀態、事件調度
+const query = reactive({})
+const onQuery = () => {
+  // do ajax
+}
+//#endregion
+
+//#region 處理搜尋結果區的狀態
+const items = reactive({})
+//#endregion
+
+//#region 處理表單區塊的事件
+const onSubmit = () => {
+  // todo: ajax 新增一筆資料
+  // todo: 
+  //   - option1: 將資料更新到 items
+  //   - option2: 依照設定好的條件重新查詢
+}
+//#endregion
+</script>
+
+<style lang="scss" scoped></style>
+  ```
+2. 依樣畫葫蘆新增 `SearchSection`、`TableSection`、`FormSection`。
