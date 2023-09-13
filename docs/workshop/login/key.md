@@ -18,3 +18,8 @@ P.S. 單頁應用程式 (SPA) 通常使用 Code Flow 進行身份驗證。"Code 
 ## 安全風險：
 1. 解密端點暴露：任何人取得網址列回傳的加密字串(瀏覽記錄、伺服器日誌)，都能夠透過解密端點取得機密資訊。
 2. 加密端點暴露：若加密操作缺乏任何形式的驗證機制，意味只要輸入任何使用者代號，即可向加密端點發送加密請求，並獲得相應的加密字串。
+
+## Reference
+- [RFC6749 - The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749)
+- [RFC6750 - The OAuth 2.0 Authorization Framework: Bearer Token Usage](https://datatracker.ietf.org/doc/html/rfc6750)
+- [RFC6819 - OAuth 2.0 Threat Model and Security Considerations](https://datatracker.ietf.org/doc/html/rfc6819)
