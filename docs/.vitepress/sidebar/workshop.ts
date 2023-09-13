@@ -9,12 +9,19 @@ export default [
     ],
   },
   {
-    text: '新專案',
+    text: '專案練習',
     collapsed: false,
     items: [
-      { text: '專案建立', link: '/workshop/project/create' },
-      { text: '開發設置', link: '/workshop/project/configure' },
-      { text: '資源設置', link: '/workshop/project/resource' },
+      {
+        text: '新建專案',
+        collapsed: true,
+        items: [
+          { text: '專案建立', link: '/workshop/project/create' },
+          { text: '開發設置', link: '/workshop/project/configure' },
+          { text: '資源設置', link: '/workshop/project/resource' },
+          { text: '網站主題', link: '/workshop/project/theme' },
+        ],
+      },
       {
         text: '版面配置',
         collapsed: true,
@@ -94,10 +101,16 @@ export default [
     text: '其他',
     collapsed: true,
     items: [
+      { text: '常用套件', link: '/workshop/other/packages' },
       { text: '元件註冊', link: '/workshop/other/component-register' },
       { text: 'Vue 生態圈', link: '/workshop/other/ecosystem' },
-      { text: '動態元件', link: '/workshop/other/dynamic' },
+      // { text: '動態元件', link: '/workshop/other/dynamic' },
       { text: 'Render Function', link: '/workshop/other/render' },
+      { text: '節流與防抖', link: '/workshop/other/throttle-debounce' },
+      { text: '混和式應用', link: '/workshop/other/hybrid' },
+      { text: 'JS雜事', link: '/workshop/other/javascript' },
+      { text: '設計模式', link: '/workshop/other/pattern' },
+      { text: '去耦合', link: '/workshop/other/decouple' },
       // {
       //   text: 'Vue3 改動',
       //   collapsed: true,

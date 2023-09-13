@@ -1,13 +1,22 @@
-主要是設置提供  index.html、反向代理
+重要：如果不是部屬在根目錄要先在 vite.config.js 調整好 base
+## 編譯
+```bash
+npm run build
+```
+## 伺服器設置
+編譯後丟上伺服器，伺服器需要
+1. 設置提供 index.html (設定當路由符合規則時，依序嘗試回傳設置的內容。)
+2. 反向代理(Optional) (透過 config 或手動設置)
+
 ### 提供 index.html 
-當路由符合規則時，依序嘗試回傳設置的內容。
 ### 反向代理
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Reverse_proxy_h2g2bob.svg/800px-Reverse_proxy_h2g2bob.svg.png)
-## IIS 部屬
+
+## IIS 部屬設置
 0. IIS 必須有安裝 `URL Rewrite Module`、`Application Request Routing`，反向代理好像要從 server 端手動設置？
 1. 轉為應用程式
 2. web.config 設定：
-  ```xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -26,7 +35,7 @@
     </system.webServer>
 </configuration>
 ```
-## Nginx 部屬
+## Nginx 部屬設置
 重點是 `try_files`，try_files 只能運行於 server, location
 ```nginx
 # Typically I use this file as a boilerplate to configure an nginx docker container
