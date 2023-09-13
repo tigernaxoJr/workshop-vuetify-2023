@@ -77,7 +77,7 @@ export default [
         collapsed: true,
         items: [
           { text: '身份驗證', link: '/workshop/login/key' },
-          { text: '登入登出', link: '/workshop/login/login' },
+          { text: '登入登出', link: '/workshop/login/loginlogout' },
         ],
       },
       {
@@ -94,6 +94,7 @@ export default [
     text: '其他',
     collapsed: true,
     items: [
+      { text: '元件註冊', link: '/workshop/other/component-register' },
       { text: 'Vue 生態圈', link: '/workshop/other/ecosystem' },
       { text: '動態元件', link: '/workshop/other/dynamic' },
       { text: 'Render Function', link: '/workshop/other/render' },

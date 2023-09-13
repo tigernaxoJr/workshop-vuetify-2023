@@ -8,12 +8,12 @@
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/FrontLayout/FrontLayout.vue'),
+    component: () => import('@/layouts/FrontLayout.vue'),
     children: [
       {
         path: '',
         name: 'FrontIndex',
-        component: () => import('@/views/Front/IndexPage.vue'),
+        component: () => import('@/views/FrontHome/IndexPage.vue'),
       },
     ],
   },
@@ -31,20 +31,21 @@ const routes = [
 <template>
   <div>
     <!-- 搜尋區 -->
-    <SearchSection v-model="query" @query="onQuery" />
+    <SectionSearch v-model="query" @query="onQuery" />
     <!-- 搜尋結果區 -->
-    <TableSection :items="items" />
+    <SectionTable :items="items" />
 	<!-- Dialog -->
     <v-dialog v-model="dialog" persistent width="1024">
-      <FormSection @submit="onSubmit" />
+      <SectionForm @submit="onSubmit" />
     </v-dialog>
   </div>
 </template>
 
 <script setup>
 import { reactive } from 'vue'
-import SearchSection from './SearchSection.vue'
-import TableSection from './TableSection.vue'
+import SectionSearch from './SectionSearch.vue'
+import SectionTable from './SectionTable.vue'
+import SectionForm from './SectionForm.vue'
 
 //#region 處理搜尋區的狀態、事件調度
 const query = reactive({})
