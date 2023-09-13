@@ -84,7 +84,7 @@ export default [
         text: '程式佈署',
         collapsed: true,
         items: [
-          { text: 'iis佈署', link: '/workshop/deploy/iis' },
+          { text: '手動佈署', link: '/workshop/deploy/manual' },
           { text: '自動佈署', link: '/workshop/deploy/cicd' },
         ],
       },
