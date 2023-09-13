@@ -6,7 +6,7 @@ hero:
   text: Vue3、Vite...
   tagline: A vuetify3 workshop.
   image:
-    src: /logo.png
+    src: /logo2.png
     alt: ImageNotFound
   actions:
     - theme: brand
