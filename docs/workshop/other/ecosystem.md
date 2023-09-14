@@ -1,10 +1,13 @@
 # Vue ecosystem
+## Development
+- VSCode
+- Vite
+
+## Official Tools
 - Vue Router
 - Pinia
-- Vuetify
-- Quasar
 
-# Vue3 UI Framework
+## Vue3 UI Framework
 vuetify-next 爭議  
 alternative: quasar 
 
