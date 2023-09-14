@@ -108,6 +108,7 @@ export default [
       { text: 'Render Function', link: '/workshop/other/render' },
       { text: '節流與防抖', link: '/workshop/other/throttle-debounce' },
       { text: '混和式應用', link: '/workshop/other/hybrid' },
+      { text: '函數式程式設計', link: '/workshop/other/functional-program' },
       { text: 'JS雜事', link: '/workshop/other/javascript' },
       { text: '設計模式', link: '/workshop/other/pattern' },
       { text: '去耦合', link: '/workshop/other/decouple' },
