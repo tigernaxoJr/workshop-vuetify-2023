@@ -5,41 +5,6 @@
 P.S. 觀察者模式和訂閱模式不同。
 ![](/observer.png)
 
-## 生命週期
-![](https://vuejs.org/assets/lifecycle.16e4c08e.png)
-## 生命週期鉤子
-Vue3 的生命週期鉤子（lifecycle hooks）實際上也是觀察者設計模式的一種實現。在這種模式中，一個目標對象管理所有依賴於它的觀察者對象，並在其本身的狀態改變時主動通知它們。在 Vue3 中，當組件的某個生命週期階段到達時（例如，組件被掛載到 DOM、更新或卸載等），相應的生命週期鉤子就會被調用。
-
-當我們在 Vue3 中調用 onMounted 生命週期鉤子時，Vue 會自動將我們提供給 onMounted 的回調函數與當前正在活動的組件實例進行關聯。這意味著，當組件被掛載時，我們的回調函數將被執行。
-```vue
-<script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  console.log(`the component is now mounted.`)
-})
-</script>
-```
-
-Vue3 有很多 lifecycle hook ，但最常用的是 onMounted
-::: details Lifecycle Hook
-- onMounted()
-- onUpdated()
-- onUnmounted()
-- onBeforeMount()
-- onBeforeUpdate()
-- onBeforeUnmount()
-- onErrorCaptured()
-- onRenderTracked()
-- onRenderTriggered()
-- onActivated()
-- onDeactivated()
-- onServerPrefetch()
-:::
-
-## Reference
-- [Vue.js-Lifecycle Hooks](https://vuejs.org/guide/essentials/lifecycle.html)
-
 ## 元件初始化範例
 在 vue3 的應用程式中，如何在頁面元件掛載時等待 app 初始化的非同步資訊。這種情況可能發生在以下場景：我們的 app 需要在初始化時進行一些非同步的操作，例如取得驗證後，獲得的使用者 id 及名稱。然而，我們的頁面元件可能會用到這些資訊，例如取得這個使用者與該頁面相關的資料。如果我們直接在頁面元件的 created 或 mounted 鉤子中執行這些操作，可能會發生錯誤，因為 app 還沒有獲得這些資訊。因此，我們需要一種機制來保證頁面元件掛載時 app 已經初始化完畢，或者至少能夠在 app 初始化完畢後執行頁面元件的初始化操作。這就是觀察者模式可以幫助我們解決的問題。  
 範例：

@@ -110,7 +110,9 @@ export default [
       { text: '混和式應用', link: '/workshop/other/hybrid' },
       { text: '函數式程式設計', link: '/workshop/other/functional-program' },
       { text: 'JS雜事', link: '/workshop/other/javascript' },
-      { text: '元件去耦合', link: '/workshop/other/decouple' },
+      { text: '耦合性原則', link: '/workshop/other/decouple' },
+      { text: '內聚性原則', link: '/workshop/other/cohesion' },
+      { text: 'SOLID原則', link: '/workshop/other/solid' },
       // {
       //   text: 'Vue3 改動',
       //   collapsed: true,

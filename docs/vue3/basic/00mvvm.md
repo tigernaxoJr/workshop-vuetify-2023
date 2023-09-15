@@ -79,6 +79,9 @@ Vue 底層是 proxy，寫程式時可以調用 vue 裡面的 ref、reactive。
 ![](https://book.vue.tw/assets/img/1-1-mvvm.febdf1bd.png)
 
 
+### 元件結構
+![](https://v2.vuejs.org/images/components.png)
+
 ## Reference
 
 - [Vue.js-State Management](https://vuejs.org/guide/scaling-up/state-management.html)
