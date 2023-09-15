@@ -21,32 +21,29 @@ Flux 明確定義不同角色的職責和互動方式，幫助開發者更清晰
 - ##### View(視圖)
   根據資料渲染使用者界面，同時它也監聽事件並將事件映射到適當的 Actions。當使用者與 View 互動時，View 會生成對應的 Action 來觸發相應的變更。
 
-## Props 依賴變數
-### 有修改需求：以 props 初始化
-在 setup 裡面直接取用一次
+## 不修改 Props 
+### 以 props 初始化後，在元件內部修改
+在 setup 裡面直接取用一次，賦予 reactivity。
 ```js
 const props = defineProps(['initialCounter'])
 const counter = ref(props.initialCounter)
 
 ```
-### 沒有修改需求：使用 props 計算結果
+### 使用 props 計算結果，可跟蹤 props 變動
 使用 computed
 ```js
 const props = defineProps(['size'])
 const normalizedSize = computed(() => props.size.trim().toLowerCase())
 ```
 
-## v-model 語法糖
-使用事件觸發上游資料變更，不違反單向資料流實作 two-way binding 語法糖
+## 修改 Props 
+為了不違反單向資料流，子元件不可直接修改父元件屬性，傳入屬性的父元件必須要監聽子元件事件以修改屬性：
 :::code-group
-```html [元件]
+```html [一般元件]
 <CustomInput
   :modelValue="searchText"
   @update:modelValue="newValue => searchText = newValue"
 />
-```
-```html [v-model]
-<input v-model="searchText" />
 ```
 ```html [input]
 <!--input 在 vue 當中的地位比較特殊-->
@@ -56,6 +53,11 @@ const normalizedSize = computed(() => props.size.trim().toLowerCase())
 />
 ```
 :::
+### v-model 語法糖
+一樣使用事件觸發上游資料變更，不違反單向資料流實作 two-way binding 語法糖
+```html [v-model]
+<input v-model="searchText" />
+```
 
 這時候子元件長這樣，使用 getter, setter 讓 value 看起來可以像是直接修改(實際上遵循單向資料流)：
 ```html 
