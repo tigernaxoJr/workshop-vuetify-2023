@@ -60,25 +60,21 @@ const normalizedSize = computed(() => props.size.trim().toLowerCase())
 這時候子元件長這樣，使用 getter, setter 讓 value 看起來可以像是直接修改(實際上遵循單向資料流)：
 ```html 
 <!-- CustomInput.vue -->
+<template>
+  <input v-model="model" />
+</template>
+
 <script setup>
 import { computed } from 'vue'
 
 const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
 
-const value = computed({
-  get() {
-    return props.modelValue
-  },
-  set(value) {
-    emit('update:modelValue', value)
-  }
-})
+const model = computed({
+  () => props.modelValue,
+  (v) => emit('update:modelValue', v)
+});
 </script>
-
-<template>
-  <input v-model="value" />
-</template>
 ```
 ## 綁定多個 v-model 
 父元件：
@@ -90,27 +86,33 @@ const value = computed({
 ```
 子元件：
 ```html
-<script setup>
-defineProps({
-  firstName: String,
-  lastName: String
-})
-
-defineEmits(['update:firstName', 'update:lastName'])
-</script>
-
 <template>
   <input
     type="text"
     :value="firstName"
     @input="$emit('update:firstName', $event.target.value)"
   />
-  <input
-    type="text"
-    :value="lastName"
-    @input="$emit('update:lastName', $event.target.value)"
-  />
+  <input type="text" v-model="firstName" />
 </template>
+
+<script setup>
+import { computed } from 'vue'
+const props = defineProps({
+  firstName: String,
+  lastName: String
+});
+
+const emit = defineEmits(['update:firstName', 'update:lastName']);
+
+const firstName = computed({
+  () => props.firstName,
+  (e) => emit('update:firstName', e.target.value)
+});
+const lastName = computed({
+  () => props.lastName,
+  (e) => emit('update:lastName', e.target.value)
+});
+</script>
 ```
 ## v-model modifiers
 ## Reference
