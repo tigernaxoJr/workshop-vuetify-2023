@@ -11,7 +11,6 @@ export default defineConfig({
   cleanUrls: false,
   themeConfig: {
     nav: [
-      { text: 'Vue3', link: '/vue3/vue3' },
       { text: '工作坊', link: '/workshop/workshop' },
       // { text: '其他', link: '/other/other' },
       // { text: 'Reference', link: '/reference/component' },

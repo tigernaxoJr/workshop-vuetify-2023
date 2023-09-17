@@ -1,5 +1,21 @@
 export default [
   {
+    text: 'Vue 基礎',
+    collapsed: true,
+    items: [
+      { text: 'MVVM 架構', link: '/workshop/vue3/mvvm' },
+      { text: '元件生命週期', link: '/workshop/vue3/lifecycle' },
+      { text: '單一元件檔', link: '/workshop/vue3/sfc' },
+      // todo: component reference
+      { text: '元件屬性綁定', link: '/workshop/vue3/attrs' },
+      { text: '元件Props', link: '/workshop/vue3/props' },
+      { text: '單向資料流', link: '/workshop/vue3/data-flow' },
+      { text: 'Pinia', link: '/workshop/vue3/pinia' },
+      { text: 'Provide/Inject', link: '/workshop/vue3/provide' },
+      { text: '元件插槽', link: '/workshop/vue3/slots' },
+    ],
+  },
+  {
     text: '開發環境',
     collapsed: false,
     items: [
