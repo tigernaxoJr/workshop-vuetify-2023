@@ -70,6 +70,47 @@ const obj = { id: 'container', class: 'wrapper' }
  ```vue
  <p v-if="seen">Now you see me</p>
  ```
+## Props
+在父元件綁定屬性給子元件後，子元件內還需要宣告 Props，才能取用綁定的屬性。
+### defineProps
+使用 `defineProps()` 宣告 Props，定義 props 的名稱、型別，撰寫型別是讓程式易懂，也可以讓組件使用者知道傳遞的型別是否正確。
+::: code-group
+```html [JS]
+<script setup>
+const props = defineProps({
+  title: String,
+  greetingMessage: String,
+  likes: Number,
+  abc: {
+	type: String,
+	required: true,
+	default: '123', // 可以是表達式
+	// 可以自訂驗證
+	validator:() => ['success', 'warning', 'danger'].includes(value)
+  }
+})
+</script>
+```
+
+```html [Typescript]
+<script setup lang="ts">
+const props = defineProps<{
+  title?: string
+  greetingMessage?: String,
+  likes?: number,
+  abc: {
+	type: String,
+	required: true,
+	default: '123', // 可以是表達式
+	// 可以自訂驗證
+	validator:() => ['success', 'warning', 'danger'].includes(value)
+  }
+}>()
+</script>
+```
+:::
+
+
 ## 
 ![](https://vuejs.org/assets/directive.69c37117.png)
 [事件修飾符](https://vuejs.org/guide/essentials/event-handling.html#event-modifiers)
@@ -82,8 +123,7 @@ const obj = { id: 'container', class: 'wrapper' }
 <!-- Alt + Enter -->
 <input @keyup.alt.enter="clear" />
 ```
-
-
 ## Reference
 - [Vue.js-Template Syntax](https://vuejs.org/guide/essentials/template-syntax.html)
 - [MDN-Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+- [Vue.js-Props](https://vuejs.org/guide/components/props.html#props-declaration)

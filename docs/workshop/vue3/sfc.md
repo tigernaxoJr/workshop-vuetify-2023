@@ -70,9 +70,8 @@ Mustache 裡面可以是、Expression（表達式、求值式）；不可以是 
 
 
 ## 腳本
-
 Vue 組件的 Javascript 部分  
-使用 `<script setup>`讓宣告的變數作為成員，自動 return 給 template 取用。
+- 在 `<script setup>` 中，頂層導入或聲明的變數和函數，可以自動在同一組件的模板中使用。
 
 ```html
 <script setup>

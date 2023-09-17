@@ -6,9 +6,9 @@ export default [
       { text: 'MVVM 架構', link: '/workshop/vue3/mvvm' },
       { text: '元件生命週期', link: '/workshop/vue3/lifecycle' },
       { text: '單一元件檔', link: '/workshop/vue3/sfc' },
+      { text: '響應式狀態', link: '/workshop/vue3/reactivity' },
       // todo: component reference
       { text: '元件屬性綁定', link: '/workshop/vue3/attrs' },
-      { text: '元件Props', link: '/workshop/vue3/props' },
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
       { text: 'Pinia', link: '/workshop/vue3/pinia' },
       { text: 'Provide/Inject', link: '/workshop/vue3/provide' },
