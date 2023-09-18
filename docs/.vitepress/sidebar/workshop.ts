@@ -9,6 +9,7 @@ export default [
       { text: '響應式狀態', link: '/workshop/vue3/reactivity' },
       // todo: component reference
       { text: '元件屬性綁定', link: '/workshop/vue3/attrs' },
+      { text: '指示詞', link: '/workshop/vue3/directive' },
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
       { text: 'Pinia', link: '/workshop/vue3/pinia' },
       { text: 'Provide/Inject', link: '/workshop/vue3/provide' },
