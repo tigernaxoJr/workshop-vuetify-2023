@@ -60,6 +60,8 @@ state.value = { count: 2 } // 有反應
   console.log(state.count) // 0
 </script>
 ```
+
+### [試試看](https://play.vuejs.org/#eNqNUU1P3DAQ/SsjXwDBxkj0tF3QthWH9tBWbY+5BGdYDP6SPVlWivLfO3YghOVD3Ox5b+a9edOLLyFU2w7FUqwIbTAN4UXtAFZXHZF3sFZGq7vzWiRiqFK+c3R8XItCAuh7mAEwDKVXjs3MWcnZVP4mFXUgSEhdKCO0DT4S9BCxUaS3CANcR2/hgF0dfM4U5V3iliwD5xPvsGeANZdwCsPRRPQGK+M3hzNXRyAlnGYvo/qFOBGj7MI2obpN3vH6fZ5QPwCpFksolVxjJ/lfixuikJZSqtZxW4tGb2PlkKQLVq6ZJiPraYuL1tv1WXVWfZKtTjQvV5js4ir6+4SRh9TiZCYjubjFuIjoWowYPyq71zaX3oNeyGd1vtrAoVDiBK/1Zi8S5W3QBuOvQJoTfhZNY4y//1FqFDucdlE3qO5eqd+m3bjT74jF2Wx/auIGaYQv//7EHb8n0Pq2Mw9neAP8g3z9LnscaV8717LtGa+4/V4urN3mX7rcEbr0uFQ2WtIo/HKPb++s/mSX055SHP4D1Xge7g==)
 ### shallowReactive()
 同 shallwRef()
 
@@ -79,9 +81,11 @@ let { count } = state
 // 不會影響到 state.count
 count++
 ```
-
+### [試看看](https://play.vuejs.org/#eNqNUsFu00AQ/ZWRL23VxqYqp5BUhaoHOAACjr649jTd1N61dtdpUBQJCSSEaFFB4gKRQLSip0qUXhBQ8TO1W/6CsdcJTkiBk70z7+2892Z71vU4tjsJWnWroTGKQ0/jsssBGuuJ1oLDih8yf6vpWkKyFuO2LxKu5+ddaxl6PVCa8KYG/T40HMOafgPjHS9kwWp+zPnV8z+o48TptIZTMUBH5UsWa1Cok5gqLIqF1NADiZ6vWQehDxtSRDBD9meu5RTHAex6dAfWjbMFMK4h23ma7r08+7Kb7u2cv3kyvIPphxB42iuo6dv32dFByRjmBOmn3bGUss+vssGz9PT457sfLg+RBOZdaI50zfaggNbhCvTnSFgOKnU0Ddrll5MWDckXXIkQ7VC0ZgvwHJDGKqp0nAus2BHrbfQ1XBzuZ4fPL04+po++Z4PH6cFx+uJbBWcG6PEdNmF2Dpr0MPId5qrLcZT0SDiUpWb5nYdFl5MWUpId7Z9/+Erxnp0OspPXwxFTBlQCpadImze7XrYWLLPmWuTFdlsJTu+6UEOvr2go16obfXmNNp+fXWtT61jVHccPONECDFlH2hy1w+PIWSGYI2kWi7AWiGhlyV6yrzoBU7patlFFtXUpthVKusS1FipjHCp2UNYk8gAlyv8dO0Grjp5o/TE+n07B9ikUrSjKDdaaiMQXUcxClHdizSjqsWi8MBTbt4qalgmOvPib6G9NqbdV13i6K7FQVvGvPdlCbdpr929jl/5HzUgESViu4ZLmPaSnnOQaDexGwgOSXcEVam8WG2a89UCtdTVyNTSVCy3SKPDFPlb/Yv23XEp7lGL/F5BV33c=)
 ## nextTick()
 Vue 會收集 reactive state 的變更，然後一次性重新渲染 DOM，因此，當 reactive state 改變後，如果需要從 DOM 中獲取已更改的值，必須使用 `nextTick()`。`nextTick()` 返回一個 Promise，因此可以使用 `await` 進行等待。
+
+### [試試看](https://play.vuejs.org/#eNqNU8tu00AU/ZWRhdRETWyksgpJFKi6gAUgqFh5UWd8k047nhnNXCdBlndsWPAD8A/8FepvcGfGSU14tLu5577OucdukhfGpJsakkkyRaiMLBDmuWJsuqwRtWIWVrM8WaLKE7bgUvBbChEc5smcNQ1zSB0p17VC1rZsmsU+mjHNegMpdNwKg8wB1oYQURltkTVMwQ4vae6IdhUcxQb8a8VatrK6YifE7uS5n8C1csiICpv5goGqpRzmSgIN9SwCHCcMGhYoTdhT1g6pO/Z63lRVuE+Ks8GQzUiCF9sTcXrqgVjeDSEms1hynyp19bGQhBOddFPIGlIkHedaISj0dcW2EHgQNyCivd43BD/UL8Hi4Oru+4+fX77effu8F/SkCY92tOfgofiMWDe7g7uovSICrTcl2jBPRkl0YFwVJr1xWtEnEI6RdwmXJ5N4Ho+RCz7Ok2tE4yZZxktFbSVIsbGpAsyUqbIFlWWW6IkKxrR9cZaepc+yUjjswym4ary0euvA0pA8GfXWZARuwI4tqBIs2MeuPWrrrz5K/bHeb6fjtHQUdGTSSqyPTsJ1ZQQ58tagIBN/O00hpd6+DhjaGg5a+DXw27/gN24XNb2zEJj19GNh10D/lk9ffPDm9ZKVLmvZ2fCP5HtwWtaeYyx7WauSaPfqAttXwWGh1pfuYkdfnNuL8kTDNUJ98OP8P9Lv6dK1D1dsfwG98X8V)
 
 ## Reference
 - [Vue.js-Reactivity Fundamentals](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)
