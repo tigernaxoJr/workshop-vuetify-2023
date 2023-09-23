@@ -66,6 +66,8 @@ const cnt2 = ref(0)
 | View（視圖）         | 顯示給用戶看的畫面。                                                                                                                                        |
 | Controller（控制器） | 處理用戶的輸入和協調Model和View之間的交互： <br> - 監聽用戶輸入事件（例如按鈕點擊）<br> - 根據用戶輸入更新Model的狀態<br> - 控制View的呈現以反映Model的變化 |
 
+[看程式](https://playcode.io/1605091)
+
 ### MVVM (Model-View-ViewModel)
 MVVM 框架下開發者無需手動處理數據更新。而MVC通常需要手動控制視圖和控制器之間的數據傳遞。
 在 MVVM 架構中，Model 需要具備反應性(Reactivity)，才能讓 ViewModel 自動更新視圖。
@@ -78,6 +80,7 @@ Vue 底層是 proxy，寫程式時可以調用 vue 裡面的 ref、reactive。
 
 ![](https://book.vue.tw/assets/img/1-1-mvvm.febdf1bd.png)
 
+[看程式](https://playcode.io/1605065)
 
 ### 元件結構
 ![](https://v2.vuejs.org/images/components.png)
