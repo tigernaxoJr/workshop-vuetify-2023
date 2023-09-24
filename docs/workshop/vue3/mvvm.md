@@ -1,5 +1,5 @@
 # Vue3 基礎
-## 指令式渲染 vs 宣告式渲染 
+<!-- ## 指令式渲染 vs 宣告式渲染 
 宣告式渲染和指令式渲染是在前端開發中，針對使用者界面(UI)的創建和更新常用的兩種不同的渲染方式。
 
 |          | 指令式                                       | 宣告式                         |
@@ -55,11 +55,22 @@ const cnt1 = ref(0)
 const cnt2 = ref(0)
 </script>
 ```
-:::
+::: -->
+
+## 宣告式渲染 VS 指令式渲染
+### 宣告式渲染（Declarative Rendering）：
+- 說明：以描述性的方式定義了所需的結果，而不需要詳細的操作步驟。  
+- 代表：是React、Vue.js等前端框架，以及HTML和CSS的使用方式。  
+- 例如：使用Vue.js的模板語法來描述UI，Vue.js負責處理DOM更新。
+
+### 指令式渲染（Imperative Rendering）：
+- 說明：需要明確的指令和操作來達到所需的結果。  
+- 代表：傳統的JavaScript DOM操作。  
+- 例如：使用 getElementById、appendChild、setAttribute 等方法直接操控DOM元素。
 
 ## MVC vs MVVM 
-
 ### MVC（Model-View-Controller）
+屬於指令式渲染，需要手動控制視圖和控制器之間的數據傳遞。
 | Term                 | 說明                                                                                                                                                        |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Model（模型）        | 儲存在應用程式中的狀態(State)或數據。                                                                                                                       |
@@ -69,7 +80,7 @@ const cnt2 = ref(0)
 [看程式](https://playcode.io/1605091)
 
 ### MVVM (Model-View-ViewModel)
-MVVM 框架下開發者無需手動處理數據更新。而MVC通常需要手動控制視圖和控制器之間的數據傳遞。
+屬於宣告式渲染（Declarative Rendering），開發者無需手動處理數據更新。
 在 MVVM 架構中，Model 需要具備反應性(Reactivity)，才能讓 ViewModel 自動更新視圖。
 Vue 底層是 proxy，寫程式時可以調用 vue 裡面的 ref、reactive。
 | Term                 | 說明                                                                                                                             |

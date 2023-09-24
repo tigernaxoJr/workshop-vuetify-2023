@@ -4,8 +4,8 @@ export default [
     collapsed: true,
     items: [
       { text: 'MVVM 架構', link: '/workshop/vue3/mvvm' },
-      { text: '元件生命週期', link: '/workshop/vue3/lifecycle' },
       { text: '單一元件檔', link: '/workshop/vue3/sfc' },
+      { text: '元件生命週期', link: '/workshop/vue3/lifecycle' },
       { text: '響應式狀態', link: '/workshop/vue3/reactivity' },
       // todo: component reference
       { text: '元件屬性綁定', link: '/workshop/vue3/attrs' },

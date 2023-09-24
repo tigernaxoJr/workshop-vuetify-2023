@@ -1,4 +1,66 @@
 # 響應式狀態
+## 以觀察者模式理解
+透過不到短短50行的程式碼[模擬](https://playcode.io/1605775)模擬簡單的 MVVM（Model-View-ViewModel）架構 ref，幫助我們理解：
+```js:line-numbers
+// vue 透過類似機制宣告為響應式狀態
+class Ref {
+  constructor(value) {
+    Ref.target = null;
+    this.dep = []; // 存儲所有觀察者的清單
+
+    let _value = value;
+    // 新增觀察者
+    const track = () => Ref.target && this.dep.push(Ref.target); 
+    // 通知所有觀察者更新
+    const trigger = () => this.dep.forEach(dep => dep.update()); 
+    // 回傳響應式狀態
+    return Object.defineProperty({}, 'value', {
+      get() {
+        track();
+        return _value;
+      },
+      set(newValue) {
+        _value = newValue;
+        trigger();
+      },
+    });
+  }
+}
+
+const ref = value => new Ref(value);
+
+// 觀察者，模板綁定響應式資料透過類似的機制獲得更新
+class Watcher {
+  constructor(template, item = {}) {
+    this.template = template;
+    this.ref = {};
+    Object.keys(item).forEach(ref => {
+      Ref.target = this;
+      const _ = item[ref].value; // 將自己添加到觀察者清單
+      this.ref[ref] = item[ref];
+      Ref.target = null;
+    });
+  }
+  update() {
+    // 替換模板中的變數
+    const el = this.template.replace(
+      /\{\{\s*([a-zA-Z]+)\s*\}\}/g, 
+      (match, key) => this.ref[key]?.value || match
+    );
+    console.log(el);
+  }
+}
+```
+測試看看：
+```js
+// vue 透過類似機制宣告為響應式狀態
+let count = ref(0);
+let message = ref('message');
+// 模板綁定響應式資料透過類似的機制獲得更新
+const template = '<div>{{count}} ({{message}})</div>';
+new Watcher(template, { count, message });
+```
+
 ## ref()
 - ref 依賴跟蹤原理基於 getter、setter，所以取用時最後會加上一個 value：
   ```js
@@ -6,12 +68,12 @@
   const myRef = {
     _value: 0,
     get value() {
-      track()
+      track() // track: 加入觀察者
       return this._value
     },
     set value(newValue) {
       this._value = newValue
-      trigger()
+      trigger() // trigger: 通知觀察者
     }
   }
   ```
