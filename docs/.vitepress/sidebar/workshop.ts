@@ -87,23 +87,8 @@ export default [
       //     // { text: 'API管理', link: '/workshop/crud/api' },
       //   ],
       // },
-      {
-        text: '內嵌網頁',
-        collapsed: true,
-        items: [
-          { text: '使用iframe', link: '/workshop/project/iframe/iframe' },
-          { text: 'key傳遞', link: '/workshop/project/iframe/key' },
-          { text: '尺寸同步', link: '/workshop/project/iframe/size' },
-        ],
-      },
-      {
-        text: '登入',
-        collapsed: true,
-        items: [
-          { text: '身份驗證', link: '/workshop/project/login/key' },
-          { text: '登入登出', link: '/workshop/project/login/loginlogout' },
-        ],
-      },
+      { text: '內嵌網頁', link: '/workshop/project/iframe' },
+      { text: '身份驗證', link: '/workshop/project/auth' },
       {
         text: '程式佈署',
         collapsed: true,

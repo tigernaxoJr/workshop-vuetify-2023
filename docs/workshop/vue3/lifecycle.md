@@ -1,5 +1,6 @@
 # Vue 元件生命週期
 ## 生命週期
+每個 Vue 組件實例在創建時都會經歷一系列初始化步驟，例如`設置數據觀察`、`編譯模板`、`將實例掛載到 DOM `並在數據更改時`更新 DOM`。在這個過程中，它還會運行稱為生命週期鉤子的函數，使用戶能夠在特定階段添加自己的代碼。
 參考圖，實際上最常用到的是 onMounted、onUnMounted：
 ![](https://vuejs.org/assets/lifecycle.16e4c08e.png)
 ## 生命週期鉤子
@@ -11,12 +12,13 @@ Vue3 的生命週期鉤子（lifecycle hooks）實際上也是觀察者設計模
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  console.log(`the component is now mounted.`)
-})
+  console.log(`元件已掛載`)
+});
 </script>
 ```
+[試試看](https://play.vuejs.org/#eNqNUslu2zAQ/RWCFzmALR7SkyEbaYscWqAL2h55iCKNbabcQA5lA4b/vSPKURVnQQQIImd7y+jIP3pfdgn4klcIxusaYS0to6dqVccCbFaS00nydSXoS8lKTCrpGpugPLIImDxFlPEuIDv2vXPm7DeXLELLTmwTnGEFoRXSNs5GZD3Eqi+c2aT11RB2GkrttrPiHjYuADsPmOfqZZG/ZVfrBNQwzp/NrthqzY4D+emcO9wBBYiWBYtMRWbdnpmhrbyjIZcdxTj1ZdATvZUYdK/5nA+SF6b25UN0lszMNOQ5ESVfPhKTnPT3d8l3iD4uhWhaS20taNWF0gIK6424oTIRiIMysGidubkur8sPtIGI03AJ0Szug9tHCDRE8vkERlCwg7AIYFsIEN4Le9E2hb5IPYPv0U9kEJmCkSzdqO2FJf0ilIbww6Miy59YU2vt9l9zDEOCUUuzg+bvC/GHeBg0/QyQmU30Yx22gEP69vd3ONB5TBrXJn1ewyvJX0C/Q+o5DmWfkm2J9qQus/2SN6zs9k+8PSDY+CiqJ5rdyPV5H5/fkP6fLrk9unj6B2QDOdE=)
 
-Vue3 有很多 lifecycle hook ，但最常用的是 onMounted
+Vue3 有很多 lifecycle hook ，但最常用的是 onMounted、onUnmounted
 ::: details Lifecycle Hook
 - onMounted()
 - onUpdated()
