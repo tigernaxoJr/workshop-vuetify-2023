@@ -32,6 +32,7 @@ layout: page
   </button>
 </template>
 ```
+[試試看](https://play.vuejs.org/#eNqNU01P1EAY/iulFy60c8DTuiGIwUQPatRjL6Wd3S22M5OZ6bKGbGLADUgwIgc1ZEM08YMLIB5IBPw3tOue/Au+M112p/Uj3mae932f9/NZtW8w5rZTbNfs+pTjWMznmEgroAmjRL0cZ84jdYkTFvsSw9uy6rd8EjxZSKWkRAMAqdh8ayt/vZEdvrn83h+snVkipoqJSMWTv9zNeh8tI7SgVtHD8/1889WU5kZl8joyUsNXBDxi0hJYpgyQCMrkssTa4DSxpl2TRzU4fV2RFeFz9oxdRDqJz9xlQQn0v6ryeyOD8OyapRGFQbz6e3ZLSiZqCAUhgbAQx1GbuwRLRFiC5sEN8ZTIKMFOSJP5WXfWvYbCSEgTdrFInCVOVwTmQOLZM0YaBGAbcwe2EGKO+f+mrYSZqSum39Kr7F2PdGEoUsC6GlGzMhJ1DVGM+T0mI0rKo/HjmK7c0ZjkKR73ErRw8PgP+LLoFD3d51hXZvQvfd7EsjAvPryLO/AeGxMapvFoDX8xPsCCxqmqsXBbSEkIZRt+utrbesMRaT4Six04TnHVlCpUT0P7633c/Efrk3Jh2sYUK5cHc/Q4HJ+SSNCK4rCiLmWbHDn8tKCWRgoY/Sci+7qb95/n2xvZ0V6282JwcJJ9OcnfHlshbvhpDNJQqhvxjiMVWELGfNmntXy/P9g8zXrrl+enJn1BNdh7lvU+Z0fffl5s5/314fvjwYez4budHweH2dOLaiYt5ytjqQRUqqGOjAYNkdvdX+G2qes=)
 
 ## 存取範圍
 
@@ -77,6 +78,8 @@ Expressions 存取範圍：
 </BaseLayout>
 ```
 
+[試試看](https://play.vuejs.org/#eNqNVM1OFEEQfpV2PHBhZmLwtI4bwJCoMWrU416amdqdxpnuSXfPgiEc/CFRognxSDARMZGL+HMwgfeZXXgLq3sGtndZ0Ft3/Xz19ddVte4tFEXQL8FredE13ycFlcA1iUVeCG5Ovt/u8EhDXmRUA54JiRapggf0hSi1vaPFpPZ9lQndSoEmIMlga6va/FYdHg3/vKwOd6q3P6vtD8ODX8NXx6QJGe68ISalrmFxzuqMgzVe9Kc32ndBAslZL9VkGQhFxj0gmukMohDdDVDoMHY4Dn5/HOy+q95vnuwfYfma4enn7ZOD74Pd16d7P4Zfj6vdA5JAl5aZrumd7O+dfvrisCzaC0Yo2pO0SElXSKJT5EQZR+G4RtmCKCycaJ4QygUGSYKqNk6H1vWuEPofojUhV4nWwIzkKqxaM4ookYPlRmNNGO8Kh58rlbmO/e6EkJGKJStQF9ClAWDYJlKTUQrpSpGTmcBBMe01c8tA1cltb9ar8/ycFsGKEhy7b90U7zQO1fFaxFqMDfPNveOlWheqFYZxwjEtgYz1ZcBBh7zIw3kMC2XJNcvBT0Q+PxfMBTfDhCntmgNQub8sxaoCiSAdb9YpE6KxD9LHGcC2A/m/ZSfS3NITrgvlTfWNDt9AUbTCH+qy3oQkZhZZBvJRoZng49LQLBOr961NyxLO3xKnED+fYl9Ra/WbHkuwzJz3ayp7oGv30tOHsIbnc2cukjJrvuES5xNQIisNxzpsseQJ0nbiLNt79ocZ7z1TS2s4K+rsUYaoVcPG2/+4c8XTR3RRbUfF8cZDGTsSe89MWZyyLJlYbcY36nC82ZFIWJ/EGVXqtpEfp4Zx85DzgHoXNbvJsVm7nU5Oc8DkOgYzsfnRPA4QTkGIzBaZjjkd40J8dLYEruJVx1zGawIhwk7u11KNtoG38RdLcCpa)
+
 ## 動態插槽名稱
 
 可以用程式動態指定內容要插在哪個 slot：
@@ -89,6 +92,7 @@ Expressions 存取範圍：
   <template #[dynamicSlotName]> ... </template>
 </base-layout>
 ```
+[試試看](https://play.vuejs.org/#eNqNVM9P1EAU/lfGJmYh0FaCJywbxHDQGDTijXIo7dvdQjvTzEwXyGYTokEwHEg0miiEoyQeCFxMJPLf2I3+F76Z2R/dZSGeOvPeN9/73teZ17IeZ5nTzMGas7x7tk2ygAOVJGRpxqha2XbVp56ENEsCCbgmxFsMBDwPdlgu9R4jvTxp2iJhcm412qFBGocruFkOUljrAhGaVf/ufil2D4u9s+L8Z3H4qbN32Lm8Ks6/dk7eFufvO0cfOp9/FR+/I0atz649N+vVcYeFuCNKvPVcSkbJQpjE4ea8b4WNgNbBt6rFwX7n6LjVarc914BUW2U63IqQx5kkAmSuKsboAZekRTjUprUluYSItEmNs5RU0LVKHzQQ0s06JW3K4MojVSJkVEgyYg6Z75NPTEyS+SpRHorVmEaw7TSDJIe1yd5ZncITq5UGBBHwyjSpRFAL8kSqZY0xicG1HlxzIBxbmJhBEtclkkXMxKemyO/rd8W3N53Tkz8/9or9K0PvJEDrskGKi8vi+LQ4uCAPenzGUCQ0QidKGlWwvJ0iM5Pk/hAjCvBc43LVmraMd3YaZM6GYBTvYEv9Rb+bEL41R3RExdBDtfethpSZmHPdMKJ4LIIkbnKHgnRplroLCHN5TmWcgh2xdGHWmXUeulEsZDnsgEjtdc62BHAk8a3pUhkXg03gNr4ENBj4/5YdOVYuPZK6UV5Vb/u0jaZIgU7X4vqIJeqGxAnwF5mM8U8MWRMkCdt6pmOS59DvJWxAuDkmviG2TU8vOWhlpf5lwOsgTXppZRm2cd1PpizKk+5vuCX5CgRLcqXRwBZzGqHsEk6rfar/cEzrr8XStgQqek0podoNjdf/48kdrQ/kotslF4cfH9roc7x7asKFjTiJRgacyg1GAe70sIniJgmTQAg1SBiVQUxVI32ABplXOBTTcXXtCT5zwMMGgyeJWek3gdNLfYbZ3DF0XoqFxxeodl++JhzLd+OsZybE3YINBgWbxe30I2Qe3vamsXMwWq32P72wOS8=)
 
 ## 作用域插槽(scoped slot)
 
@@ -105,23 +109,24 @@ Expressions 存取範圍：
 ```html
 <!-- parent -->
 <!-- child 綁定的所有屬性會變成一個物件，這裡把它命名 slotProps -->
-<MyComponent v-slot="slotProps">
+<template v-slot="slotProps">
   <!-- 這時候可以透過 slotProps 拿到子元件綁定的屬性 -->
   {{ slotProps.text }} {{ slotProps.count }}
-</MyComponent>
+</template>
 ```
 
 通常搭配解構賦值使用。
 
 ```html
-<!-- child -->
+<!-- parent -->
 <!-- 父元件只需要少數特定的屬性時，可透過解構賦值直接拿到特定屬性 -->
-<MyComponent v-slot="{ text, count }">
+<template v-slot="{ text, count }">
   <!-- 使用時不需每次都透過最上層 slotProps -->
   {{ text }} {{ count }}
-</MyComponent>
+</template>
 ```
 
+[試試看](https://play.vuejs.org/#eNqNU8tu00AU/ZVhNt3EtlBZhVKVVhUCIaiApTfGvk1c7JnRzHUaFEVKeUhISJRtumJTseG56aaq+Jk4Vf6CO2M3ccJD3c09933mngG/q5TfK4C3+cYNz2Mq0iCQxTJXUtiX522GYgMhV1mEQG/GNrYjAw+jl7JAZxNy5Wc9z2QS74R8gNDHFhUqBA5DXgdSqO0yG42n41flaFwef5+cn85Gx7OjD8xm7mmpDJu+/1W++1F+/Vi+fT05P7s8Oyq/nVyevCl/fpmOPlczVeXuaQBMRafNBgNmW7LhsMV2bFcHuf6E1XMGy4sES5sseck0sU4VMgNYKEJSokQjW6SwfS1ztuY3qlgq127bUlXyJm/xKs/LI+UfGCmI6YFtHtYOE3KatJov5JRv7ZB3EZVpB0GcCEpLIEt72heAgVB5sEVhgabN0hy8ROZb6/66fytIUoNN2AeTe8+1PDSgqUjIW402AYE90B79dwIa9HXbrqQ1W6+4/mhvu9NPDIkUNLEU+2lnhRJ7d2kG+rHCVIplaqIsk4cPHIa6gPkucRfiF3/BD0y/2mlPg5ussT9GugNYuXefPqK7aThzmRRZ/Q3/cD4BI7PCzliFbRciobEbcW7a++6H6Tyfmd0+gjBXS9lBHRsu3v3Hzn9WX4xLbDdYXD48ojHUdHtWYXE3zZIVGVvf4sLJmuuxiq5jHJqkvbnhACtOJzDS9uTiU3l6EXLWdvIi5CYpnG6eYhYl6CaqGk1dWbOWxkIjw9/w5ZYp)
 ## Reference
 
 - [Vue.js-Slots](https://vuejs.org/guide/components/slots.html)
