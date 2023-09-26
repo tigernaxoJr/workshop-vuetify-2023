@@ -69,11 +69,10 @@ const ref = value => new Ref(value);
 class Watcher {
   constructor(template, item = {}) {
     this.template = template;
-    this.ref = {};
+    this.ref = item;
     Object.keys(item).forEach(ref => {
       Ref.target = this;
       const _ = item[ref].value; // 將自己添加到觀察者清單
-      this.ref[ref] = item[ref];
       Ref.target = null;
     });
   }
