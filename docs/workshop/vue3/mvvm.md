@@ -57,18 +57,21 @@ const cnt2 = ref(0)
 ```
 ::: -->
 
-## 宣告式渲染 VS 指令式渲染
-### 宣告式渲染（Declarative Rendering）：
-- 說明：以描述性的方式定義了所需的結果，而不需要詳細的操作步驟。  
-- 代表：是React、Vue.js等前端框架，以及HTML和CSS的使用方式。  
-- 例如：使用Vue.js的模板語法來描述UI，Vue.js負責處理DOM更新。
+網頁的渲染是指瀏覽器將 HTML、CSS 和 JavaScript 等文件轉換為使用者可以看到的畫面的過程，渲染的方式可分為`指令式`和`聲明式`。
 
-### 指令式渲染（Imperative Rendering）：
-- 說明：需要明確的指令和操作來達到所需的結果。  
-- 代表：傳統的JavaScript DOM操作。  
-- 例如：使用 getElementById、appendChild、setAttribute 等方法直接操控DOM元素。
+React、Vue.js等前端框架採用的是 `MVVM` 架構，開發者**只需描述所需的結果，而不需關心渲染的操作步驟**，例如 Vue 使用模板語法描述 UI，DOM 更新 Vue 會自動負責處理，這種方式又稱為`宣告式渲染（Declarative Rendering）`。  
+
+MVC (例如：C# Razer)和傳統的 JavaScript DOM 操作(使用 getElementById、appendChild、setAttribute 等方法直接操控DOM元素)，**需要明確的指令和操作達到所需結果**，這種方式又稱為`指令式渲染（Imperative Rendering）`。
+
+|          | 指令式                                       | 宣告式                         |
+| -------- | -------------------------------------------- | ------------------------------ |
+| 概念     | 怎麼做<br>(明確撰寫每一個操作和更新)         | 做什麼<br>(定義UI的狀態和結構) |
+| 用於     | MVC、傳統 JS DOM 操作                        | 現代前端框架(Vue...etc.)       |
+| DOM 操作 | 手動                                         | 自動                           |
+| 維護     | 困難、易出錯、難以跟蹤狀態、不易預測渲染結果 | 容易、較不易出錯               |
 
 ## MVC vs MVVM 
+
 ### MVC（Model-View-Controller）
 屬於指令式渲染，需要手動控制視圖和控制器之間的數據傳遞。
 | Term                 | 說明                                                                                                                                                        |
