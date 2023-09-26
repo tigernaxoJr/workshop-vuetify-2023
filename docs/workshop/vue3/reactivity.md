@@ -1,6 +1,42 @@
 # 響應式狀態
-## 以觀察者模式理解
-透過不到短短50行的程式碼[模擬](https://playcode.io/1605775)模擬簡單的 MVVM（Model-View-ViewModel）架構 ref，幫助我們理解：
+在 MVVM 架構下，Model 需要具有響應性，才能讓 ViewModel 自動更新視圖。響應性是指 Model 的狀態變化會自動通知 ViewModel，ViewModel 才能根據 Model 的最新狀態更新視圖。
+
+## ref()
+- ref 依賴跟蹤原理基於 getter、setter，所以取用時最後會加上一個 value，這是官方給的示意程式碼 (非實作)：
+  ```js
+  // pseudo code, not actual implementation
+  const myRef = {
+    _value: 0,
+    get value() {
+      track() // track: 加入觀察者
+      return this._value
+    },
+    set value(newValue) {
+      this._value = newValue
+      trigger() // trigger: 通知觀察者
+    }
+  }
+  ```
+- template 裡面取用 ref 會自動解包(unwrap)，不需要使用 .value
+  ```vue
+  <template>
+    <!-- template 裡面取用 ref 會自動解包(unwrap)，不需要使用 .value -->
+    <div>{{ count }}</div>
+  </template>
+  
+  <script setup>
+  import { ref } from 'vue';
+  const count = ref(0)
+  
+  console.log(count) // { value: 0 }
+  console.log(count.value) // 0
+  
+  count.value++
+  console.log(count.value) // 1
+  </script>
+  ```
+### 以觀察者模式理解
+我們可以透過不到短短50行的程式碼[實作](https://playcode.io/1605775)模擬簡單的 MVVM（Model-View-ViewModel）架構 ref，幫助我們理解：
 ```js:line-numbers
 // vue 透過類似機制宣告為響應式狀態
 class Ref {
@@ -61,40 +97,7 @@ const template = '<div>{{count}} ({{message}})</div>';
 new Watcher(template, { count, message });
 ```
 
-## ref()
-- ref 依賴跟蹤原理基於 getter、setter，所以取用時最後會加上一個 value：
-  ```js
-  // pseudo code, not actual implementation
-  const myRef = {
-    _value: 0,
-    get value() {
-      track() // track: 加入觀察者
-      return this._value
-    },
-    set value(newValue) {
-      this._value = newValue
-      trigger() // trigger: 通知觀察者
-    }
-  }
-  ```
-- template 裡面取用 ref 會自動解包(unwrap)，不需要使用 .value
-  ```vue
-  <template>
-    <!-- template 裡面取用 ref 會自動解包(unwrap)，不需要使用 .value -->
-    <div>{{ count }}</div>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue';
-  const count = ref(0)
-  
-  console.log(count) // { value: 0 }
-  console.log(count.value) // 0
-  
-  count.value++
-  console.log(count.value) // 1
-  </script>
-  ```
+
 
 ### shallowRef()
 Deep Reactivity：ref 預設會跟蹤其內部的所有對象，如果不是基本(privative)數據類型，它會自動使用 reactive() 來將對象轉換為代理(proxy)。

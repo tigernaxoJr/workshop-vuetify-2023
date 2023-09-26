@@ -8,12 +8,12 @@ export default [
       { text: '元件生命週期', link: '/workshop/vue3/lifecycle' },
       { text: '響應式狀態', link: '/workshop/vue3/reactivity' },
       // todo: component reference
-      { text: '元件屬性綁定', link: '/workshop/vue3/attrs' },
+      { text: '屬性綁定', link: '/workshop/vue3/attrs' },
       { text: '指示詞', link: '/workshop/vue3/directive' },
+      { text: '元件溝通', link: '/workshop/vue3/provide' },
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
-      { text: 'Pinia', link: '/workshop/vue3/pinia' },
-      { text: 'Provide/Inject', link: '/workshop/vue3/provide' },
       { text: '元件插槽', link: '/workshop/vue3/slots' },
+      { text: 'Pinia', link: '/workshop/vue3/pinia' },
     ],
   },
   {
