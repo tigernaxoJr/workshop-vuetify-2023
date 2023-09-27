@@ -13,6 +13,7 @@ export default [
       { text: '元件溝通', link: '/workshop/vue3/provide' },
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
       { text: '元件插槽', link: '/workshop/vue3/slots' },
+      { text: 'Vue 生態圈', link: '/workshop/vue3/ecosystem' },
       { text: 'Pinia', link: '/workshop/vue3/pinia' },
     ],
   },
@@ -105,7 +106,6 @@ export default [
     items: [
       { text: '常用套件', link: '/workshop/other/packages' },
       { text: '元件註冊', link: '/workshop/other/component-register' },
-      { text: 'Vue 生態圈', link: '/workshop/other/ecosystem' },
       // { text: '動態元件', link: '/workshop/other/dynamic' },
       { text: 'Render Function', link: '/workshop/other/render' },
       { text: '節流與防抖', link: '/workshop/other/throttle-debounce' },

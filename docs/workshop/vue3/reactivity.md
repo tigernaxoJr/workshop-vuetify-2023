@@ -37,6 +37,13 @@
   ```
 ### 以觀察者模式理解
 我們可以透過不到短短50行的程式碼[實作](https://playcode.io/1605775)模擬簡單的 MVVM（Model-View-ViewModel）架構 ref，幫助我們理解：
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="2023-ref" 
+  src="https://playcode.io/1605775" 
+  frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+</iframe>
+
+
 ```js:line-numbers
 // vue 透過類似機制宣告為響應式狀態
 class Ref {
