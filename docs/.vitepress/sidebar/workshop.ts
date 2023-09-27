@@ -3,7 +3,6 @@ export default [
     text: 'Vue 基礎',
     collapsed: true,
     items: [
-      { text: 'MVVM 架構', link: '/workshop/vue3/mvvm' },
       { text: '單一元件檔', link: '/workshop/vue3/sfc' },
       { text: '元件生命週期', link: '/workshop/vue3/lifecycle' },
       { text: '響應式狀態', link: '/workshop/vue3/reactivity' },
@@ -14,7 +13,10 @@ export default [
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
       { text: '元件插槽', link: '/workshop/vue3/slots' },
       { text: 'Vue 生態圈', link: '/workshop/vue3/ecosystem' },
+      { text: 'Vue-CLI', link: '/workshop/vue3/vue-cli' },
       { text: 'Pinia', link: '/workshop/vue3/pinia' },
+      { text: 'Vue-Router', link: '/workshop/vue3/vue-router' },
+      { text: 'Vuetify', link: '/workshop/vue3/vuetify' },
     ],
   },
   {
@@ -115,6 +117,8 @@ export default [
       { text: '耦合性原則', link: '/workshop/other/decouple' },
       { text: '內聚性原則', link: '/workshop/other/cohesion' },
       { text: 'SOLID原則', link: '/workshop/other/solid' },
+      { text: 'MVVM 架構', link: '/workshop/other/mvvm' },
+      { text: '唯變所適', link: '/workshop/other/change' },
       // {
       //   text: 'Vue3 改動',
       //   collapsed: true,

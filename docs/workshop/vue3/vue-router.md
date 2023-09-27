@@ -1,9 +1,10 @@
-# 前端路由
-## 後端路由
-![](/back-route.png)
+# Vue-Router
 ## 前端路由
+### 後端路由
+![](/back-route.png)
+### 前端路由
 ![](/front-route.png)
-## 後端路由 vs 前端路由
+### 後端路由 vs 前端路由
 |            | 後端路由     | 前端路由       |
 | ---------- | ------------ | -------------- |
 | 路由邏輯   | 後端程式處理 | 客戶端程式處理 |
@@ -23,3 +24,5 @@
 | SEO(不重要)    | 不利於 SEO                        | 利於 SEO                      |
 
 Hash Mode 無法傳遞網址列參數，在傳遞 KEY 的時候會有問題，伺服器端設置也不複雜，建議用 History Mode。
+## Reference
+- [Vue Router](https://router.vuejs.org/introduction.html)

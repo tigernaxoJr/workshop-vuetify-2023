@@ -5,6 +5,8 @@ layout: page
 
 Vue 建構的應用程式是由小元件組成的樹狀結構，開發者最常以`單一元件檔`定義單個元件。  
 
+![](https://v2.vuejs.org/images/components.png)
+
 `單一元件檔`以.vue 為副檔名，是用於組織 Vue 組件的一種文件結構。並允許將 HTML 模板、JavaScript 程式碼和 CSS 樣式組織在一個地方，易於閱讀、維護和複用。
 
 SFC 由三個主要部分組成：
