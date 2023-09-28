@@ -96,6 +96,7 @@ js 程式碼中(sfc 外)，可呼叫 router 的位置
 </div>
 ```
 ### 多 router-view 
+### 在其他地方(ex: store)取得 Router, route 的方法
 
 ## Reference
 - [vue router](https://router.vuejs.org/)

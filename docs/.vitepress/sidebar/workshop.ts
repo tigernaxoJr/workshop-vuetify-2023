@@ -30,6 +30,7 @@ export default [
       { text: '應用程式主題', link: '/workshop/vuetify/theme' },
       { text: '版面配置', link: '/workshop/vuetify/layout' },
       { text: '網格系統', link: '/workshop/vuetify/grid' },
+      { text: '元件註冊', link: '/workshop/vuetify/component-register' },
     ],
   },
   {
@@ -41,10 +42,24 @@ export default [
         text: '[元件] 側邊選單',
         collapsed: true,
         items: [
-          /* recursive component(可能先跳過) */
-          { text: '側邊選單', link: '/workshop/project/layout/menus' },
-          /* computed、reactivity 使用技巧 */
-          { text: '選單資料', link: '/workshop/project/layout/menus-data' },
+          { text: '側邊選單', link: '/workshop/project/menus/menus' },
+          { text: '選單資料', link: '/workshop/project/menus/menus-data' },
+        ],
+      },
+      {
+        text: '[工具] 實用工具',
+        collapsed: true,
+        items: [
+          { text: 'dayjs', link: '/workshop/project/tools/dayjs' },
+          // { text: 'token', link: '/workshop/project/tools/token' },
+        ],
+      },
+      {
+        text: '[工具] 實用狀態',
+        collapsed: true,
+        items: [
+          { text: 'appStore', link: '/workshop/project/store/app' },
+          { text: 'authStore', link: '/workshop/project/store/auth' },
         ],
       },
       {
@@ -63,13 +78,6 @@ export default [
           { text: '新增資料', link: '/workshop/project/crud/add' },
         ],
       },
-      // {
-      //   text: '個案細節',
-      //   collapsed: true,
-      //   items: [
-      //     // { text: 'API管理', link: '/workshop/crud/api' },
-      //   ],
-      // },
       { text: '內嵌網頁', link: '/workshop/project/iframe' },
       { text: '身份驗證', link: '/workshop/project/auth' },
       {
@@ -87,7 +95,6 @@ export default [
     collapsed: true,
     items: [
       { text: '常用套件', link: '/workshop/other/packages' },
-      { text: '元件註冊', link: '/workshop/other/component-register' },
       // { text: '動態元件', link: '/workshop/other/dynamic' },
       { text: 'Render Function', link: '/workshop/other/render' },
       { text: '節流與防抖', link: '/workshop/other/throttle-debounce' },
@@ -111,3 +118,5 @@ export default [
     ],
   },
 ];
+
+/* recursive component(可能先跳過) */
