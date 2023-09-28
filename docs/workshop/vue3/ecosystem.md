@@ -30,4 +30,5 @@
 |SSG  (伺服器端生成)| VitePress|SSG 的 CMS(內容管理系統)，不吃資源。 |
 
 ## Refernece
+- [Vue CLI](https://cli.vuejs.org/guide/)
 - [Vue.js-State Management](https://vuejs.org/guide/scaling-up/state-management.html)

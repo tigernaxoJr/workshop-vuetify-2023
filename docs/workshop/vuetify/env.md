@@ -1,5 +1,13 @@
-# VSCode 設置vscode
-## 安裝 Extension
+# 開發環境
+## 必要軟體
+- [Git](https://git-scm.com/)
+- [VSCode](https://code.visualstudio.com/)
+- [NodeJS、NPM](https://nodejs.org/en/download/)
+
+選用：
+- yarn：`npm install --global yarn`
+
+## VSCode Extension
 ### 安裝套件的方式：
 - 在 VSCode 裡面 `ctrl-shift-x` 搜尋安裝。
 - 從 [Marketplace](https://marketplace.visualstudio.com/) 搜尋安裝。
@@ -26,7 +34,7 @@
 	- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Code formatter - Code formatter using prettier
 	- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) - Language support for Vue 3
 
-## 設置 settings.json
+## VSCode settings.json
 1. `Ctrl-Shift-P` 輸入 json 搜尋，選擇 `Preference: Open User Settings (JSON)`
 2. 在第一層加入 lint 設置
 	```js
@@ -49,11 +57,21 @@
 	},
 	```
 
-## 注意事項
+### 注意事項
 請務必解除安裝 Vetur
 
-## 同步帳號的擴充功能與設置
+### 同步帳號的擴充功能與設置
 點左下角 (Sign In to Sync Settings)，登入後開啟同步設置 。  
 目前接受 GitHub、Microsoft 帳號。  
 在新的電腦登入帳號後就直接可以使用環境，有點像手機 App Store 的概念.  
 
+## Vue DevTools
+Vue DevTools 是 Browser Extension
+| 瀏覽器  | 安裝連結                                                                                                  |
+| ------- | --------------------------------------------------------------------------------------------------------- |
+| chrome  | [安裝](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)         |
+| edge    | [安裝](https://microsoftedge.microsoft.com/addons/detail/vuejs-devtools/olofadcdnkkjdfgjcmjaadnlehnnihnl) |
+| firefox | [安裝](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)                                   |
+
+## Reference
+ - [Vue Devtools](https://devtools.vuejs.org/guide/installation.html)

@@ -13,54 +13,38 @@ export default [
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
       { text: '元件插槽', link: '/workshop/vue3/slots' },
       { text: 'Vue 生態圈', link: '/workshop/vue3/ecosystem' },
-      { text: 'Vue-CLI', link: '/workshop/vue3/vue-cli' },
       { text: 'Pinia', link: '/workshop/vue3/pinia' },
       { text: 'Vue-Router', link: '/workshop/vue3/vue-router' },
-      { text: 'Vuetify', link: '/workshop/vue3/vuetify' },
     ],
   },
   {
-    text: '開發環境',
+    text: 'Vuetify',
+    link: '/workshop/vue3/vuetify',
     collapsed: false,
     items: [
-      { text: '開發軟體', link: '/workshop/env/software' },
-      { text: 'VSCode', link: '/workshop/env/vscode' },
-      { text: 'Devtools', link: '/workshop/env/devtools' },
+      { text: '開發環境', link: '/workshop/vuetify/env' },
+      { text: '建立專案', link: '/workshop/vuetify/create' },
+      { text: '開發設置', link: '/workshop/vuetify/devconfig' },
+      { text: '網站設置', link: '/workshop/vuetify/siteconfig' },
+      { text: '路由配置', link: '/workshop/vuetify/route' },
+      { text: '應用程式主題', link: '/workshop/vuetify/theme' },
+      { text: '版面配置', link: '/workshop/vuetify/layout' },
+      { text: '網格系統', link: '/workshop/vuetify/grid' },
     ],
   },
   {
     text: '專案練習',
     collapsed: false,
     items: [
+      { text: '專案模板', link: '/workshop/project/template' },
       {
-        text: '新建專案',
+        text: '[元件] 側邊選單',
         collapsed: true,
         items: [
-          { text: '專案建立', link: '/workshop/project/create' },
-          { text: '開發設置', link: '/workshop/project/configure' },
-          { text: '資源設置', link: '/workshop/project/resource' },
-          { text: '網站主題', link: '/workshop/project/theme' },
-        ],
-      },
-      {
-        text: '版面配置',
-        collapsed: true,
-        items: [
-          { text: '版面配置', link: '/workshop/project/layout/layout' },
           /* recursive component(可能先跳過) */
           { text: '側邊選單', link: '/workshop/project/layout/menus' },
           /* computed、reactivity 使用技巧 */
           { text: '選單資料', link: '/workshop/project/layout/menus-data' },
-        ],
-      },
-      {
-        text: '前端路由',
-        collapsed: true,
-        items: [
-          { text: '前端路由', link: '/workshop/route/front-route' },
-          /* 路由配置方式 */
-          { text: '路由配置', link: '/workshop/route/route' },
-          { text: '路由', link: '/workshop/route/router' },
         ],
       },
       {
@@ -70,10 +54,6 @@ export default [
           { text: '建立頁面', link: '/workshop/project/crud/create' },
           /* 透過對頁面對APP的相依性講述觀察者模式 */
           { text: '頁面初始化', link: '/workshop/project/crud/init' },
-          { text: 'Store', link: '/workshop/project/crud/store' },
-          /* 介紹 flex、GridSystem */
-          { text: '網格系統', link: '/workshop/project/crud/grid' },
-          { text: 'RWD', link: '/workshop/project/crud/rwd' },
           { text: '搜尋區域', link: '/workshop/project/crud/search' },
           { text: 'API管理', link: '/workshop/project/crud/api' },
           { text: '搜尋結果', link: '/workshop/project/crud/result' },
