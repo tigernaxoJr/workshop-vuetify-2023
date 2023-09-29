@@ -45,25 +45,22 @@ SFC 由三個主要部分組成：
   </template>
   ```
 - Mustache 裡面可以是 `Expression（表達式、求值式）`；不可以是 `Statement（敘述、語句）`
-  <table>
-  	<thead>
-  		<tr><th>可以</th><th>不可以</th></tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td> <ul>
-  				<li><code>`list-${id}`</code></li>
-  				<li><code>formatDate(date)</code></li>
-  				<li><code>message.split('').reverse().join('')</code></li>
-  				<li><code>ok ? 'yes': 'no'</code></li>
-  			</ul> </td>
-  			<td> <ul>
-  				<li> <code>var a = 1</code></li>
-  				<li> <code>if(ok){return 'yes'}else{return 'no'}</code> </li>
-  			</ul> </td>
-  		</tr>
-  	</tbody>
-  </table>
+::: code-group
+```js [可以]
+a = 1 // 1
+ok ? 'yes': 'no' // 'yes'
+`list-${id}` // 'list-...'
+formatDate(date) // 對 function 回傳的結果 toString
+message.split('').reverse().join('')` 
+```
+```js [不可以]
+var a = 1 // undefined
+if(ok){return 'yes'}else{return 'no'}
+```
+```js [不是你想的那樣]
+formatData
+```
+:::
 
 
 ## 腳本
