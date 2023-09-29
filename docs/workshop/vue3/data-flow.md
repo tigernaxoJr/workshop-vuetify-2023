@@ -78,44 +78,52 @@ const model = computed({
 });
 </script>
 ```
+[試試看](https://play.vuejs.org/#eNp9UstO6zAQ/RVfb5JKTbpg11uQ7kVdwAIQIDaYRZVMiyGxLT9KpSj/zozTpCmPrpKZc2bmzPg0/J8x+TYAn/PFnyxjl8F5XV8pEzylWZZdCLXwUJtq5QH/GWsaVusSKta2FC5GJWybRehc8PgVnM2ofjZqgKErrDSeOfDBYEbWRlvPGmZhzVq2trpmCQ5PBmg8ooPz2RelSC60cn6v7ZyapUkyoendvAs+5d4haS03+ZvTCnduaAPBC10bWYG9NV5iE8HnLCKErapKf1zHnLcBpn2+eIXi/Yf8m9tRTvA7Cw7sFgQfML+yG/AdvHy4gR3+DyAKDxWyT4D34HQVSGNH+x9UibJHvKj2Kl5Nqs2jW+48KNcvRUKJ2Ua+4Hi3yxOrH+Se5WexTqgWr/jl9Ke8Y4/cgxF1XsjfzUIFI7tgGFPHlsHMYBp6u+ChPHbOvq6zhLHaOLRECWup4I6i9DmJQ59WFdJfJgcy1NIP3CUGxA2mRDnzbyWHst52vZy06bfFE6aT6G4frOrE5IdO9Bh7Jm6XbolKGtIfhk4Zwi3R28nf7lS9t9tPA4RMgA==)
 ## 綁定多個 v-model 
 父元件：
 ```html
+<script setup>
+import UserName from './UserName.vue';
+import { ref } from 'vue'
+
+const first = ref('Peter')
+const last = ref('Chen')
+</script>
+
+<template>
+{{first}}, {{last}}
 <UserName
   v-model:first-name="first"
   v-model:last-name="last"
 />
+</template>
 ```
 子元件：
 ```html
 <template>
-  <input
-    type="text"
-    :value="firstName"
-    @input="$emit('update:firstName', $event.target.value)"
-  />
-  <input type="text" v-model="firstName" />
+    <input type="text" v-model="firstName" />
+    <input type="text" v-model="lastName" />
 </template>
 
 <script setup>
 import { computed } from 'vue'
 const props = defineProps({
-  firstName: String,
-  lastName: String
+    firstName: String,
+    lastName: String
 });
 
 const emit = defineEmits(['update:firstName', 'update:lastName']);
 
 const firstName = computed({
-  () => props.firstName,
-  (e) => emit('update:firstName', e.target.value)
+    get() { return props.firstName },
+    set(e) { emit('update:firstName', e) }
 });
 const lastName = computed({
-  () => props.lastName,
-  (e) => emit('update:lastName', e.target.value)
+    get() { return props.lastName },
+    set(e) { emit('update:lastName', e) }
 });
-</script>
 ```
+[試試看](https://play.vuejs.org/#eNqVVMFu2zAM/RVBFzuA6xx6S90BW5HDduiCdTtNOxg2nbqzZUGSswyG/n2kHMnJVnTtJTD5HqlHPSoTf69UfhiBb3hhKt0qywzYUb0Tsu3VoC37ZkDflz2wRg89S/J1SFBZchN5E9PQMHeiESakkNUgjWVNq/H3lhhpsgMLOlkFrCsX6O4RJCHFetaCKjCw0KuutIARY9N06uZcRoEvd46gIko9XPVDDd3GM68kpm4F94HgEaTKgNE3Qms8oljH83jGrUGVTbvPn8wg8ZImOkjwauhV24H+rGyLUwi+YR4hrOy64dcnn7N6hCzkq0eofj6TfzJHygm+04ADHEDwiNlS7wGVEbx9uIcjfkcQxxg7ZL8AfgEzdCNpnGkfRlmj7DOeV/vRW9jK/VezPVqQJgxFQonpPF9wtPXuhdEXudf5ta8T0uEtnq8MbdriqJ5Li1aq0TL7W5Eb1o8SjArWUYPZo9cVkacXNWfOUuhTlzuPmbjNZPFoob5caWTMa6v0oAzubQ1NK2FHUToFZVHvhj1YjfeaBSSICgDl3eom6Jl7Q9/Sk5hbbzEw6fdkVDUqn1eaOiQZC7nQNPnxd6fIxnZhoEUmepWu/MO1o5bzSPlSgqafiHg9KRCTlKXPSUHUnc2yPO23HR4r/nd2HPmfo+N/B3d/ABxUqkY=)
 ## v-model modifiers
 ## Reference
 - [Vue.js-Component v-model](https://vuejs.org/guide/components/v-model.html)
