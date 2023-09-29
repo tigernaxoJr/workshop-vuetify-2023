@@ -32,12 +32,12 @@
       url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.ttf?expires=1970-01-01T00:00:00Z') format('truetype');
   }
 
-	* {
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		font-family: '其他優先使用的字型', 'EUDC', sans-serif;
-		font-display: auto;
-	}
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: '其他優先使用的字型', 'EUDC', sans-serif;
+    font-display: auto;
+  }
 </style>
 ```
 
