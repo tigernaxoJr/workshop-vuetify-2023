@@ -29,7 +29,7 @@ export default [
       { text: '路由配置', link: '/workshop/vuetify/route' },
       { text: '版面配置', link: '/workshop/vuetify/layout' },
       { text: '網格系統', link: '/workshop/vuetify/grid' },
-      { text: '元件註冊', link: '/workshop/vuetify/component-register' },
+      { text: '元件配置', link: '/workshop/vuetify/component-register' },
       { text: '應用程式主題', link: '/workshop/vuetify/theme' },
     ],
   },
@@ -69,7 +69,6 @@ export default [
           { text: '建立頁面', link: '/workshop/project/crud/create' },
           /* 透過對頁面對APP的相依性講述觀察者模式 */
           { text: '頁面初始化', link: '/workshop/project/crud/init' },
-          { text: '搜尋區域', link: '/workshop/project/crud/search' },
           { text: 'API管理', link: '/workshop/project/crud/api' },
           { text: '搜尋結果', link: '/workshop/project/crud/result' },
           // todo dialog

@@ -1,20 +1,5 @@
-## 掛載路由點
-
-設置 `<router-view>`、`<router-link>`
-
-子路由會顯示在 `<router-view></router-view>` 裡面，在 `App.vue` 裡面設置顯示根路由。
-`src/App.vue` 主頁面
-
-```vue
-<template>
-  <router-view />
-</template>
-
-<script setup></script>
-```
-
+# 路由配置
 ## 路由設置
-
 ### `src/router.index.js`
 ::: info 練習目標
 - 定義路由
@@ -24,7 +9,7 @@
 - 惰性加載(lazy-loading)
 :::
 
-```js
+```js:line-numbers {16-35}
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -53,14 +38,10 @@ const routes = [
         component: () => import( '@/views/Admin.vue'),  
       },
       {
-        path: 'Statistic',
-        name: 'AdminStatistic',
-        component: () => import( '@/views/Statistic.vue'),
-      },
-      {
-        path: 'Statistic',
-        name: 'AdminStatistic',
-        component: () => import( '@/views/Statistic.vue'),
+        // 路由參數
+        path: 'User/:id',
+        name: 'AdminUser',
+        component: () => import( '@/views/AdminUser.vue'),
       },
     ],
   },
@@ -72,43 +53,108 @@ const router = createRouter({
 })
 
 export default router
-
 ```
+
 ### router-link/router-view
 ::: info 練習目標
 - router-view
 - router-link
 :::
+
+## 掛載路由點
+### `@/layouts/AdminLayout.vue`
 ```vue
-<script src="https://unpkg.com/vue@3"></script>
-<script src="https://unpkg.com/vue-router@4"></script>
+<template>
+  <v-container>
+    <!-- 使用路徑導航 -->
+    <router-link class="d-block" to="/Admin/User?id=queryId">
+      使用路徑導航: '/Admin/User?id=queryId'
+    </router-link>
+    <!-- 使用 route object 導航 -->
+    <router-link class="d-block" :to="route2">
+      使用 route object 導航: {{ route2 }}}}
+    </router-link>
+    <!-- 使用程式導航 -->
+    <v-btn class="d-block" flat variant="outlined" @click="onswitch">
+      Programmatic Navigation
+    </v-btn>
+  </v-container>
+  <v-container>
+    <!-- 子路由會顯示在 <router-view></router-view> 裡面 -->
+    <router-view></router-view>
+  </v-container>
+</template>
+<script setup>
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
-<div id="app">
-  <h1>Hello App!</h1>
-  <p>
-    <!-- use the router-link component for navigation. -->
-    <!-- specify the link by passing the `to` prop. -->
-    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
-    <router-link to="/">Go to Home</router-link>
-    <router-link to="/about">Go to About</router-link>
-  </p>
-  <!-- route outlet -->
-  <!-- component matched by the route will render here -->
-  <router-view></router-view>
-</div>
+const router = useRouter();
+const route1 = { name: "AdminUser", query: { id: "queryId" } };
+const route2 = { name: "AdminUser2", params: { id: "paramsId" } };
+
+const flag = ref(true);
+const onswitch = () => {
+  const route = flag.value ? route1 : route2;
+  router.push(route);
+  flag.value = !flag.value;
+};
+</script>
 ```
-### 多個 router-view
-<!-- 
-todo:
-路由切換 
-區分 route/router
-js 程式碼中(sfc 外)，可呼叫 router 的位置
--->
+### `@/views/AdminUser.vue`
+```vue
+<template>
+  <v-table>
+    <thead>
+      <tr>
+        <th>參數來源</th>
+        <th>參數值</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>route params</td>
+        <td>{{ route.params.id }}</td>
+      </tr>
+      <tr>
+        <td>url query</td>
+        <td>{{ route.query.id }}</td>
+      </tr>
+    </tbody>
+  </v-table>
+</template>
+<script setup>
+import { useRoute } from "vue-router";
+const route = useRoute();
+</script>
+```
 
-## 程式導航
-### 在其他地方(ex: store)取得 Router, route 的方法
+打開 [`http://localhost:3000/Admin`](http://localhost:3000/Admin) 看看效果
+### 練習
+- 程式導航
+- 區分 `query` 和 `params`
+- 區分 `router` 和 `route`
+- 修改程式碼觀察如果路由設置參數 :id 卻沒給會發生什麼事，再把路由設置的 :id 改為 :id? 觀察效果。
+- 對沒有設置 /:id 的路徑傳入 id params 觀察效果。
+- 在 store 取得 Router, route 的方法
 
 ## 路由守衛
+基本觀念： 
+- to 即將進入的 route
+- from 即將離開的 route
+- 調用 next 之前路由的狀態為待定，調用 next 會解析(resolve) hook 並確定路由狀態，路由狀態確定後才會進入
+```js
+router.beforeEach((to, from, next) => {
+  if (to.name !== 'Login' && !isAuthenticated) next({ name: 'Login' })
+  else next()
+})
+```
+
+深入學習：
+- **Per-Route Guard
+- **In-Component Guards
+- Global Resolve Guards
+- Global After Hooks
+- Global injections within guards
 
 ## Reference
 - [vue router](https://router.vuejs.org/)
