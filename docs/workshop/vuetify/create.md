@@ -1,13 +1,17 @@
 <script setup lang="ts">
 </script>
 # 建立專案
+麻煩大家先把 node.js 版本升級，我用 16.19.1 會遇到錯誤，18.14.0 沒有錯誤。
+```
+npm ERR! Unexpected token '.'
+```
 ## 建立專案
 1. 輸入指令建立專案   
    ```bash
    npm create vuetify
    ```
 2. 設定項目：  
-   - 輸入**專案名稱(這裡用 vue3-app)**
+   - 輸入**專案名稱(這裡用 v3app)**
    - 選擇 Essentials (Vuetify, VueRouter, Pinia)
    - Use Typescript 選 **No**
    - 安裝程式選 **npm** 或 **yarn**(若有安裝)。    
@@ -19,7 +23,7 @@
 ## 啟動專案
 1. 進入專案資料夾 
    ```bash
-   cd v3-app
+   cd v3app
    ```
 2. 以 VSCode 打開專案 
    ```bash

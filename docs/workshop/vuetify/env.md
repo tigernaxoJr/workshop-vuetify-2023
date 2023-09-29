@@ -1,6 +1,6 @@
 # 開發環境
 ## 必要軟體
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/)，請勾選安裝 git bash。
 - [VSCode](https://code.visualstudio.com/)
 - [NodeJS、NPM](https://nodejs.org/en/download/)
 
@@ -73,5 +73,28 @@ Vue DevTools 是 Browser Extension
 | edge    | [安裝](https://microsoftedge.microsoft.com/addons/detail/vuejs-devtools/olofadcdnkkjdfgjcmjaadnlehnnihnl) |
 | firefox | [安裝](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)                                   |
 
+## NVM
+NVM 是用於 Node.js 版本控制的工具。它允許使用者安裝、切換和卸載不同版本的 Node.js。如果要維護舊專案，可以使用 NVM 切換回較舊版本的 Node.js。
+### 安裝方式
+打開 git bash 執行：
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
+安裝其他 node 版本
+```bash
+nvm install node # "node" is an alias for the latest version
+nvm install 18.14.0 # or 16.3.0, 12.22.1, etc
+```
+查看 node.js 安裝清單，並列出當前環境版本：
+```bash
+nvm list
+
+  * 18.14.0 (Currently using 64-bit executable)
+    16.19.1
+```
+切換 node.js 版本：
+```bash
+nvm use
+```
 ## Reference
  - [Vue Devtools](https://devtools.vuejs.org/guide/installation.html)
