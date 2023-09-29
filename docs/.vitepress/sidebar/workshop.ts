@@ -19,7 +19,6 @@ export default [
   },
   {
     text: 'Vuetify',
-    link: '/workshop/vue3/vuetify',
     collapsed: false,
     items: [
       { text: '開發環境', link: '/workshop/vuetify/env' },
