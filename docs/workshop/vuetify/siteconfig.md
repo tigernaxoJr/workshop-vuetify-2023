@@ -21,16 +21,16 @@
   })
   ```
 ## 靜態資源 光田自造字
-到 `index.html` 裡面的 `<header>` 區塊中加入這一段，會不定時更新。
+在 `index.html` 的 `<header>` 區塊加入以下 CSS，即可在瀏覽器中顯示光田自造字。使用 `?expires=1970-01-01T00:00:00Z` 可使字型檔每次都重新載入，不受瀏覽器快取影響。
 ```html
 <style>
-	@font-face {
-		font-family: "EUDC";
-		font-style: normal;
-		src: url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.woff2') format('woff2'),
-		url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.woff') format('woff'),
-		url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.ttf') format('truetype');
-	}
+  @font-face {
+    font-family: "EUDC";
+    font-style: normal;
+    src: url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.woff2?expires=1970-01-01T00:00:00Z') format('woff2'),
+      url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.woff?expires=1970-01-01T00:00:00Z') format('woff'),
+      url('https://m-med.ktgh.com.tw/CDN/fonts/EUDC.ttf?expires=1970-01-01T00:00:00Z') format('truetype');
+  }
 
 	* {
 		-webkit-font-smoothing: antialiased;

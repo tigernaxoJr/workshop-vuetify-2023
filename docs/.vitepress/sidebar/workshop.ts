@@ -27,10 +27,10 @@ export default [
       { text: '開發設置', link: '/workshop/vuetify/devconfig' },
       { text: '網站設置', link: '/workshop/vuetify/siteconfig' },
       { text: '路由配置', link: '/workshop/vuetify/route' },
-      { text: '應用程式主題', link: '/workshop/vuetify/theme' },
       { text: '版面配置', link: '/workshop/vuetify/layout' },
       { text: '網格系統', link: '/workshop/vuetify/grid' },
       { text: '元件註冊', link: '/workshop/vuetify/component-register' },
+      { text: '應用程式主題', link: '/workshop/vuetify/theme' },
     ],
   },
   {

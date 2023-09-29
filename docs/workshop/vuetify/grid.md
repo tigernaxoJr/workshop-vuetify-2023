@@ -9,9 +9,11 @@
 
 ## 彈性佈局模式(Flexbox)
 口訣：
- 1. 決定列方向。
- 2. 指定行大小、百分比。
- 3. 剩餘/不足空間，行伸縮。
+ 1. [列]`方向`，決定子元素排列方向，預設為水平。   
+ 2. [行]`百分比`，子元素是否有設置百分比，有設置百分比的話就不理會伸縮。
+ 3. [行]`伸縮`，子元素是否有設置伸縮，將決定如何分配剩餘空間，通常使用 `grow` 讓子元素在有剩餘空間時自動伸展。
+ 4. [行]`基底大小`，子元素都沒有設置以上屬性(2, 3)的話，直接套用子元素的基底大小。
+
 ### flex-direction: 
  ![](/flex.png)
 
@@ -20,11 +22,11 @@
  1. 設置容器的display屬性為flex或inline-flex，將容器元素定義為Flex容器（flex container）。
  2. 將容器內的元素設置為Flex項目（flex item），並指定它們的佈局規則。
 
-|css 屬性|預設值| 說明 |
-|-|-|-|
-|flex-basis<br>基礎大小|auto<br>由元素內容決定|指定網格元素初始大小。|
-|flex-grow<br>增長因子|0<br>不增長|每個網格元素依照增長因子比例分配剩餘可用空間。|
-|flex-shrink<br>收縮因子|1|指定初始大小相加超出可用空間時，每個網格元素等比例縮小的權重。|
+| css 屬性                | 預設值                 | 說明                                                           |
+| ----------------------- | ---------------------- | -------------------------------------------------------------- |
+| flex-basis<br>基礎大小  | auto<br>由元素內容決定 | 指定網格元素初始大小。                                         |
+| flex-grow<br>增長因子   | 0<br>不增長            | 每個網格元素依照增長因子比例分配剩餘可用空間。                 |
+| flex-shrink<br>收縮因子 | 1                      | 指定初始大小相加超出可用空間時，每個網格元素等比例縮小的權重。 |
 
 [MDN-flex grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
 [MDN-flex shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
@@ -94,22 +96,22 @@
 | v-spacer | 分配剩餘的寬度，子元件之前或之後放置單個 v-spacer 時，這些元件將推向其容器的右側和左側。當在多個元件之間使用多個 v-spacer 時，剩餘的寬度將均勻分佈在每個間距之間。 |                   |                 |
 
 ## 對齊
-|項目|對象|說明|
-|-|-|-|
-|[Align](https://vuetifyjs.com/en/components/grids/#align)|flexbox|把 flexbox 內的元素垂直對齊|
-|[Align Self](https://vuetifyjs.com/en/styles/flex/#flex-align-self)|flexitem| 指定 flexbox 內的元素垂直對齊|
-|[Justify](https://vuetifyjs.com/en/components/grids/#justify)|flexbox|水平對齊|
-|[Auto Margins](https://vuetifyjs.com/en/styles/flex/#auto-margins) |flexitem|自動留空|
+| 項目                                                                | 對象     | 說明                          |
+| ------------------------------------------------------------------- | -------- | ----------------------------- |
+| [Align](https://vuetifyjs.com/en/components/grids/#align)           | flexbox  | 把 flexbox 內的元素垂直對齊   |
+| [Align Self](https://vuetifyjs.com/en/styles/flex/#flex-align-self) | flexitem | 指定 flexbox 內的元素垂直對齊 |
+| [Justify](https://vuetifyjs.com/en/components/grids/#justify)       | flexbox  | 水平對齊                      |
+| [Auto Margins](https://vuetifyjs.com/en/styles/flex/#auto-margins)  | flexitem | 自動留空                      |
 
 ## Breakpoints
-|code|range|
-|-|-|
-|xs|<600px|
-|sm|600px><960px|
-|md|960px><1280px|
-|lg|1280px><1920px|
-|xl|1920px><2560px|
-|xxl|>2560px|
+| code | range          |
+| ---- | -------------- |
+| xs   | <600px         |
+| sm   | 600px><960px   |
+| md   | 960px><1280px  |
+| lg   | 1280px><1920px |
+| xl   | 1920px><2560px |
+| xxl  | >2560px        |
 
 ## 常用搜尋區 RWD
 ```html

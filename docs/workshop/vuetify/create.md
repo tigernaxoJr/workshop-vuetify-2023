@@ -1,10 +1,11 @@
 <script setup lang="ts">
 </script>
 # 建立專案
-麻煩大家先把 node.js 版本升級，我用 16.19.1 會遇到錯誤，18.14.0 沒有錯誤。
-```
+麻煩大家先切換 node.js 版本，我用 16.19.1 會遇到錯誤，18.14.0 沒有錯誤。
+```bash
 npm ERR! Unexpected token '.'
 ```
+以下指令都使用 git bash 執行，也可以用 cmd 執行(理論上)：
 ## 建立專案
 1. 輸入指令建立專案   
    ```bash
@@ -29,7 +30,7 @@ npm ERR! Unexpected token '.'
    ```bash
    code . 
    ```
-3. ``` ctrl+` ```打開 console
+3. ``` ctrl+ ```打開 console
 4. 啟動開發伺服器
    ```bash
    npm run dev

@@ -1,7 +1,13 @@
 # 專案設置
 學習如何設置 vite.config.js、Linting。
-## BASE_URL
-物件最上層(和 `plugins` 同級)加入屬性 `base: '/app/'`，注意前後要有斜線。
+## vite.config.js
+先記比較常用到的設定：
+  - base
+  - server.proxy
+  - build.outDir
+  - server.port
+### base
+打開 `vite.config.js`，在物件最上層(和 `plugins` 同級)加入屬性 `base: '/app/'`，注意前後有斜線。
 ```js
 export default defineConfig({
   base:'/app/',  // import.meta.env.BASE_URL
@@ -35,12 +41,8 @@ const router = createRouter({
 ```
 
 重啟專案，瀏覽器打開網址 `http://localhost:3000/app/`，應用程式已正確設置為子目錄。
-## Vite Server Proxy
-先比較常用到的設定：
-  - base
-  - build.outDir
-  - server.port
-  - server.proxy
+### server.proxy
+
 ```js
 // vite.config.js
 export default {
