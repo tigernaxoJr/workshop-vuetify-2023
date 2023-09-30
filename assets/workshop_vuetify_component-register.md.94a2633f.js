@@ -1,4 +1,4 @@
-import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.fb95d6d7.js";const u=JSON.parse('{"title":"全局註冊元件","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/vuetify/component-register.md","filePath":"workshop/vuetify/component-register.md"}'),l={name:"workshop/vuetify/component-register.md"},o=p(`<h1 id="全局註冊元件" tabindex="-1">全局註冊元件 <a class="header-anchor" href="#全局註冊元件" aria-label="Permalink to &quot;全局註冊元件&quot;">​</a></h1><p>main.js</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> SideMenu </span><span style="color:#F97583;">from</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">&#39;@/components/SideMenu&#39;</span></span>
+import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.fb95d6d7.js";const d=JSON.parse('{"title":"元件配置","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/vuetify/component-register.md","filePath":"workshop/vuetify/component-register.md"}'),l={name:"workshop/vuetify/component-register.md"},o=p(`<h1 id="元件配置" tabindex="-1">元件配置 <a class="header-anchor" href="#元件配置" aria-label="Permalink to &quot;元件配置&quot;">​</a></h1><p>學習目標：</p><ul><li>全局註冊元件</li><li>預設元件樣式</li></ul><h2 id="全局註冊元件" tabindex="-1">全局註冊元件 <a class="header-anchor" href="#全局註冊元件" aria-label="Permalink to &quot;全局註冊元件&quot;">​</a></h2><p>main.js</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> SideMenu </span><span style="color:#F97583;">from</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">&#39;@/components/SideMenu&#39;</span></span>
 <span class="line"><span style="color:#6A737D;">//...</span></span>
 <span class="line"><span style="color:#F97583;">const</span><span style="color:#E1E4E8;"> </span><span style="color:#79B8FF;">app</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">=</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">createApp</span><span style="color:#E1E4E8;">(App)</span></span>
 <span class="line"><span style="color:#6A737D;">// 加這一行</span></span>
@@ -6,7 +6,7 @@ import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.fb95d6d7.js";const u=
 <span class="line"><span style="color:#6A737D;">//...</span></span>
 <span class="line"><span style="color:#D73A49;">const</span><span style="color:#24292E;"> </span><span style="color:#005CC5;">app</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">=</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">createApp</span><span style="color:#24292E;">(App)</span></span>
 <span class="line"><span style="color:#6A737D;">// 加這一行</span></span>
-<span class="line"><span style="color:#24292E;">app.</span><span style="color:#6F42C1;">component</span><span style="color:#24292E;">(</span><span style="color:#032F62;">&#39;SideMenu&#39;</span><span style="color:#24292E;">, SideMenu)</span></span></code></pre></div><h2 id="型別注釋" tabindex="-1">型別注釋 <a class="header-anchor" href="#型別注釋" aria-label="Permalink to &quot;型別注釋&quot;">​</a></h2><p>為了讓IDE能夠提供 JS 元件的型別提示，需要手動定義元件型別，作法繁瑣。建議考慮直接使用 TS(TypeScript)，TS 提供型別支持，節省開發人員生命。</p><ol><li>妥善描述元件型別</li></ol><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// SideMenu.d.ts</span></span>
+<span class="line"><span style="color:#24292E;">app.</span><span style="color:#6F42C1;">component</span><span style="color:#24292E;">(</span><span style="color:#032F62;">&#39;SideMenu&#39;</span><span style="color:#24292E;">, SideMenu)</span></span></code></pre></div><h3 id="型別注釋" tabindex="-1">型別注釋 <a class="header-anchor" href="#型別注釋" aria-label="Permalink to &quot;型別注釋&quot;">​</a></h3><p>為了讓IDE能夠提供 JS 元件的型別提示，需要手動定義元件型別，作法繁瑣。建議考慮直接使用 TS(TypeScript)，TS 提供型別支持，節省開發人員生命。</p><ol><li>妥善描述元件型別</li></ol><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// SideMenu.d.ts</span></span>
 <span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { VListItem } </span><span style="color:#F97583;">from</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">&quot;vuetify/components&quot;</span><span style="color:#E1E4E8;">;</span></span>
 <span class="line"><span style="color:#F97583;">import</span><span style="color:#E1E4E8;"> { DefineComponent } </span><span style="color:#F97583;">from</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">&quot;vue&quot;</span><span style="color:#E1E4E8;">;</span></span>
 <span class="line"></span>
@@ -68,4 +68,36 @@ import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.fb95d6d7.js";const u=
 <span class="line"><span style="color:#24292E;">  </span><span style="color:#D73A49;">export</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">interface</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">GlobalComponents</span><span style="color:#24292E;"> {</span></span>
 <span class="line"><span style="color:#24292E;">    </span><span style="color:#E36209;">SideMenu</span><span style="color:#D73A49;">:</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">typeof</span><span style="color:#24292E;"> SideMenu,</span></span>
 <span class="line"><span style="color:#24292E;">  }</span></span>
-<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div>`,9),e=[o];function t(c,r,y,E,i,F){return n(),a("div",null,e)}const A=s(l,[["render",t]]);export{u as __pageData,A as default};
+<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><h2 id="預設元件樣式" tabindex="-1">預設元件樣式 <a class="header-anchor" href="#預設元件樣式" aria-label="Permalink to &quot;預設元件樣式&quot;">​</a></h2><p>統一調整預設樣式，避免專案元素充滿相同屬性綁定。</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// src/plugins/vuetify.js</span></span>
+<span class="line"><span style="color:#B392F0;">createVuetify</span><span style="color:#E1E4E8;">({</span></span>
+<span class="line"><span style="color:#E1E4E8;">  defaults: {</span></span>
+<span class="line"><span style="color:#E1E4E8;">    VCard: {</span></span>
+<span class="line"><span style="color:#E1E4E8;">      VBtn: { variant: </span><span style="color:#9ECBFF;">&#39;outlined&#39;</span><span style="color:#E1E4E8;"> },</span></span>
+<span class="line"><span style="color:#E1E4E8;">	  </span><span style="color:#6A737D;">/* 以下都是合法的作法</span></span>
+<span class="line"><span style="color:#6A737D;">      class: &#39;text-none&#39;,</span></span>
+<span class="line"><span style="color:#6A737D;">      style: &#39;text-transform: none;&#39;,</span></span>
+<span class="line"><span style="color:#6A737D;">      style: [{ textTransform: &#39;none&#39; }],</span></span>
+<span class="line"><span style="color:#6A737D;">	  */</span></span>
+<span class="line"><span style="color:#E1E4E8;">    },</span></span>
+<span class="line"><span style="color:#E1E4E8;">	</span><span style="color:#6A737D;">// 巢狀的寫法也合法，可以指定深層元素預設值</span></span>
+<span class="line"><span style="color:#E1E4E8;">	MyComponent2: {</span></span>
+<span class="line"><span style="color:#E1E4E8;">      MyComponent: { foo: </span><span style="color:#9ECBFF;">&#39;baz&#39;</span><span style="color:#E1E4E8;"> },</span></span>
+<span class="line"><span style="color:#E1E4E8;">    }</span></span>
+<span class="line"><span style="color:#E1E4E8;">  },</span></span>
+<span class="line"><span style="color:#E1E4E8;">})</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#6A737D;">// src/plugins/vuetify.js</span></span>
+<span class="line"><span style="color:#6F42C1;">createVuetify</span><span style="color:#24292E;">({</span></span>
+<span class="line"><span style="color:#24292E;">  defaults: {</span></span>
+<span class="line"><span style="color:#24292E;">    VCard: {</span></span>
+<span class="line"><span style="color:#24292E;">      VBtn: { variant: </span><span style="color:#032F62;">&#39;outlined&#39;</span><span style="color:#24292E;"> },</span></span>
+<span class="line"><span style="color:#24292E;">	  </span><span style="color:#6A737D;">/* 以下都是合法的作法</span></span>
+<span class="line"><span style="color:#6A737D;">      class: &#39;text-none&#39;,</span></span>
+<span class="line"><span style="color:#6A737D;">      style: &#39;text-transform: none;&#39;,</span></span>
+<span class="line"><span style="color:#6A737D;">      style: [{ textTransform: &#39;none&#39; }],</span></span>
+<span class="line"><span style="color:#6A737D;">	  */</span></span>
+<span class="line"><span style="color:#24292E;">    },</span></span>
+<span class="line"><span style="color:#24292E;">	</span><span style="color:#6A737D;">// 巢狀的寫法也合法，可以指定深層元素預設值</span></span>
+<span class="line"><span style="color:#24292E;">	MyComponent2: {</span></span>
+<span class="line"><span style="color:#24292E;">      MyComponent: { foo: </span><span style="color:#032F62;">&#39;baz&#39;</span><span style="color:#24292E;"> },</span></span>
+<span class="line"><span style="color:#24292E;">    }</span></span>
+<span class="line"><span style="color:#24292E;">  },</span></span>
+<span class="line"><span style="color:#24292E;">})</span></span></code></pre></div><h2 id="reference" tabindex="-1">Reference <a class="header-anchor" href="#reference" aria-label="Permalink to &quot;Reference&quot;">​</a></h2><ul><li><a href="https://vuetifyjs.com/en/features/global-configuration/#contextual-defaults" target="_blank" rel="noreferrer">Vuetify-Contextual Defaults</a></li></ul>`,17),e=[o];function t(c,r,y,E,i,F){return n(),a("div",null,e)}const A=s(l,[["render",t]]);export{d as __pageData,A as default};
