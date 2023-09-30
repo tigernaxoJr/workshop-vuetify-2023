@@ -128,7 +128,7 @@ const route = useRoute();
 </script>
 ```
 
-打開 [`http://localhost:3000/Admin`](http://localhost:3000/Admin) 看看效果
+打開 `http://localhost:3000/Admin` 看看效果
 ### 練習
 - 程式導航
 - 區分 `query` 和 `params`

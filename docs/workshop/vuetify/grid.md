@@ -99,14 +99,6 @@
 | v-col    | 必須是 v-row 的直接子元素                                                                                                                                          |                   | v-flex          |
 | v-spacer | 分配剩餘的寬度，子元件之前或之後放置單個 v-spacer 時，這些元件將推向其容器的右側和左側。當在多個元件之間使用多個 v-spacer 時，剩餘的寬度將均勻分佈在每個間距之間。 |                   |                 |
 
-## 對齊
-| 項目                                                                | 對象     | 說明                          |
-| ------------------------------------------------------------------- | -------- | ----------------------------- |
-| [Align](https://vuetifyjs.com/en/components/grids/#align)           | flexbox  | 把 flexbox 內的元素垂直對齊   |
-| [Align Self](https://vuetifyjs.com/en/styles/flex/#flex-align-self) | flexitem | 指定 flexbox 內的元素垂直對齊 |
-| [Justify](https://vuetifyjs.com/en/components/grids/#justify)       | flexbox  | 水平對齊                      |
-| [Auto Margins](https://vuetifyjs.com/en/styles/flex/#auto-margins)  | flexitem | 自動留空                      |
-
 ## Breakpoints
 | code | range          |
 | ---- | -------------- |
