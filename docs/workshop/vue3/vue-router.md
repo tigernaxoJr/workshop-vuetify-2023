@@ -24,5 +24,12 @@
 | SEO(不重要)    | 不利於 SEO                        | 利於 SEO                      |
 
 Hash Mode 無法傳遞網址列參數，在傳遞 KEY 的時候會有問題，伺服器端設置也不複雜，建議用 History Mode。
+<iframe src="https://codesandbox.io/embed/vue-router-yv8473?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="vue-router"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 ## Reference
 - [Vue Router](https://router.vuejs.org/introduction.html)
