@@ -1,6 +1,8 @@
 ---
 ---
-# Pinia
+# 全局狀態共享
+有時候前端路由切換頁面時能希望保留頁面狀態。
+## Pinia
 Pinia 是 Vue 的一個狀態管理庫，用來在組件/頁面之間共享狀態。好處：
  - Devtools 支持 
  - 服務器端渲染(SSR)支持
@@ -8,9 +10,36 @@ Pinia 是 Vue 的一個狀態管理庫，用來在組件/頁面之間共享狀�
  - ... 其他
 
 P.S. 在服務器端渲染(SSR; Server Side Rendering)應用程式中，通過簡單的 export const state = reactive({}) 共享全局狀態則會使應用程序暴露於安全漏洞。
-<iframe src="https://codesandbox.io/embed/pinia-playground-forked-jdf5s7?fontsize=14&hidenavigation=1&theme=dark"
+
+### store 宣告
+`store/counter.js`
+```js
+import { defineStore } from "pinia";
+
+export const useCounterStore = defineStore("counter", {
+  state: () => ({ count: 0 })
+});
+```
+
+### store 使用
+```vue
+<template>
+  <div>
+    {{ counter.count }}
+    <button @click="counter.count++">+</button>
+    <button @click="counter.count--">-</button>
+  </div>
+</template>
+
+<script setup>
+import { useCounterStore } from "../store/counter";
+const counter = useCounterStore();
+</script>
+```
+### 試試看
+<iframe src="https://codesandbox.io/embed/2023-pinia-m88klz?fontsize=14&hidenavigation=1&theme=dark"
      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="pinia-playground (forked)"
+     title="2023-pinia"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>

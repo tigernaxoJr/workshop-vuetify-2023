@@ -76,10 +76,7 @@ Vue DevTools 是 Browser Extension
 ## NVM
 NVM 是用於 Node.js 版本控制的工具。它允許使用者安裝、切換和卸載不同版本的 Node.js。如果要維護舊專案，可以使用 NVM 切換回較舊版本的 Node.js。
 ### 安裝方式
-打開 git bash 執行：
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-```
+原始 nvm 專案只適用於 Linux/Mac，windows 需要下載另外的專案 [nvm windows](https://github.com/coreybutler/nvm-windows/releases)安裝。
 安裝其他 node 版本
 ```bash
 nvm install node # "node" is an alias for the latest version

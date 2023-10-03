@@ -18,6 +18,15 @@ export default defineConfig({
     ],
     sidebar,
   },
+  head: [
+    [
+      'link',
+      {
+        href: 'https://cdn.jsdelivr.net/npm/vuetify@3.3.19/dist/vuetify.min.css',
+        rel: 'stylesheet',
+      },
+    ],
+  ],
   vite: {
     resolve: {
       alias: {

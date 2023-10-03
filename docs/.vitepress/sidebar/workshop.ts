@@ -13,8 +13,8 @@ export default [
       { text: '單向資料流', link: '/workshop/vue3/data-flow' },
       { text: '元件插槽', link: '/workshop/vue3/slots' },
       { text: 'Vue 生態圈', link: '/workshop/vue3/ecosystem' },
-      { text: 'Pinia', link: '/workshop/vue3/pinia' },
       { text: 'Vue-Router', link: '/workshop/vue3/vue-router' },
+      { text: 'Pinia', link: '/workshop/vue3/pinia' },
     ],
   },
   {

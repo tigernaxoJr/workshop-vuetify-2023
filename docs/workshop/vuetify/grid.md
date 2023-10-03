@@ -65,15 +65,22 @@
 
 ```
 ### flex shorthand property
+
 ```css
 .item {
+  /* Three values: flex-grow | flex-shrink | flex-basis */
   flex: <flex-grow> <flex-shrink> <flex-basis>;
+  /* Two values: flex-grow | flex-basis */
+  flex: <flex-grow> <flex-basis>;
+  /* Two values: flex-grow | flex-shrink */
+  flex: <flex-grow> <flex-shrink>;
 }
 ```
+
 [MDN-Shorthand Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 
 ## 彈性網格系統(Flex Grid System)
-以 bootstrap 為例，經典的網格系統長這樣：
+以 bootstrap 為例，經典的網格系統長這樣(實際拿出來看)：
 ```css
 .col { flex: 1 0 0%; } /*增長因子為 1，會長大*/ 
 /* col-1 ~ col-12 固定百分比 */
@@ -112,31 +119,34 @@
 ## 常用搜尋區 RWD
 ```html
 <v-row>
-  <v-col cols="12" md="6" lg="3">1</v-col>
-  <v-col cols="12" md="6" lg="3">2</v-col>
-  <v-col cols="12" md="6" lg="3">3</v-col>
-  <v-col cols="12" md="6" lg="3">4</v-col>
+  <v-col cols="12" md="6" lg="3">搜尋框1</v-col>
+  <v-col cols="12" md="6" lg="3">搜尋框2</v-col>
+  <v-col cols="12" md="6" lg="3">搜尋框3</v-col>
+  <v-col cols="12" md="6" lg="3">搜尋框4</v-col>
+  <v-col class="d-none d-lg-block"></v-col>
+  <v-col cols="12" md="6" lg="auto">
+    <v-btn class="w-100">按鈕</v-btn>
+  </v-col>
+  <v-col cols="12" md="6" lg="auto">
+    <v-btn class="w-100">按鈕</v-btn>
+  </v-col>
 </v-row>
 ```
 螢幕寬度 {{width}}，效果：
-
-<div class="row">
-  <div :class="col">搜尋框1</div>
-  <div :class="col">搜尋框2</div>
-  <div :class="col">搜尋框3</div>
-  <div :class="col">搜尋框4</div>
-  <div :class="col" class="border-0" v-if="col=='col-3'">填充</div>
-  <div :class="col" class="border-0" v-if="col=='col-3'">填充</div>
-  <div :class="col">搜尋按鈕</div>
-  <div :class="col">清空按鈕</div>
+<div class="v-row">
+  <div class="v-col-12 v-col-md-6 v-col-lg-3 border">搜尋框1</div>
+  <div class="v-col-12 v-col-md-6 v-col-lg-3 border">搜尋框2</div>
+  <div class="v-col-12 v-col-md-6 v-col-lg-3 border">搜尋框3</div>
+  <div class="v-col-12 v-col-md-6 v-col-lg-3 border">搜尋框4</div>
+  <div class="v-col d-none d-lg-block"></div>
+  <button class="v-col-12 v-col-md-6 v-col-lg-auto border rounded">搜尋按鈕</button>
+  <button class="v-col-12 v-col-md-6 v-col-lg-auto border rounded">搜尋按鈕</button>
 </div>
 
 ## 常用表格 RWD 策略
  - 大螢幕 => 完整表格  
  - 中螢幕 => 減少不重要欄位  
  - 小螢幕 => 卡片清單、可展開細節
-
-<!-- 螢幕寬度 {{width}}，效果： -->
 
 <script setup> 
 import { ref, computed, reactive, onMounted, onUnmounted } from 'vue'
@@ -148,49 +158,9 @@ const resizeHandler = (e)=> (width.value = window.innerWidth)
 let listener;
 onMounted(()=> (listener = window.addEventListener("resize", resizeHandler)))
 onUnmounted(()=> window.removeEventListener("resize", listener))
-
-// col
-const col = computed(()=>{
-	if(width.value < 960) return 'col-12'
-	if(width.value < 1280) return 'col-6'
-	return 'col-3'
-})
-
 </script>
 <style > 
-* {
-  box-sizing: border-box; /* 这会将内边距和边框计算在元素的总宽度内 */
- }
-.row { 
-	display: flex; 
-	max-width: 100%;
-	flex-wrap: wrap;
-}
-.row * { border: 1px solid #000; }
-.border-0 { border: 0px !important; }
-.col { flex: 1 0 0%; } /*增長因子為 1，會長大*/ 
-/* col-1 ~ col-12 固定百分比 */
-/* .col-auto{flex:0 0 auto;width:auto}
-.col-1{flex:0 0 auto;width:8.33333333%}
-.col-2{flex:0 0 auto;width:16.66666667%} */
-.col-3 {
-  flex: 0 0 25%; /* 或者 flex: 1 0 25%; 如果你希望元素能够收缩以适应空间 */
-  max-width: 25%;
-}
-/* .col-4{flex:0 0 auto;width:33.33333333%}
-.col-5{flex:0 0 auto;width:41.66666667%}
- */
-.col-6 {
-  flex: 0 0 50%; /* 或者 flex: 1 0 25%; 如果你希望元素能够收缩以适应空间 */
-  max-width: 50%;
-}
-/* .col-7{flex:0 0 auto;width:58.33333333%}
-.col-8{flex:0 0 auto;width:66.66666667%}
-.col-9{flex:0 0 auto;width:75%}
-.col-10{flex:0 0 auto;width:83.33333333%}
-.col-11{flex:0 0 auto;width:91.66666667%}
-*/
-.col-12{flex:0 0 100%;max-width:100%} 
+
 </style>
 ## Reference
 - [MDN-Basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
