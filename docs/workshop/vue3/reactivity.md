@@ -35,14 +35,9 @@
   console.log(count.value) // 1
   </script>
   ```
+[試試看](https://play.vuejs.org/#eNp9kUFLwzAUx79KfJcqzA3ZbXQDlYF6UFHBSy6je+sy0yQkL7NQ+t19SVn1ILv1/X//l/7SdnDr3PQYERZQhsorRyIgRbeSRjXOehKd8LgTvdh524iCq4U00lTWBBJNqMUy8cviAbW24tN6vb0orqQpZ8NxfBAPhI3TG0KehCj3N6uuy8t9X854yqkyLpI4Xjd2i3opgbkERuVs3IYJUOBX71Q9PQRr2LpLuxIq2zil0b84UqwmYSEySWzDZt9POSMfcXLKqz1WX//kh9CmTMKrx4D+iBJGRhtfIw14/f6MLT+PkM2j5vYZ+IbB6pgch9pdNFvW/tPLto/52ytTf4R1S2jC6VJJNDX73JfA/+P+zNV/defTed6Tpof+B7x8phs=)
 ### 以觀察者模式理解
 我們可以透過不到短短50行的程式碼[實作](https://playcode.io/1605775)模擬簡單的 MVVM（Model-View-ViewModel）架構 ref，幫助我們理解：
-
-<iframe height="500" style="width: 100%;" scrolling="no" title="2023-ref" 
-  src="https://playcode.io/1605775" 
-  frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-</iframe>
-
 
 ```js:line-numbers
 // vue 透過類似機制宣告為響應式狀態
@@ -101,6 +96,14 @@ let message = ref('message');
 // 模板綁定響應式資料透過類似的機制獲得更新
 const template = '<div>{{count}} ({{message}})</div>';
 new Watcher(template, { count, message });
+```
+
+測試看看：
+```js
+count.value++;
+message.value="new message";
+count.value++;
+message.value="new message2";
 ```
 
 
