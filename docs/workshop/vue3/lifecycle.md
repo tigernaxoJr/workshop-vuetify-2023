@@ -2,7 +2,7 @@
 ## 生命週期
 每個 Vue 組件實例在創建時都會經歷一系列初始化步驟，例如`設置數據觀察`、`編譯模板`、`將實例掛載到 DOM `並在數據更改時`更新 DOM`。在過程中，元件會運行稱為生命週期鉤子 (lifecycle hooks) 的函數，使開發者能夠在特定階段添加自己的程式碼。
 
-參考圖，實際上最常用到的是 onMounted、onUnMounted：
+參考圖，實際上最常用到的是 setup、onMounted、onUnMounted：
 ![](https://vuejs.org/assets/lifecycle.16e4c08e.png)
 ## 生命週期鉤子
 ### 觀察者設計模式

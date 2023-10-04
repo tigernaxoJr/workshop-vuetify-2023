@@ -11,9 +11,9 @@ Vue 建構的應用程式是由小元件組成的樹狀結構，開發者最常�
 
 SFC 由三個主要部分組成：
 
-- 模板（`<Template>`）（HTML）
-- 腳本（`<Script>`）、（Javascript）
-- 樣式（`<Style>`）、（CSS）
+- 模板（`<template>`）（HTML）
+- 腳本（`<script>`）、（Javascript）
+- 樣式（`<style>`）、（CSS）
 
 結構會像這樣：
 
@@ -51,7 +51,7 @@ a = 1 // 1
 ok ? 'yes': 'no' // 'yes'
 `list-${id}` // 'list-...'
 formatDate(date) // 對 function 回傳的結果 toString
-message.split('').reverse().join('')` 
+message.split('').reverse().join('') 
 ```
 ```js [不可以]
 var a = 1 // undefined
