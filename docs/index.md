@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: Vuetify3 Practice
+  name: Vuetify3 Bootcamp
   text: Vue3、Vite...
   tagline: A vuetify3 workshop.
   image:
