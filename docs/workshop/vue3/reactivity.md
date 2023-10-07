@@ -161,6 +161,17 @@ Vue 會收集 reactive state 的變更，然後一次性重新渲染 DOM，因�
 
 ### [試試看](https://play.vuejs.org/#eNqNU8tu00AU/ZWRhdRETWyksgpJFKi6gAUgqFh5UWd8k047nhnNXCdBlndsWPAD8A/8FepvcGfGSU14tLu5577OucdukhfGpJsakkkyRaiMLBDmuWJsuqwRtWIWVrM8WaLKE7bgUvBbChEc5smcNQ1zSB0p17VC1rZsmsU+mjHNegMpdNwKg8wB1oYQURltkTVMwQ4vae6IdhUcxQb8a8VatrK6YifE7uS5n8C1csiICpv5goGqpRzmSgIN9SwCHCcMGhYoTdhT1g6pO/Z63lRVuE+Ks8GQzUiCF9sTcXrqgVjeDSEms1hynyp19bGQhBOddFPIGlIkHedaISj0dcW2EHgQNyCivd43BD/UL8Hi4Oru+4+fX77effu8F/SkCY92tOfgofiMWDe7g7uovSICrTcl2jBPRkl0YFwVJr1xWtEnEI6RdwmXJ5N4Ho+RCz7Ok2tE4yZZxktFbSVIsbGpAsyUqbIFlWWW6IkKxrR9cZaepc+yUjjswym4ary0euvA0pA8GfXWZARuwI4tqBIs2MeuPWrrrz5K/bHeb6fjtHQUdGTSSqyPTsJ1ZQQ58tagIBN/O00hpd6+DhjaGg5a+DXw27/gN24XNb2zEJj19GNh10D/lk9ffPDm9ZKVLmvZ2fCP5HtwWtaeYyx7WauSaPfqAttXwWGh1pfuYkdfnNuL8kTDNUJ98OP8P9Lv6dK1D1dsfwG98X8V)
 
+## Summary
+- 響應性狀態3特性：
+  - 管理一個私有值，並且存取和修改該值都只能透過這個響應性狀態。
+  - 管理一個對象清單，紀錄私有值改變時通知應通知的對象。
+  - 在私有值被修改/賦值時通知依賴於私有值的對象。
+- `ref()`、`reactive()` 可包裹私有值，獲得響應性狀態。
+- `ref()` 用於包裹初級(primary)資料型態，也可以包裹物件但會自動調用 `reactive()`。
+- `reactive` 用於包裹複雜資料型態。
+- `ref()`的底層實現是 `getter`、`setter`，`reactive()` 的底層實現是 `proxy`。
+- Vue3 使用了 `proxy` 因此不支援 IE。
+
 ## Reference
 - [Vue.js-Reactivity Fundamentals](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)
 - [MDN-Proxy](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)

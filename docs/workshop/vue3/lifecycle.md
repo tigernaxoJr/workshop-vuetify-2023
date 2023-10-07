@@ -38,5 +38,12 @@ Vue3 有很多 lifecycle hook ，但最常用的是 onMounted、onUnmounted
 - onServerPrefetch()
 :::
 
+## Summary
+- 組件到達某個生命週期階段，相應的生命週期鉤子就會被調用。
+- 生命週期鉤子是`觀察者設計模式`的一種實現。
+- `setup` 是組件實體產生前的準備階段，在組件建立前被調用。
+- `onMounted` 是組件被掛載到 DOM 的生命週期鉤子。
+- `onUnMounted` 是組件從 DOM 卸載的生命週期鉤子。
+
 ## Reference
 - [Vue.js-Lifecycle Hooks](https://vuejs.org/guide/essentials/lifecycle.html)

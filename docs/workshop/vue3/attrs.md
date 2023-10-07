@@ -67,6 +67,12 @@ const obj = { id: 'container', class: 'wrapper' }
 ## 玩玩看
 [Playground](https://play.vuejs.org/#eNqNVM1u00AQfpWtOTiR6hgoXExaFaoe4AAIevTF9m7STe3d1e7aLYoi8XcpcIADCAriikCoCFWqRIG3aZNy4hUYr+3UcSniNjt/3zffjD20rgrRyVJieVZXk0TEgSZLPkOoi2lmDDApE6lGmZNwTOJF36LYt5bQr7dvjp6/mOw/ONrdaR1/ej/eeznZe9X20HCIKEajkWnjFn2MPec4R18/j+9/KIocZ4oEzUPKsEdx1b7pqBqV+bXM0zlN/oB7ePD08Pt+SbZ4jF9/mWx/G+8+mew8Lmj9/vFsOYpptIHG7x4d/9yePDxAHmcrxtUu6UK/MNWaM+DMmWfyAZ8zY+XCnPhh/CK3UVmgzFaVyGdUVDRma6bkZqqaMpTi5qXhAMom2x+nWpwhGaYqCGOCq917lQOazM0Z2etIXbd2O/BUkaRCI0V0KsBDE8GlRkPEyJZeA77zSJIg0jQjudVDI9STPEE2HKJ9xWcRZ0rnN7SYR1u2wj27XbnL8SHWaqPFJRTEROqWfeHiQi0nHEB8mFOk2EO2JkpTbM/njigOlAJfgEIU2T6DM+26BeGSvL4X53OcC4QAIbKiT8glJtKRAaYplJ/vXCYJUIVAEG30JU8ZdiIec+mhkNA+MTERYExZ30MXyuQkkH3KqncBbeCseatQyUkC0RkozuCLNMBw2iagfAs+rWI9vgVK5W/fWtdaKM91I8ygDL5PmskOI9plInGXIc2VKdM0IQ7myfJCZ6FzCZamdN3dISpxQsk3FZHQxLeMUCWMC84sn5wwEIDI/4VtlNWhG6FT8Dk6aDMCUbSCjfZovyFJxBNBYfG3hKaw8RlpgjjmmzeMT8uUTGeJ1km08Rf/QG0VM92WxDCrza9hX0QX4dW7N+F8a0H4HaZxuYYzgneI4nGacyzSrsGZAO1anmF73WwYLmVNrW5pwlQ1VE7UqGHyzT5W/jH6CV1Qe6ri6A8+lxXj)
 
+## Summary
+- 綁定的屬性或事件，命名方式為 kebab-case(建議) 或 camelCase。
+- 事件綁定是`v-on:[事件名稱]`語法糖 `@[事件名稱]`。
+- 屬性綁定是`v-bind:[屬性名稱]`語法糖 `:[屬性名稱]`。
+- 綁定屬性`:onClick`效果和`@click`相同，事件也是屬性的一種。
+- 單純使用 `v-bind` 是物件綁定，綁定物件下的所有屬性。
 
 ## Reference
 - [Vue.js-Template Syntax](https://vuejs.org/guide/essentials/template-syntax.html)

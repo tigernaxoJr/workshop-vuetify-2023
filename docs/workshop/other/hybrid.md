@@ -26,8 +26,10 @@ Webview2通常與.NET和C++應用程式一起使用，可在Windows平台上嵌�
  - 讓 javascript 和 c# 程式碼互操作
  - 讓 windowform `漸進式`遷移到三層(tier)式架構的策略
 
+![](https://learn.microsoft.com/en-us/microsoft-edge/webview2/index-images/what-webview.png)
+
 ### 單檔佈署
-### 互操作
+### 互操作性
 #### c# 
 #### javascript 
 ### 非同步下的UI線程

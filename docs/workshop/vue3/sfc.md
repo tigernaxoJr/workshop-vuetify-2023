@@ -102,6 +102,14 @@ lang 屬性套用想要的 CSS 預處理器，但要先 npm 安裝對應的 CSS 
 來玩玩看吧
 [Playground](https://play.vuejs.org/#eNqNUk2P0zAQ/SsmHLqrbpIuu1xKWhXQSsABECBx8SW1p623/pLttEVV/jtjJy3Z8iEubebNm5k3b3zMXltb7BrIplnlmRM2EA+hsXOqhbLGBXIkDlakJStnFBkhdUQ11cxoHwgzjQ5kFhlXk+sTqvy6x0bvQEpDvhsn+bPRmVBzjoSrazKbdy2KXS0bGI+prspOBc7HIICysg6AESHV5nZ+PKbubVuVGCVUaNsEssuV4SBnNMM8zbqUt7WOJZ3MWJSQlFs2IRhNFkwKtsUy1IRliTkeV2WXRmpVDkRg6MMPCcQzY4GnTptbcoz/BMdI46a4OH8VgTb+9GN6xrJm27XDGTzvyc/vWb16OUkF5w77jQjQQ0vjOCCmjX4K5a7movFTMilegDpNxBWjwHl2k3X3y1Vti0dvNF44qaB9wtNsetJFM7xrjGm2CcH6aVkyrrEMLRU7V2gIpbaqXCCtdGiRUJBzoxZ3xV1xX3LhwxAuwKt86czeg8MmNLsZjCkR3EX5oHELcP879qJsOPoi9dv43psWTQl4Ob0S6wtLmFFWSHCfbBD4RJ9YU+MT3n9IWHANnHdhG2DbP+CP/tDt9NlBUjbYP9RuDaFLP3z9CAf8PifxBTeyP8Nfkl/AG9lEjR3tDT4llD3gJbXv04WFXn/zD4cA2p+WikKTG4mf7vH2H6v/kotun11sfwIsXmkY)
 
+## Summary
+- Vue 撰寫最常見元件檔案是單一元件檔(SFC; Single File Component)。
+- 單一元件檔由 `<template>`、`<script.`、`<style>` 三個部分組成。
+- `<template>` 當中可以用鬍子語法(Mustache syntax)綁定表達式、響應性狀態。
+- `<script setup>` 中，頂層導入或聲明的變數和函數，可以自動在同一組件的模板中使用。
+- `<style lang="scss">` 可以選擇以 SCSS 撰寫樣式。
+- 求值式/表達式(`Expression`)與敘述句(`Statement`)不同。
+
 ## Reference
 - [Vue.js-Template Syntax](https://vuejs.org/guide/essentials/template-syntax.html)
 - [2020it 邦鐵人賽-30 天手把手的 Vue.js 教學 Day15 - 認識 Single file components(SFC)](https://ithelp.ithome.com.tw/articles/10245406)
