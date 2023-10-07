@@ -6,7 +6,7 @@ import sidebar from './sidebar';
 export default defineConfig({
   title: 'Vuetify 2023',
   description: 'Just playing around.',
-  base: '/workshop-vuetify-2023',
+  base: '',
   // appearance: 'dark',
   cleanUrls: false,
   themeConfig: {
