@@ -33,5 +33,9 @@ Hash Mode 無法傳遞網址列參數，在傳遞 KEY 的時候會有問題，�
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
+## Summary
+- 前端路由只有頁面載入時需要請求靜態檔案。
+- 官方優先考慮使用 HTML5 Mode 並設置伺服器端。
+
 ## Reference
 - [Vue Router](https://router.vuejs.org/introduction.html)

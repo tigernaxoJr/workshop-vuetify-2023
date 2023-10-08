@@ -98,6 +98,10 @@ export const useCounterStore = defineStore(
 https://github.com/vuejs/pinia/discussions/1264
 https://github.com/vuejs/pinia/discussions/1264#discussioncomment-5802335
 you can change state from anywhere you want But keep in mind that if you keep all the updates in one place, it will be much easier to manage and maintain the code in the future.
+## Summary
+- vue3 使用 pinia 作為官方全局狀態工具。
+- 使用 `useXxxxStore` 取得該 store。
+- 取得該 store 可以直接 `v-model` 綁定(和 props 不同)。
 ## Reference
 - [Pinia-Introduction](https://pinia.vuejs.org/introduction.html)
 - [Medium-How to use pinia with composition script setup](https://blog.devgenius.io/how-to-use-pinia-with-composition-script-setup-2352558fb06c)
