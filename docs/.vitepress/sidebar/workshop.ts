@@ -51,11 +51,7 @@ export default [
       },
       {
         text: '[工具] 實用工具',
-        collapsed: true,
-        items: [
-          { text: 'dayjs', link: '/workshop/project/tools/dayjs' },
-          // { text: 'token', link: '/workshop/project/tools/token' },
-        ],
+        link: '/workshop/project/tools',
       },
       {
         text: '[工具] 實用狀態',
