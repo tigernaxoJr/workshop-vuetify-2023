@@ -106,7 +106,21 @@ count.value++;
 message.value="new message2";
 ```
 
-
+## 元件參考
+別忘了元件本質上也是 javascript 物件，當然也可以使用 `ref` 進行跟蹤取值、調用暴露的方法：
+```vue
+<template>
+  <dialog ref="dialog"></dialog>
+  <button @click="test"> click </button>
+</template>
+<script setup>
+import { ref } from 'vue';
+const dialog = ref(null)
+const test = ()=>{
+  dialog.value.show()
+};
+</script>
+```
 
 ### shallowRef()
 Deep Reactivity：ref 預設會跟蹤其內部的所有對象，如果不是基本(privative)數據類型，它會自動使用 reactive() 來將對象轉換為代理(proxy)。
@@ -168,6 +182,7 @@ Vue 會收集 reactive state 的變更，然後一次性重新渲染 DOM，因�
   - 在私有值被修改/賦值時通知依賴於私有值的對象。
 - `ref()`、`reactive()` 可包裹私有值，獲得響應性狀態。
 - `ref()` 用於包裹初級(primary)資料型態，也可以包裹物件但會自動調用 `reactive()`。
+- `ref()` 可以製作`元件參考`。
 - `reactive` 用於包裹複雜資料型態。
 - `ref()`的底層實現是 `getter`、`setter`，`reactive()` 的底層實現是 `proxy`。
 - Vue3 使用了 `proxy` 因此不支援 IE。

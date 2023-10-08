@@ -4,18 +4,19 @@ export default [
     collapsed: true,
     items: [
       // 預計 4hr, 中間休息 20min, 前後扣除 15min(緩衝) = 4*60-20 -15 =205 min
-      { text: '單一元件檔', link: '/workshop/vue3/sfc' }, // 10min, 10
-      { text: '元件生命週期', link: '/workshop/vue3/lifecycle' }, // 5min, 15
-      { text: '響應式狀態', link: '/workshop/vue3/reactivity' }, // 15min, 30
+      { text: '[元件]單一元件檔', link: '/workshop/vue3/sfc' }, // 10min, 10
+      { text: '[元件]生命週期', link: '/workshop/vue3/lifecycle' }, // 5min, 15
+      { text: '[狀態]響應性', link: '/workshop/vue3/reactivity' }, // 15min, 30
+      { text: '[狀態]觀察者', link: '/workshop/vue3/reactivity2' }, // 5min,
       // todo: component reference
-      { text: '屬性綁定', link: '/workshop/vue3/attrs' }, // 5min, 35
-      { text: '指示詞', link: '/workshop/vue3/directive' }, // 10min, 45
-      { text: '元件溝通', link: '/workshop/vue3/provide' }, // 15min, 60
-      { text: '單向資料流', link: '/workshop/vue3/data-flow' }, // 15min, 75
-      { text: '元件插槽', link: '/workshop/vue3/slots' }, // 15min, 90
-      { text: 'Vue 生態圈', link: '/workshop/vue3/ecosystem' }, // 5min, 95
-      { text: 'Vue-Router', link: '/workshop/vue3/vue-router' }, // 10min, 105
-      { text: 'Pinia', link: '/workshop/vue3/pinia' }, // 10min, 115
+      { text: '[元件]屬性綁定', link: '/workshop/vue3/attrs' }, // 5min, 35
+      { text: '[元件]指示詞', link: '/workshop/vue3/directive' }, // 10min, 45
+      { text: '[元件]元件溝通', link: '/workshop/vue3/provide' }, // 15min, 60
+      { text: '[觀念]單向資料流', link: '/workshop/vue3/data-flow' }, // 15min, 75
+      { text: '[元件]插槽', link: '/workshop/vue3/slots' }, // 15min, 90
+      { text: '[Vue]生態圈', link: '/workshop/vue3/ecosystem' }, // 5min, 95
+      { text: '[Vue]前端路由', link: '/workshop/vue3/vue-router' }, // 10min, 105
+      { text: '[Vue]全局狀態', link: '/workshop/vue3/pinia' }, // 10min, 115
     ],
   },
   {

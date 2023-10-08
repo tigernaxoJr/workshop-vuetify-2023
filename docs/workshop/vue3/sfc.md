@@ -66,6 +66,7 @@ formatData
 ## 腳本
 Vue 組件的 Javascript 部分  
 - 在 `<script setup>` 中，頂層導入或聲明的變數和函數，可以自動在同一組件的模板中使用。
+`<script setup>` 也支援 `top lovel await`。
 
 ```html
 <script setup>
@@ -106,7 +107,9 @@ lang 屬性套用想要的 CSS 預處理器，但要先 npm 安裝對應的 CSS 
 - Vue 撰寫最常見元件檔案是單一元件檔(SFC; Single File Component)。
 - 單一元件檔由 `<template>`、`<script.`、`<style>` 三個部分組成。
 - `<template>` 當中可以用鬍子語法(Mustache syntax)綁定表達式、響應性狀態。
-- `<script setup>` 中，頂層導入或聲明的變數和函數，可以自動在同一組件的模板中使用。
+- `<script setup>` 直接撰寫元件 setup() 的部分
+  - 頂層導入或聲明的變數和函數，可以自動在同一組件的模板中使用。
+  - 支援 `top lovel await`。
 - `<style lang="scss">` 可以選擇以 SCSS 撰寫樣式。
 - 求值式/表達式(`Expression`)與敘述句(`Statement`)不同。
 

@@ -1,4 +1,5 @@
 # Vue-Router
+Vue3 前端路由採用 `Vue-Router`
 ## 前端路由
 ### 後端路由
 ![](/back-route.png)
