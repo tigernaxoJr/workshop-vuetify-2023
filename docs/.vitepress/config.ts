@@ -34,4 +34,7 @@ export default defineConfig({
       },
     },
   },
+  sitemap: {
+    hostname: 'https://vuetify3.tigernaxo.com',
+  },
 });
