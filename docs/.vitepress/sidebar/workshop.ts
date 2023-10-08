@@ -1,7 +1,7 @@
 export default [
   {
     text: 'Vue 基礎',
-    collapsed: true,
+    collapsed: false,
     items: [
       // 預計 4hr, 中間休息 20min, 前後扣除 15min(緩衝) = 4*60-20 -15 =205 min
       { text: '[元件]單一元件檔', link: '/workshop/vue3/sfc' }, // 10min, 10
