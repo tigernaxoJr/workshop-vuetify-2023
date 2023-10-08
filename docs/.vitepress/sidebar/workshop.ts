@@ -11,7 +11,7 @@ export default [
       // todo: component reference
       { text: '[元件]屬性綁定', link: '/workshop/vue3/attrs' }, // 5min, 35
       { text: '[元件]指示詞', link: '/workshop/vue3/directive' }, // 10min, 45
-      { text: '[元件]元件溝通', link: '/workshop/vue3/provide' }, // 15min, 60
+      { text: '[元件]元件溝通', link: '/workshop/vue3/comminucation' }, // 15min, 60
       { text: '[觀念]單向資料流', link: '/workshop/vue3/data-flow' }, // 15min, 75
       { text: '[元件]插槽', link: '/workshop/vue3/slots' }, // 15min, 90
       { text: '[Vue]生態圈', link: '/workshop/vue3/ecosystem' }, // 5min, 95

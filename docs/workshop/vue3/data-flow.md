@@ -124,7 +124,7 @@ const lastName = computed({
 });
 ```
 [試試看](https://play.vuejs.org/#eNqVVMFu2zAM/RVBFzuA6xx6S90BW5HDduiCdTtNOxg2nbqzZUGSswyG/n2kHMnJVnTtJTD5HqlHPSoTf69UfhiBb3hhKt0qywzYUb0Tsu3VoC37ZkDflz2wRg89S/J1SFBZchN5E9PQMHeiESakkNUgjWVNq/H3lhhpsgMLOlkFrCsX6O4RJCHFetaCKjCw0KuutIARY9N06uZcRoEvd46gIko9XPVDDd3GM68kpm4F94HgEaTKgNE3Qms8oljH83jGrUGVTbvPn8wg8ZImOkjwauhV24H+rGyLUwi+YR4hrOy64dcnn7N6hCzkq0eofj6TfzJHygm+04ADHEDwiNlS7wGVEbx9uIcjfkcQxxg7ZL8AfgEzdCNpnGkfRlmj7DOeV/vRW9jK/VezPVqQJgxFQonpPF9wtPXuhdEXudf5ta8T0uEtnq8MbdriqJ5Li1aq0TL7W5Eb1o8SjArWUYPZo9cVkacXNWfOUuhTlzuPmbjNZPFoob5caWTMa6v0oAzubQ1NK2FHUToFZVHvhj1YjfeaBSSICgDl3eom6Jl7Q9/Sk5hbbzEw6fdkVDUqn1eaOiQZC7nQNPnxd6fIxnZhoEUmepWu/MO1o5bzSPlSgqafiHg9KRCTlKXPSUHUnc2yPO23HR4r/nd2HPmfo+N/B3d/ABxUqkY=)
-## v-model modifiers
+<!-- ## v-model modifiers -->
 ## Reference
 - [Vue.js-Component v-model](https://vuejs.org/guide/components/v-model.html)
 - [Medium-深入淺出 Flux](https://medium.com/4cats-io/%E6%B7%B1%E5%85%A5%E6%B7%BA%E5%87%BA-flux-44a48c320e11)

@@ -27,6 +27,7 @@ export default defineConfig({
         rel: 'stylesheet',
       },
     ],
+    ['link', { rel: 'icon', href: '/logo.png' }],
     [
       'script',
       {

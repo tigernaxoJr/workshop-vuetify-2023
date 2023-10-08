@@ -1,4 +1,4 @@
-# 元件溝通 (Provide-Inject)
+# 元件溝通 
 ## Props
 在父元件綁定屬性給子元件後，子元件內還需要宣告 Props，才能取用綁定的屬性。
 ### defineProps

@@ -4,13 +4,13 @@ layout: home
 hero:
   name: Vuetify3 Bootcamp
   text: Vue3、Vite...
-  tagline: A vuetify3 workshop.
+  tagline: Vuetify3 Workshop.
   image:
     src: /logo2.png
     alt: ImageNotFound
   actions:
     - theme: brand
-      text: Get Started
+      text: 開始
       link: ./workshop/workshop
     # - theme: alt
     #   text: View on GitHub
@@ -18,17 +18,17 @@ hero:
 
 features:
   - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
+    title: Vite
+    details: 使用 Hot Module Relad 快速啟動專案。
   - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
+    title: Vuetify3 
+    details: 上一代曾經風光的前端 UI 框架。
   - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
-  - icon: 🧶
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+    title: Vue
+    details: 前端三大框架之一。
+  # - icon: 🧶
+  #   title: Simple and minimal, always
+  #   details: Lorem ipsum...
 ---
 
 

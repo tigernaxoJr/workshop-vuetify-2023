@@ -98,7 +98,7 @@ const count = ref(0);
     - 不變的資料可以用 index 作為 key
 4. 事件綁定 (`v-on`/`@`) 常用修飾詞：`.prevent`、`.stop`
 5. `v-model`：雙向綁定語法糖。
-    - 不指定的話(`v-model="xxx"`)預設綁定 `modelValue` 這個 props。
+    - 不指定綁定值的話(`v-model="xxx"`)預設綁定 `modelValue` 這個 props。
     - 指定其他`props`綁定：`v-model:somevalue="xxx"`。
     - 可綁定多個值。
 6. `v-slot` 嵌入插槽，先大致了解內容和結構，後面有專門章節。
