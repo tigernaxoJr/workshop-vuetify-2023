@@ -127,6 +127,17 @@ Expressions 存取範圍：
 ```
 
 [試試看](https://play.vuejs.org/#eNqNU8tu00AU/ZVhNt3EtlBZhVKVVhUCIaiApTfGvk1c7JnRzHUaFEVKeUhISJRtumJTseG56aaq+Jk4Vf6CO2M3ccJD3c09933mngG/q5TfK4C3+cYNz2Mq0iCQxTJXUtiX522GYgMhV1mEQG/GNrYjAw+jl7JAZxNy5Wc9z2QS74R8gNDHFhUqBA5DXgdSqO0yG42n41flaFwef5+cn85Gx7OjD8xm7mmpDJu+/1W++1F+/Vi+fT05P7s8Oyq/nVyevCl/fpmOPlczVeXuaQBMRafNBgNmW7LhsMV2bFcHuf6E1XMGy4sES5sseck0sU4VMgNYKEJSokQjW6SwfS1ztuY3qlgq127bUlXyJm/xKs/LI+UfGCmI6YFtHtYOE3KatJov5JRv7ZB3EZVpB0GcCEpLIEt72heAgVB5sEVhgabN0hy8ROZb6/66fytIUoNN2AeTe8+1PDSgqUjIW402AYE90B79dwIa9HXbrqQ1W6+4/mhvu9NPDIkUNLEU+2lnhRJ7d2kG+rHCVIplaqIsk4cPHIa6gPkucRfiF3/BD0y/2mlPg5ussT9GugNYuXefPqK7aThzmRRZ/Q3/cD4BI7PCzliFbRciobEbcW7a++6H6Tyfmd0+gjBXS9lBHRsu3v3Hzn9WX4xLbDdYXD48ojHUdHtWYXE3zZIVGVvf4sLJmuuxiq5jHJqkvbnhACtOJzDS9uTiU3l6EXLWdvIi5CYpnG6eYhYl6CaqGk1dWbOWxkIjw9/w5ZYp)
+
+## Summary
+1. 插槽可以有預設值。
+2. 插槽名稱
+    - 插槽名稱可以是字串或動態綁定。
+    - 沒有名稱的插槽稱為預設插槽
+    - 多個預設插槽父元件需按照順序插入。
+3. 插槽作用域
+    - 父元件插入插槽的內容只能存取父元件的狀態。
+    - 作用域插槽能讓子元件提供狀態給插槽內容使用。
+    - 作用域插槽取值常搭配解構賦值。
 ## Reference
 
 - [Vue.js-Slots](https://vuejs.org/guide/components/slots.html)
