@@ -166,6 +166,17 @@ const { location, updateLocation } = inject('location');
 ```
 [試看看](https://play.vuejs.org/#eNqtVL1y00AQfpVDjZOxJYFDZRxPgEkBBTBAqUY+bZxLpLvL3ckJ41EFmaGiYihSk6GmSQOPQ5KSV2DvTpZlBzPApLJvf779dlffzoKHUkbTEoJBMDRQyDw1MEo4IcOMTUfX55+u319cnr798e2CSCWmLANyffaOUFFy8/P72Wzm/5KqGsY2w6U+FoW8NxrG/jfhw7gFjU9NFZOGaDClRAsrpFCGzOYVekTBHqnInhIF6SC5zoMmyEHWnsgXsPRtBBVcm5rOtoXYuLs5tzJOFaQa0LGxSbZHPiyapnkJ3e48KoP1UWGY8JrfRody0+khYefvNei9BUKFpYexb3QU9AJPPyxSGR1owXHcMzuqpHboJBgQZ7E2bMi+k2DfGKkHcUwzjmkZ5GyqIg4m5rKIdzAsVkiAFRBmotjZirai+7gFbdrmCHQRjpU41qAQJAl6rTIxGqegQgU8AwXqb8uupLVLr7hulLfVq4RXOBSjce57bLIyEopbZTmo59Iw3MvSaNI8F8dPnc2oEppe6D7Qw9/YD/SJ7+mFAses1b9J1QSMd+++egYn+L9xFiIr83oNa5wvQYu8tBx92KOSZ0i7FefYPnEbZnzyWu+eGOB63pQl6qbh4t0+7Ae9rvUFXZx2a4qNCHCCicLPbiE2fNlcq2VC81Tr7SRQQiBI43N+C9GvBdtfpHlFW8iWgO1zWcBoaamzv6TOfq1OB1LLwT48jHmTA8GPQELmrJElhx3XBMYpPZwo1FgWUpELNSDpUZkWqWIcHKQNkmmW4XAH5B4UjXEsFH59oUozVuqFq6p52LpWlQ3D/x7d5emXy6+f/YW8+nB+9fFizXlcmve4NEZwskNzRg8ReH5AELzbHcbevbyi1ZT5pcGUMLyR8u+rm+EVOwCKVJfuLgb42/jHY4cH02f707h5W+seM31UArnjOabc3MLWq18+bmtz)
 
+## Summary
+- 元件定義 Props：使用 `const props = defineProps()` 定義元件 Props，以取用父元件綁定的屬性。
+  - `<script setup>` 當中以 `props.someprops` 取得 props。
+  - `template` 當中直接以 `{{ someprops }}` 取得 props。
+- 元件事件定義：使用 `const emits = defineEmits(['submit'])` 定義元件事件。
+  - `template` 當中以 `$emit('submit', 'payload')` 觸發事件。
+  - `<script setup>` 當中以 `emits('submit', 'payload')` 觸發事件。
+- 父元件事件控制
+  - 父元件常用 `.prevent`、`.stop` 等等`事件修飾符`控制事件傳遞。
+  - 父元件常用`按鍵修飾符`接收特定按鍵事件。
+
 ## Reference
 
 - [Vue.js-Provide / Inject](https://vuejs.org/guide/components/provide-inject.html)

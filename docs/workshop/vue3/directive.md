@@ -56,8 +56,9 @@ const count = ref(0);
 
 多值雙向綁定
 [試試看](https://play.vuejs.org/#eNqtVL1u01AUfpWLFydSbA9lSt2oLcpQJKACxIIZ/HOSutjXV/deJ6kiDwgxoA7AwADsjLB1QeJpCBVvwbn+vUlK6dBIkfyd3+989jlL44Axe5aDMTRcEfKYSSJA5mzk0ThlGZdkSThMSEEmPEuJiaFm63pwdkRZLmuX7dRY1TN3PRpmVEjikz1VoWea/cYU6CbXqfpiRwQSUpb4EhAR/Ll3LOv32/PV+cfV96+X736u3rz+9ePiz5dPq/cfLi9erb59tqwmtGEzs9IsgmTo73mG7xktDhAHnjFyG55NYhTPRv6QLJfItShcR2HNFZSuQHO5jkYToZBnCRARZgwiLF/CkTEwKpms1Gf2qcgoarxUdb3aITwDS1edPANFU9gzTqRkYug4YUQxDZnHM25TkA5lqbOPYQ7PqYxTsKIs3d+xd+y7yEtI3WyDSK2AZ3MBHIt4xkBr46BxBtziQCPgwG/adiNNb73h2mqvuhceLVAUiTrRSTzdkCTMUhYnwB8xGeNHsiaNnyTZ/H5pkzyHdpbwBMKXV9hPxaKa6ZhDyUybX/p8CrJyj588hAU+t078UPKkfg3/cD4GkSW54liFHeY0QtpaXMn2qHzDMZ0+FeOFBCqaoRTRUo0yvnwf964ZvaOLamsqaqu2vbp8fXkHRImbS4jW1xjDqn1kPGMCdzKCSUzhWKHec9M3B2Zgvuh3cZDGsosbK4RxOYtwE4YqvH5cz1IHoCHQWyq7Gs1xCA4mUbnagKjXx8FrqH4cx+G0omf7u40LpeuK4MhaEUQ9CvNnfpLDRrGSfE9jS9rAtrB6KDTq6lDdAvXgVqkH/6Gu/t1RbQzdxaozyttGDvQ+bqwf0Op8dvHV8VvLPrw2Wx3b7Wz9eDbkrj6gxV+exjlZ)
+
 ## v-slot
-用於指定具名插槽、從作用域插槽獲取屬性。
+用於指定具名插槽、從作用域插槽獲取屬性。先大致了解內容和結構，後面有專門章節。
 ```html
 <!-- 具名插槽 -->
 <BaseLayout>
@@ -88,5 +89,21 @@ const count = ref(0);
   滑鼠位置: {{ x }}, {{ y }}
 </Mouse>
 ```
+
+## Summary
+1. `v-if`：條件成立才渲染，後面可接 `v-else`/`v-else-if`。
+2. `v-show`：一律渲染，條件成立才顯示(不成立會加上 `style="display: none;"`)。
+3. `v-for`：清單渲染 
+    - 變動性的資料應該用 id 作為 key
+    - 不變的資料可以用 index 作為 key
+4. 事件綁定 (`v-on`/`@`) 常用修飾詞：`.prevent`、`.stop`
+5. `v-model`：雙向綁定語法糖。
+    - 不指定的話(`v-model="xxx"`)預設綁定 `modelValue` 這個 props。
+    - 指定其他`props`綁定：`v-model:somevalue="xxx"`。
+    - 可綁定多個值。
+6. `v-slot` 嵌入插槽，先大致了解內容和結構，後面有專門章節。
+    <!-- - 預設插槽：`<v-slot>`或`<v-slot:default>`
+    - 具名插槽：`<v-slot:slotname>`或`<v-slot:default>` -->
+
 ## Reference
 - [Vue.js-Built-in Directives](https://vuejs.org/api/built-in-directives.html)
