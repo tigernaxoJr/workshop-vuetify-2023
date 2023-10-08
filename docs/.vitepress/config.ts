@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 
 // import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 import sidebar from './sidebar';
+const GA4_ID = 'G-H2T39417H1';
 export default defineConfig({
   title: 'Vuetify 2023',
   description: 'Just playing around.',
@@ -25,6 +26,21 @@ export default defineConfig({
         href: 'https://cdn.jsdelivr.net/npm/vuetify@3.3.19/dist/vuetify.min.css',
         rel: 'stylesheet',
       },
+    ],
+    [
+      'script',
+      {
+        async: '',
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`,
+      },
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'TAG_ID');`,
     ],
   ],
   vite: {
