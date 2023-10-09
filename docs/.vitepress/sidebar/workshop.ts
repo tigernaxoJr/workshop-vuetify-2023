@@ -48,6 +48,7 @@ export default [
           // { text: '專案模板', link: '/workshop/project/template' },
           { text: '側邊選單', link: '/workshop/project/template/menus' },
           { text: '內建工具', link: '/workshop/project/template/tools' },
+          /* 透過對頁面對APP的相依性講述觀察者模式 */
           { text: '程式初始化', link: '/workshop/project/template/init' },
           { text: '內嵌網頁', link: '/workshop/project/template/iframe' },
           { text: '身份驗證', link: '/workshop/project/template/auth' },
@@ -58,8 +59,6 @@ export default [
         collapsed: true,
         items: [
           { text: '建立頁面', link: '/workshop/project/crud/create' },
-          /* 透過對頁面對APP的相依性講述觀察者模式 */
-          { text: '頁面初始化', link: '/workshop/project/crud/init' },
           { text: 'API管理', link: '/workshop/project/crud/api' },
           { text: '搜尋結果', link: '/workshop/project/crud/result' },
           // todo dialog
