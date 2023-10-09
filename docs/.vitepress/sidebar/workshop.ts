@@ -39,30 +39,22 @@ export default [
   {
     text: '專案練習',
     collapsed: false,
+    link: '/workshop/project/template/index',
     items: [
-      { text: '專案模板', link: '/workshop/project/template' },
       {
-        text: '[元件] 側邊選單',
+        text: '[模板] 專案模板',
         collapsed: true,
         items: [
-          { text: '側邊選單', link: '/workshop/project/menus/menus' },
-          { text: '選單資料', link: '/workshop/project/menus/menus-data' },
+          // { text: '專案模板', link: '/workshop/project/template' },
+          { text: '側邊選單', link: '/workshop/project/template/menus' },
+          { text: '內建工具', link: '/workshop/project/template/tools' },
+          { text: '程式初始化', link: '/workshop/project/template/init' },
+          { text: '內嵌網頁', link: '/workshop/project/template/iframe' },
+          { text: '身份驗證', link: '/workshop/project/template/auth' },
         ],
       },
       {
-        text: '[工具] 實用工具',
-        link: '/workshop/project/tools',
-      },
-      {
-        text: '[工具] 實用狀態',
-        collapsed: true,
-        items: [
-          { text: 'appStore', link: '/workshop/project/store/app' },
-          { text: 'authStore', link: '/workshop/project/store/auth' },
-        ],
-      },
-      {
-        text: '搜尋頁面',
+        text: '[練習] 搜尋頁面',
         collapsed: true,
         items: [
           { text: '建立頁面', link: '/workshop/project/crud/create' },
@@ -74,12 +66,13 @@ export default [
           // { text: 'Dialog', link: '/workshop/project/crud/dialog' },
           { text: '編輯資料', link: '/workshop/project/crud/edit' },
           { text: '新增資料', link: '/workshop/project/crud/add' },
+          { text: '分頁查詢', link: '/workshop/project/crud/pagination' },
+          { text: '即時查詢', link: '/workshop/project/crud/throttle' },
         ],
       },
-      { text: '內嵌網頁', link: '/workshop/project/iframe' },
-      { text: '身份驗證', link: '/workshop/project/auth' },
+      { text: '[練習] 元件製作', link: '/workshop/project/component' },
       {
-        text: '程式佈署',
+        text: '[練習] 程式佈署',
         collapsed: true,
         items: [
           { text: '手動佈署', link: '/workshop/project/deploy/manual' },

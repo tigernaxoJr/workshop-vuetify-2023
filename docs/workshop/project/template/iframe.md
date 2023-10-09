@@ -1,4 +1,4 @@
-
+# 內嵌往頁
 
 ## 延遲反映的 iframe
 在 Vue 中，當我們改變一個 DOM 屬性的值時，瀏覽器通常會立即反映這個變化。  
@@ -29,4 +29,19 @@ const changeIframeSrc = async (newUrl) => {
 ```
 
 ## 尺寸同步
-todo
+詳見範例：
+```vue
+<template>
+  <!-- 直接綁定 virtual-width 讓 iframe 裡面的網頁以該寬度檢視 -->
+  <FrameReflector
+    modelValue="https://www.ktgh.com.tw/Default.asp"
+    :virtual-width="1100"
+  ></FrameReflector>
+</template>
+
+<script setup>
+import FrameReflector from "@/components/FrameReflector.vue";
+</script>
+
+<style lang="scss" scoped></style>
+```

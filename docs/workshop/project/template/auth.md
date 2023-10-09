@@ -1,3 +1,4 @@
+# 身分驗證
 ## SSO
 在典型的單一登入模型中，前端的路由設置常使用 History 模式，這是為了避免重新導向時的問題。如果使用 Hash 模式，當重新導向發生時，重新導向後的路由資訊可能會丟失。而使用 History 模式則可以更好地處理重新導向，確保路由資訊的完整性。
 
@@ -19,6 +20,8 @@ P.S. 單頁應用程式 (SPA) 通常使用 Code Flow 進行身份驗證。"Code 
 1. 解密端點暴露：任何人取得網址列回傳的加密字串(瀏覽記錄、伺服器日誌)，都能夠透過解密端點取得機密資訊。
 2. 加密端點暴露：若加密操作缺乏任何形式的驗證機制，意味只要輸入任何使用者代號，即可向加密端點發送加密請求，並獲得相應的加密字串。
 
+## 登入實做
+
 ## 登出策略
 |登出類型|方法|
 |-|-|
@@ -32,25 +35,26 @@ P.S. 單頁應用程式 (SPA) 通常使用 Code Flow 進行身份驗證。"Code 
 </template>
 
 <script setup lang="ts">
-const HOME_URL = "https://m-eip.ktgh.com.tw/MEIP_ServerHttps/"; // 光田人網址
-const emit = defineEmits(["click"]);
+const HOME_URL = 'https://m-eip.ktgh.com.tw/MEIP_ServerHttps/' // 光田人網址
+const emit = defineEmits(['click'])
 
 // 裝置判斷邏輯
-const TABLET_PATTERN = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i;
-const MOBILE_PATTETN = /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/;
+const TABLET_PATTERN = /(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i
+const MOBILE_PATTETN =
+  /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/
 const getDevice = () => {
-  const { userAgent } = navigator;
-  if (TABLET_PATTERN.test(userAgent)) return "tablet"; // 判斷平板
-  if (MOBILE_PATTETN.test(userAgent)) return "mobile"; // 判斷手機
-  return "desktop"; // 都不是的話就是桌面
-};
+  const { userAgent } = navigator
+  if (TABLET_PATTERN.test(userAgent)) return 'tablet' // 判斷平板
+  if (MOBILE_PATTETN.test(userAgent)) return 'mobile' // 判斷手機
+  return 'desktop' // 都不是的話就是桌面
+}
 
 // 判斷是否為桌機
-const isDesktop = getDevice() === "desktop"; // 是否為桌機
-const icon = isDesktop ? "mdi-logout" : "mdi-home";
+const isDesktop = getDevice() === 'desktop' // 是否為桌機
+const icon = isDesktop ? 'mdi-logout' : 'mdi-home'
 const onClick = !isDesktop
   ? () => (window.location.href = HOME_URL) // 回光田人
-  : (e) => emit("click", e); // 丟出 click 事件
+  : e => emit('click', e) // 丟出 click 事件
 </script>
 
 <style scoped></style>
