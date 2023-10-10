@@ -69,5 +69,54 @@ module.exports = {
   arrowParens: "avoid"
 };
 ```
+
+## Mode和環境變數
+### 常用環境變數
+```js
+// import.meta.env
+{
+  MODE: 'development', // 開發模式
+  BASE_URL: '/',  // SPA 子目錄
+  PROD: false, // 是否為生產環境
+  DEV: true, // 是否為開發環境
+  SSR: false, // 是否為 Server Side Render
+}
+```
+
+取用方式：
+```js
+const BASE_URL = import.meta.env.BASE_URL
+```
+### 自定義環境變數
+在 vite.config.js 定義的 `envDir` 目錄下，可以新增環境檔案(.env)，預設是專案根目錄：
+  - `.env` 檔案適用於所有模式，如果和特定模式的變數名稱重複，則優先級別較低。
+  - `.local` 結尾的設置檔不會列入版本控制。
+```
+.env                # 所有情況都載入 
+.env.local          # 所有情況都載入，不列入 git 版控 
+.env.[mode]         # 特定模式的環境設置檔案
+.env.[mode].local   # 特定模式的環境設置檔案，不列入 git 版控 
+```
+
+範例：在開發環境、生產環境設置不同的 api 端點網址，自定義的變數命名需要以 `VITE_` 開頭：
+`.env.production`，`yarn dev` 會使用這個
+```
+VITE_API_URL='/'
+```
+`.env.development`，`yarn build` 會使用這個
+```
+VITE_API_URL='https://yourapidomain.ktgh.com.tw/maybe/subfolder/'
+```
+
+### Summary
+  - `.env` 檔案儲存在 vite.config.js 定義的 `envDir` 目錄下
+  - `.env` 檔案適用於所有模式，如果和特定模式的變數名稱重複，則優先級別較低。
+  - `.local` 結尾的設置檔不會列入版本控制。
+  - `yarn dev` 會使用 `.env.development`
+  - `yarn build` 會使用 `.env.production`
+  - 自定義的變數命名需要以 `VITE_` 開頭
+  - 變數取得方式是 `import.meta.env.[變數名稱]`
+
 ## Reference
 - [vite-config](https://vitejs.dev/config/)
+- [vite-Env Variables and Modes](https://vitejs.dev/guide/env-and-mode.html)
