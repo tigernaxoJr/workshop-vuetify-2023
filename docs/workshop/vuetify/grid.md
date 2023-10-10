@@ -133,6 +133,7 @@
 </v-row>
 ```
 螢幕寬度 {{width}}，效果：
+
 <div class="v-row">
   <div class="v-col-12 v-col-md-6 v-col-lg-3 border">搜尋框1</div>
   <div class="v-col-12 v-col-md-6 v-col-lg-3 border">搜尋框2</div>
@@ -143,6 +144,9 @@
   <button class="v-col-12 v-col-md-6 v-col-lg-auto border rounded">搜尋按鈕</button>
 </div>
 
+::: info 練習
+- 上面的效果。[練習](https://play.vuetifyjs.com/?preview=false#eNqLrlYqLkrWdywo0CsrTVWyUrIpSc0tyEksSbWLyVNQsCnTLcovBzOBHEVdXSirTDc5P0cBiIttY5QMjWKUFHJTgCwzICMnHcgwBjKScxKLQdJJ+UUpqUUxSnbPJsx5uqH72cI2Qxt9sAEwcykzzYiqphlT1TQT7KZB1afo5uXnpSqk6Oak6ybl5CdnA7WSaH1iaUk+NhdAtIMNSCrJg8uX6xoaGIAc2NP5smMqyC6gLMyuQWKzri4k6QEFIWnPRh8pTSrV6igZ6xnrmShBaEMzpVgAmsvk+A==)
+:::
 ## 常用表格 RWD 策略
  - 大螢幕 => 完整表格  
  - 中螢幕 => 減少不重要欄位  

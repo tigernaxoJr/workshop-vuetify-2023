@@ -109,7 +109,7 @@ lang 屬性套用想要的 CSS 預處理器，但要先 npm 安裝對應的 CSS 
 - `<template>` 當中可以用鬍子語法(Mustache syntax)綁定表達式、響應性狀態。
 - `<script setup>` 直接撰寫元件 setup() 的部分
   - 頂層導入或聲明的變數和函數，可以自動在同一組件的模板中使用。
-  - 支援 `top lovel await`。
+  - 支援 `top level await`。
 - `<style lang="scss">` 可以選擇以 SCSS 撰寫樣式。
 - 求值式/表達式(`Expression`)與敘述句(`Statement`)不同。
 
