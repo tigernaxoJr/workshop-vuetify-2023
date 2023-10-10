@@ -9,8 +9,11 @@ props.foo = 'bar'
 ## Flux
 Flux 是一種設計模式。這個概念由 Facebook 提出，最核心的思想就是確保資料在應用程序中的流動方向是單向的。以避免雙向資料流所可能帶來的維護問題。
 
+=> 資料在哪裡定義，就由哪裡修改！
+
 ![](/flux.png)
 
+::: details
 Flux 明確定義不同角色的職責和互動方式，幫助開發者更清晰地管理應用程序的狀態和資料流：
 - ##### Action(動作)
   表示某個事件或操作，通常由使用者或系統事件觸發，用來更新應用程序的狀態，所有改變資料的動作必須在這裡被定義和觸發
@@ -20,24 +23,25 @@ Flux 明確定義不同角色的職責和互動方式，幫助開發者更清晰
   每個 Store 存儲特定部分的應用程序狀態，重要的是，Store 是唯讀的，提供 getter 方法供 View 存取，只能通過 Actions 來修改它的狀態。
 - ##### View(視圖)
   根據資料渲染使用者界面，同時它也監聽事件並將事件映射到適當的 Actions。當使用者與 View 互動時，View 會生成對應的 Action 來觸發相應的變更。
+:::
 
-## 不修改 Props 
-### 以 props 初始化後，在元件內部修改
-在 setup 裡面直接取用一次，賦予 reactivity。
-```js
-const props = defineProps(['initialCounter'])
-const counter = ref(props.initialCounter)
-
-```
-### 使用 props 計算結果，可跟蹤 props 變動
-使用 computed
-```js
-const props = defineProps(['size'])
-const normalizedSize = computed(() => props.size.trim().toLowerCase())
-```
+## 唯獨 Props 的利用
+- ### 單純使用 props 唯獨值
+- ### props 作為初始化的值
+  在 setup 裡面直接取用一次，賦予 reactivity。
+  ```js
+  const props = defineProps(['initialCounter'])
+  const counter = ref(props.initialCounter)
+  ```
+- ### 跟蹤 props 變動 得到 computed
+  使用 computed
+  ```js
+  const props = defineProps(['size'])
+  const normalizedSize = computed(() => props.size.trim().toLowerCase())
+  ```
 
 ## 修改 Props 
-為了不違反單向資料流，子元件不可直接修改父元件屬性，傳入屬性的父元件必須要監聽子元件事件以修改屬性：
+為了不違反單向資料流，子元件不可直接修改父元件屬性，資料在哪裡定義，就由哪裡修改！因此父元件必須要監聽子元件事件以修改屬性。
 :::code-group
 ```html [一般元件]
 <CustomInput

@@ -47,10 +47,10 @@ SFC 由三個主要部分組成：
 - Mustache 裡面可以是 `Expression（表達式、求值式）`；不可以是 `Statement（敘述、語句）`
 ::: code-group
 ```js [可以]
-a = 1 // 1
-ok ? 'yes': 'no' // 'yes'
-`list-${id}` // 'list-...'
-formatDate(date) // 對 function 回傳的結果 toString
+a = 1 // 1 // Assignment Expression // 可讀性差
+true ? 'yes': 'no' // 'yes'
+`list-${'asdf'}` // 'list-...'
+Date() // function 回傳的結果
 message.split('').reverse().join('') 
 ```
 ```js [不可以]
@@ -58,7 +58,7 @@ var a = 1 // undefined
 if(ok){return 'yes'}else{return 'no'}
 ```
 ```js [不是你想的那樣]
-formatData
+Date
 ```
 :::
 

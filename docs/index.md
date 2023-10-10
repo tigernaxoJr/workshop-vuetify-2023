@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 點我開始
-      link: ./workshop/workshop
+      link: ./workshop/vue3/sfc
     # - theme: alt
     #   text: View on GitHub
     #   link: https://github.com/vuejs/vitepress
