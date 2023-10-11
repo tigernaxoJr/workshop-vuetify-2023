@@ -4,35 +4,35 @@ export default [
     collapsed: false,
     items: [
       // 預計 4hr, 中間休息 20min, 前後扣除 15min(緩衝) = 4*60-20 -15 =205 min
-      { text: '[元件]單一元件檔', link: '/workshop/vue3/sfc' }, // 10min, 10
-      { text: '[元件]生命週期', link: '/workshop/vue3/lifecycle' }, // 5min, 15
-      { text: '[狀態]響應性', link: '/workshop/vue3/reactivity' }, // 15min, 30
-      { text: '[狀態]觀察者', link: '/workshop/vue3/reactivity2' }, // 5min, 35
-      { text: '[元件]屬性綁定', link: '/workshop/vue3/attrs' }, // 5min, 40
-      { text: '[元件]指示詞', link: '/workshop/vue3/directive' }, // 10min, 50
-      { text: '[元件]元件溝通', link: '/workshop/vue3/comminucation' }, // 15min, 65
-      { text: '[觀念]單向資料流', link: '/workshop/vue3/data-flow' }, // 15min, 80
-      { text: '[元件]插槽', link: '/workshop/vue3/slots' }, // 15min, 95
-      { text: '[Vue]生態圈', link: '/workshop/vue3/ecosystem' }, // 5min, 100
-      { text: '[Vue]前端路由', link: '/workshop/vue3/vue-router' }, // 10min, 110
-      { text: '[Vue]全局狀態', link: '/workshop/vue3/pinia' }, // 10min, 120
+      { text: '[元件]單一元件檔', link: '/workshop/vue3/sfc', t: 10 }, // 10min, 10
+      { text: '[元件]生命週期', link: '/workshop/vue3/lifecycle', t: 5 }, // 5min, 15
+      { text: '[狀態]響應性', link: '/workshop/vue3/reactivity', t: 15 }, // 15min, 30
+      { text: '[狀態]觀察者', link: '/workshop/vue3/reactivity2', t:5 }, // 5min, 35
+      { text: '[元件]屬性綁定', link: '/workshop/vue3/attrs', t:5 }, // 5min, 40
+      { text: '[元件]指示詞', link: '/workshop/vue3/directive', t:10 }, // 10min, 50
+      { text: '[元件]元件溝通', link: '/workshop/vue3/comminucation', t:15 }, // 15min, 65
+      { text: '[觀念]單向資料流', link: '/workshop/vue3/data-flow', t:15 }, // 15min, 80
+      { text: '[元件]插槽', link: '/workshop/vue3/slots' , t:15}, // 15min, 95
+      { text: '[Vue]生態圈', link: '/workshop/vue3/ecosystem', t:5 }, // 5min, 100
+      { text: '[Vue]前端路由', link: '/workshop/vue3/vue-router', t:10 }, // 10min, 110
+      { text: '[Vue]全局狀態', link: '/workshop/vue3/pinia', t:10 }, // 10min, 120
     ],
   },
   {
     text: 'Vuetify',
     collapsed: false,
     items: [
-      { text: '開發環境', link: '/workshop/vuetify/env' }, // 15min, 15
-      { text: '建立專案', link: '/workshop/vuetify/create' }, // 5min, 20
-      { text: '開發設置', link: '/workshop/vuetify/devconfig' }, // 5min, 25
-      { text: '網站設置', link: '/workshop/vuetify/siteconfig' }, // 5min, 30
-      { text: '路由配置', link: '/workshop/vuetify/route' }, // 10min, 40
-      { text: '版面配置', link: '/workshop/vuetify/layout' }, // 10min, 50
-      { text: '網格系統', link: '/workshop/vuetify/grid' }, // 15min, 65
-      { text: '大小與空白', link: '/workshop/vuetify/size' }, // 5min, 70
-      { text: '對齊置中', link: '/workshop/vuetify/align' }, // 5min, 75
-      { text: '元件配置', link: '/workshop/vuetify/component-register' }, // 5min, 80
-      { text: '應用程式主題', link: '/workshop/vuetify/theme' }, //5min, 85
+      { text: '開發環境', link: '/workshop/vuetify/env', t: 15 }, // 15min, 15
+      { text: '建立專案', link: '/workshop/vuetify/create',t: 5 }, // 5min, 20
+      { text: '開發設置', link: '/workshop/vuetify/devconfig', t: 5 }, // 5min, 25
+      { text: '網站設置', link: '/workshop/vuetify/siteconfig', t: 5 }, // 5min, 30
+      { text: '路由配置', link: '/workshop/vuetify/route', t: 10 }, // 10min, 40
+      { text: '版面配置', link: '/workshop/vuetify/layout', t: 10 }, // 10min, 50
+      { text: '網格系統', link: '/workshop/vuetify/grid', t: 15 }, // 15min, 65
+      { text: '大小與空白', link: '/workshop/vuetify/size', t: 5 }, // 5min, 70
+      { text: '對齊置中', link: '/workshop/vuetify/align', t: 5 }, // 5min, 75
+      { text: '元件配置', link: '/workshop/vuetify/component-register', t: 5 }, // 5min, 80
+      { text: '應用程式主題', link: '/workshop/vuetify/theme', t: 5 }, //5min, 85
     ],
   },
   {
