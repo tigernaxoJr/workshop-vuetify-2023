@@ -28,8 +28,8 @@ export default [
       { text: '網站設置', link: '/workshop/vuetify/siteconfig', t: 5 }, // 5min, 30
       { text: '路由配置', link: '/workshop/vuetify/route', t: 10 }, // 10min, 40
       { text: '版面配置', link: '/workshop/vuetify/layout', t: 10 }, // 10min, 50
-      { text: '網格系統', link: '/workshop/vuetify/grid', t: 15 }, // 15min, 65
-      { text: '大小與空白', link: '/workshop/vuetify/size', t: 5 }, // 5min, 70
+      { text: '大小與空白', link: '/workshop/vuetify/size', t: 5 }, // 5min, 55
+      { text: '網格系統', link: '/workshop/vuetify/grid', t: 15 }, // 15min, 70
       { text: '對齊置中', link: '/workshop/vuetify/align', t: 5 }, // 5min, 75
       { text: '元件配置', link: '/workshop/vuetify/component-register', t: 5 }, // 5min, 80
       { text: '應用程式主題', link: '/workshop/vuetify/theme', t: 5 }, //5min, 85
