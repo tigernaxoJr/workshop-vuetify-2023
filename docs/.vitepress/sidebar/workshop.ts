@@ -95,17 +95,9 @@ export default [
       { text: 'SOLID原則', link: '/workshop/other/solid' },
       { text: 'MVVM 架構', link: '/workshop/other/mvvm' },
       { text: '唯變所適', link: '/workshop/other/change' },
-      // {
-      //   text: 'Vue3 改動',
-      //   collapsed: true,
-      //   items: [
-      //     { text: 'vite', link: '/vue3/vite' },
-      //     { text: '組合式 API', link: '/vue3/composition' },
-      //   ],
-      // },
-      // { text: 'SPA/MPA', link: '/vue3/basic/other/spa-mpa' },
     ],
   },
+  { text: '  ', link: '/workshop/time' },
 ];
 
 /* recursive component(可能先跳過) */
