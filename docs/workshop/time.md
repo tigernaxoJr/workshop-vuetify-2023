@@ -32,12 +32,14 @@
 </table>
 
 <script setup>
-  import { ref, computed } from 'vue'
-  import dayjs from 'dayjs'
-  import workshop from '../../docs/\.vitepress/sidebar/workshop'
+import { ref, computed } from 'vue'
+import dayjs from 'dayjs'
+import workshop from '../../docs/\.vitepress/sidebar/workshop'
 
-  const stime1=ref(new Date())
-  const qk = ref(15)
+const d = new Date()
+d.setHours(13, 40, 0, 0)
+const stime1=ref(d)
+const qk = ref(15)
 
 const time1 = computed(()=>{
   let t = dayjs(stime1.value)
