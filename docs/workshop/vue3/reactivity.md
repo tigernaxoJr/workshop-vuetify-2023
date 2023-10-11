@@ -1,6 +1,11 @@
 # 響應式狀態
 在 MVVM 架構下，Model 需要具有響應性，才能讓 ViewModel 自動更新視圖。響應性是指 Model 的狀態變化會自動通知 ViewModel，ViewModel 才能根據 Model 的最新狀態更新視圖。
 
+響應性狀態有3特性：
+  - 管理一個私有值(例如 `_value`)，並且存取和修改該值都只能透過這個響應性狀態。
+  - 管理一個對象清單，紀錄私有值改變時通知應通知的對象。
+  - 在私有值被修改/賦值時通知依賴於私有值的對象。
+
 ## ref()
 - ref 依賴跟蹤原理基於 getter、setter，所以取用時最後會加上一個 value，這是官方給的示意程式碼 (非實作)：
   ```js
@@ -123,7 +128,7 @@ const test = ()=>{
 ```
 
 ### shallowRef()
-Deep Reactivity：ref 預設會跟蹤其內部的所有對象，如果不是基本(privative)數據類型，它會自動使用 reactive() 來將對象轉換為代理(proxy)。
+Deep Reactivity：ref 預設會跟蹤其內部的所有對象，如果不是基本(primative)數據類型，它會自動使用 reactive() 來將對象轉換為代理(proxy)。
 淺層(Shallow) refs：用於改進性能（當您不希望跟蹤 ref 下的大型對象時），或是 ref 內部對象的狀態由外部函數庫管理。
 ```js
 const state = shallowRef({ count: 1 })
