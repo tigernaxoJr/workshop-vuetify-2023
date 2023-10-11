@@ -96,19 +96,20 @@ class Watcher {
 測試看看：
 ```js
 // vue 透過類似機制宣告為響應式狀態
-let count = ref(0);
-let message = ref('message');
+var count = ref(0);
+var message = ref('message');
 // 模板綁定響應式資料透過類似的機制獲得更新
-const template = '<div>{{count}} ({{message}})</div>';
+var template = '<div>{{count}} ({{message}})</div>';
 new Watcher(template, { count, message });
 ```
 
-測試看看：
+依序測試看看：
 ```js
 count.value++;
 message.value="new message";
 count.value++;
 message.value="new message2";
+a = (count.value++) && (message.value="new message ABC")
 ```
 
 ## 元件參考
