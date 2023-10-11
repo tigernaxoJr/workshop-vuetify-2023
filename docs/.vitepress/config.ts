@@ -12,7 +12,7 @@ export default defineConfig({
   cleanUrls: false,
   themeConfig: {
     nav: [
-      { text: '工作坊', link: '/workshop/workshop' },
+      { text: '       ', link: '/workshop/workshop' },
       // { text: '其他', link: '/other/other' },
       // { text: 'Reference', link: '/reference/component' },
       { text: '輸入密鑰', link: '/decrypt' },
