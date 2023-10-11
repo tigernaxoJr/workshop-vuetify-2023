@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o}from"./chunks/framework.15f172dd.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"workshop/vue3/vuetify.md","filePath":"workshop/vue3/vuetify.md"}'),r={name:"workshop/vue3/vuetify.md"};function a(s,c,n,i,p,f){return t(),o("div")}const d=e(r,[["render",a]]);export{_ as __pageData,d as default};
