@@ -2,23 +2,30 @@
 1. 新增檔案 `src\views\Front\IndexPage.vue`   
 2. 使用 `vbase` 快捷鍵新增頁面模板 
   ![](/vbase.png)
+
+`PracticeLayout`
+`src\router\index.js`
 ## 路由設置
 設置前台路由
 ```js
 const routes = [
+  //...
   {
-    path: '/',
-    component: () => import('@/layouts/FrontLayout.vue'),
+    path: '/Practice',
+    component: () => import('@/layouts/PracticeLayout.vue'), 
     children: [
       {
         path: '',
-        name: 'FrontIndex',
-        component: () => import('@/views/FrontHome/IndexPage.vue'),
+        name: 'PracticeCRUD',
+        component: () => import('@/views/PracticeCRUD/IndexPage.vue'),
       },
     ],
   },
+  //...
 ]
 ```
+## Layout 元件
+參考`FrontLayout`製作。
 
 ## 頁面元件
 1. 撰寫 pseudocode：

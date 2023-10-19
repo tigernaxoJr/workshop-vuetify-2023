@@ -39,6 +39,37 @@ npm install axios
 ```
 :::
 
+## 製作 api 庫
+<div id="swaggerUrl"></div>
 
+<script setup>
+import crypto from 'crypto-js'
+import { computed, watchEffect, onMounted, onUnmounted } from 'vue'
+import { useSecret } from '@/store.js'
+const secret = useSecret()
 
-
+const watchers = []
+const addScrete = (id, encrypted, template) => {
+   watchers.push(watchEffect(()=>{
+      try{
+         const decrypted = crypto.AES.decrypt(encrypted, secret.value).toString(crypto.enc.Utf8)
+         console.log('decrypted', decrypted,decrypted.length)
+         const innerHtml = template(decrypted)
+         document.getElementById(id).innerHTML = innerHtml
+      } catch(e){
+         console.log(error, e)
+         document.getElementById(id).innerHTML = `需要正確的密鑰匙`
+      }
+   }))
+}
+onMounted(()=>{
+   addScrete(
+      'swaggerUrl',
+      `U2FsdGVkX19acBlVi5NSLDf1Cf4EQN2rn0mxxH259T0Ct8pCtBy5+oJoTnaZh///USnP6iPN1ltMasgR80eZBg==`,
+      (d)=>`<a href="${d}" target="_blank" rel="noreferrer">swagger 參考網址</a>`
+   )
+})
+onUnmounted(()=>{
+   watchers.forEach(w=> w())
+})
+</script>
