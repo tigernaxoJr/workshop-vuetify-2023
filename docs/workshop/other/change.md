@@ -1,4 +1,3 @@
-# 唯變所適
 - 易.繫辭下：易之為書也不可遠，為道也屢遷，變動不居，周流六虛，上下无常，剛柔相易，不可為典要，`惟變所適`。
 - 赫拉克利特：`世上唯一不變的事，就是改變`。（There is nothing permanent except change. ──Heraclitus）。
 

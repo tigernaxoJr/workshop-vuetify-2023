@@ -40,7 +40,7 @@ export default [
     collapsed: false,
     link: '/workshop/project/template/index',
     items: [
-      { text: 'JavaScript', link: '/workshop/project/javascript' },
+      { text: '基礎JS', link: '/workshop/project/javascript' },
       {
         text: '[模板] 專案模板',
         collapsed: false,
@@ -93,7 +93,7 @@ export default [
       { text: '內聚性原則', link: '/workshop/other/cohesion' },
       { text: 'SOLID原則', link: '/workshop/other/solid' },
       { text: 'MVVM 架構', link: '/workshop/other/mvvm' },
-      { text: '唯變所適', link: '/workshop/other/change' },
+      { text: '前端迷因', link: '/workshop/other/change' },
     ],
   },
   { text: '  ', link: '/workshop/time' },
