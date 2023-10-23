@@ -84,6 +84,8 @@ export default [
     text: '其他',
     collapsed: true,
     items: [
+      { text: 'Composable', link: '/workshop/other/composable' },
+      { text: '指示詞', link: '/workshop/other/directive' },
       { text: '常用套件', link: '/workshop/other/packages' },
       // { text: '動態元件', link: '/workshop/other/dynamic' },
       { text: 'Render Function', link: '/workshop/other/render' },

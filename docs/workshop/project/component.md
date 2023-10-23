@@ -4,7 +4,8 @@
 ex: confirm dialog
 
 todo: 了解 `v-bind="$attrs"` 的意義，如何製造 wrapper component。
-## 全局註冊
+## 元件註冊
+[vuejs-registration](https://vuejs.org/guide/components/registration.html)
 ## 型別定義
 todo: 有空再講。參考 SideMenu.d.ts、components.d.ts
 

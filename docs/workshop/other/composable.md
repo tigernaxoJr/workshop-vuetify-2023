@@ -1,5 +1,6 @@
 # Composable
-在 Vue 應用中，"Composable" 是一種利用 Vue 的 Composition API 封裝和重用有狀態邏輯的函數。這種邏輯涉及管理隨時間變化的狀態，例如追蹤頁面上的滑鼠位置或資料庫連接狀態等。這與無狀態邏輯（如日期格式化）不同，無狀態邏輯只需輸入並立即返回預期輸出。
+在 Vue 應用中，"Composable" 是一種利用 Vue 的 Composition API 封裝和重用有狀態邏輯的函數。這種邏輯涉及管理隨時間變化的狀態，例如追蹤頁面上的滑鼠位置或資料庫連接狀態等。
+這與只需輸入並立即返回預期輸出的工具函數（如`lodash`、`date-fns`...）不同。
 
 範例，元件監聽滑鼠事件，在元件當中充滿程式碼、邏輯：
 ```vue
@@ -53,10 +54,16 @@ export function useMouse() {
 <script setup>
 import { useMouse } from './mouse.js'
 
-const { x, y } = useMouse()
+const { x, y } = useMouse();
 </script>
 
 <template>Mouse position is at: {{ x }}, {{ y }}</template>
 ```
+
+## todo
+- 閱讀官方的非同步狀態範例
+- 閱讀官方的非同步狀態搭配 watchEffect 範例
+- 解釋 [`Extracting Composables for Code Organization`](https://vuejs.org/guide/reusability/composables.html#extracting-composables-for-code-organization)
+
 ## Reference
 [vue-Composables](https://vuejs.org/guide/reusability/composables.html)
