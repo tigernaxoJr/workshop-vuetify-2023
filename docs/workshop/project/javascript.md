@@ -1,11 +1,79 @@
-# All About Javascript
- - let const, var
- <!-- - promise, then
- - call back hell
- - try catch async await  -->
+# Javascript
+## let const, var
+
+**不要用 var，用 const 和 let**
+
+## 匿名函數/一般函數
+### this 指涉
+- 匿名函數中，this 指的是該函數在哪裡被定義
+- 一般函數中，this 指的是該函數被呼叫的物件
+### 暫時性死區
+- 匿名函數，先定義才能使用
+- 一般函數，會提升，可以在末端定義
+
 ## 非同步處理
 非同步操作是指在執行程式碼時，不需要等待某個操作完成才繼續執行下一個操作，而是可以同時進行多個操作，並在適當的時機處理它們的結果。
 例如：我們想要從網路上下載一張圖片，但是我們不知道這個過程會花多少時間，也不想讓程式卡住等待圖片下載完成，那麼我們就可以使用非同步操作來實現。
+
+### Call Back
+回呼函數（Callback Function）是一種用於處理非同步操作的程式模式。 在Promise出現之前，回呼函數是處理非同步問題的常見方式。 它的基本思想是，你傳遞一個函數作為參數給另一個函數，並在後者完成任務後呼叫前者，將結果傳遞給回調函數。
+
+在回調函數的情況下，處理非同步操作通常會採用嵌套的方式，導致回調地獄（Callback Hell），這會使程式碼難以維護和閱讀。 例如：
+
+```js
+function makeAjaxRequest(url, callback) {
+  // 執行 AJAX 請求，然後在完成時調用回調函數
+  const responseData = "Data from " + url;
+  setTimeout(function () {
+    callback(responseData);
+  }, 1000);
+}
+
+makeAjaxRequest("url1", function (data1) {
+  makeAjaxRequest(data1, function (data2) {
+    makeAjaxRequest(data2, function (data3) {
+      makeAjaxRequest(data3, function (data4) {
+        makeAjaxRequest(data4, function (data5) {
+          makeAjaxRequest(data5, function (data6) {
+            makeAjaxRequest(data6, function (data7) {
+              makeAjaxRequest(data7, function (data8) {
+                makeAjaxRequest(data8, function (data9) {
+                  makeAjaxRequest(data9, function (data10) {
+                    makeAjaxRequest(data10, function (data11) {
+                      makeAjaxRequest(data11, function (data12) {
+                        makeAjaxRequest(data12, function (data13) {
+                          makeAjaxRequest(data13, function (data14) {
+                            makeAjaxRequest(data14, function (data15) {
+                              makeAjaxRequest(data15, function (data16) {
+                                makeAjaxRequest(data16, function (data17) {
+                                  makeAjaxRequest(data17, function (data18) {
+                                    makeAjaxRequest(data18, function (data19) {
+                                      makeAjaxRequest(data19, function (data20) {
+                                        console.log(data20);
+                                      });
+                                    });
+                                  });
+                                });
+                              });
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+});
+```
+
+todo: google "call back hell"  
+[波動拳支援](https://lidemy5thwbc.coderbridge.io/2022/08/01/%E5%B7%A2%E7%8B%80%E6%95%91%E6%98%9F%E4%B8%89%E9%83%A8%E6%9B%B2(1)-%E5%BE%9E-callback-hell-%E5%88%B0-promise-chain/)
 
 ### Promise
 promise 是一種用來處理非同步操作的語法，它可以讓我們用更簡潔的方式寫出可讀性高的程式碼。

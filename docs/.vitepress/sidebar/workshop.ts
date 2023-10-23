@@ -40,6 +40,7 @@ export default [
     collapsed: false,
     link: '/workshop/project/template/index',
     items: [
+      { text: 'JavaScript', link: '/workshop/project/javascript' },
       {
         text: '[模板] 專案模板',
         collapsed: false,
@@ -88,7 +89,6 @@ export default [
       { text: 'Render Function', link: '/workshop/other/render' },
       { text: '混和式應用', link: '/workshop/other/hybrid' },
       { text: '函數式程式設計', link: '/workshop/other/functional-program' },
-      { text: 'JS雜事', link: '/workshop/other/javascript' },
       { text: '耦合性原則', link: '/workshop/other/decouple' },
       { text: '內聚性原則', link: '/workshop/other/cohesion' },
       { text: 'SOLID原則', link: '/workshop/other/solid' },
