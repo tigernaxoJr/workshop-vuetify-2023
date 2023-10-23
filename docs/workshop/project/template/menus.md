@@ -1,5 +1,7 @@
 vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。  
 ## VLIst
+[參考](https://vuetifyjs.com/en/components/lists/#sub-group)
+
 ![](/vlist.png)
 ```vue
 <template>
