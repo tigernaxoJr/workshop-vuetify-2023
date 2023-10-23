@@ -14,7 +14,7 @@ export default defineConfig({
     nav: [
       // { text: '       ', link: '/workshop/workshop' },
       { text: '第一週', link: 'workshop/vue3/sfc' },
-      { text: '第二週', link: '/workshop/project/template/' },
+      { text: '第二週', link: '/workshop/project/javascript' },
       { text: '輸入密鑰', link: '/decrypt' },
     ],
     sidebar,

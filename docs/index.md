@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 點我開始
-      link: ./workshop/project/template/
+      link: /workshop/project/javascript
     # - theme: alt
     #   text: View on GitHub
     #   link: https://github.com/vuejs/vitepress

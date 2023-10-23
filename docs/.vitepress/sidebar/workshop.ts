@@ -7,15 +7,15 @@ export default [
       { text: '[元件]單一元件檔', link: '/workshop/vue3/sfc', t: 10 }, // 10min, 10
       { text: '[元件]生命週期', link: '/workshop/vue3/lifecycle', t: 5 }, // 5min, 15
       { text: '[狀態]響應性', link: '/workshop/vue3/reactivity', t: 15 }, // 15min, 30
-      { text: '[狀態]觀察者', link: '/workshop/vue3/reactivity2', t:5 }, // 5min, 35
-      { text: '[元件]屬性綁定', link: '/workshop/vue3/attrs', t:5 }, // 5min, 40
-      { text: '[元件]指示詞', link: '/workshop/vue3/directive', t:10 }, // 10min, 50
-      { text: '[元件]元件溝通', link: '/workshop/vue3/comminucation', t:15 }, // 15min, 65
-      { text: '[觀念]單向資料流', link: '/workshop/vue3/data-flow', t:15 }, // 15min, 80
-      { text: '[元件]插槽', link: '/workshop/vue3/slots' , t:15}, // 15min, 95
-      { text: '[Vue]生態圈', link: '/workshop/vue3/ecosystem', t:5 }, // 5min, 100
-      { text: '[Vue]前端路由', link: '/workshop/vue3/vue-router', t:10 }, // 10min, 110
-      { text: '[Vue]全局狀態', link: '/workshop/vue3/pinia', t:10 }, // 10min, 120
+      { text: '[狀態]觀察者', link: '/workshop/vue3/reactivity2', t: 5 }, // 5min, 35
+      { text: '[元件]屬性綁定', link: '/workshop/vue3/attrs', t: 5 }, // 5min, 40
+      { text: '[元件]指示詞', link: '/workshop/vue3/directive', t: 10 }, // 10min, 50
+      { text: '[元件]元件溝通', link: '/workshop/vue3/comminucation', t: 15 }, // 15min, 65
+      { text: '[觀念]單向資料流', link: '/workshop/vue3/data-flow', t: 15 }, // 15min, 80
+      { text: '[元件]插槽', link: '/workshop/vue3/slots', t: 15 }, // 15min, 95
+      { text: '[Vue]生態圈', link: '/workshop/vue3/ecosystem', t: 5 }, // 5min, 100
+      { text: '[Vue]前端路由', link: '/workshop/vue3/vue-router', t: 10 }, // 10min, 110
+      { text: '[Vue]全局狀態', link: '/workshop/vue3/pinia', t: 10 }, // 10min, 120
     ],
   },
   {
@@ -23,7 +23,7 @@ export default [
     collapsed: true,
     items: [
       { text: '開發環境', link: '/workshop/vuetify/env', t: 15 }, // 15min, 15
-      { text: '建立專案', link: '/workshop/vuetify/create',t: 5 }, // 5min, 20
+      { text: '建立專案', link: '/workshop/vuetify/create', t: 5 }, // 5min, 20
       { text: '開發設置', link: '/workshop/vuetify/devconfig', t: 5 }, // 5min, 25
       { text: '網站設置', link: '/workshop/vuetify/siteconfig', t: 5 }, // 5min, 30
       { text: '路由配置', link: '/workshop/vuetify/route', t: 10 }, // 10min, 40
@@ -38,11 +38,11 @@ export default [
   {
     text: '專案練習',
     collapsed: false,
-    link: '/workshop/project/template/index',
     items: [
       { text: '基礎JS', link: '/workshop/project/javascript' },
       {
         text: '[模板] 專案模板',
+        link: '/workshop/project/template/index',
         collapsed: false,
         items: [
           // { text: '專案模板', link: '/workshop/project/template' },
