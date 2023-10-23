@@ -1,4 +1,6 @@
 # 內嵌往頁
+目前 vite 還沒有支持 Module Federation(Webpack 有)，iframe 是前端微服務的原始做法之一，只能透過 iframe 的方式把不同專案的功能嵌入。
+P.S. Module Federation ：在A專案上改程式，B專案也會即時更新，不同應用程式中有相同組件，就不需要把每個組件的程式碼複製貼上到每一个專案中，解决了跨應用程式程式碼共享的問題。[參考](https://webpack.js.org/concepts/module-federation/)
 
 ## 延遲反映的 iframe
 在 Vue 中，當我們改變一個 DOM 屬性的值時，瀏覽器通常會立即反映這個變化。  

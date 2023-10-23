@@ -1,7 +1,7 @@
 export default [
   {
     text: 'Vue 基礎',
-    collapsed: false,
+    collapsed: true,
     items: [
       // 預計 4hr, 中間休息 20min, 前後扣除 15min(緩衝) = 4*60-20 -15 =205 min
       { text: '[元件]單一元件檔', link: '/workshop/vue3/sfc', t: 10 }, // 10min, 10
@@ -20,7 +20,7 @@ export default [
   },
   {
     text: 'Vuetify',
-    collapsed: false,
+    collapsed: true,
     items: [
       { text: '開發環境', link: '/workshop/vuetify/env', t: 15 }, // 15min, 15
       { text: '建立專案', link: '/workshop/vuetify/create',t: 5 }, // 5min, 20
@@ -42,7 +42,7 @@ export default [
     items: [
       {
         text: '[模板] 專案模板',
-        collapsed: true,
+        collapsed: false,
         items: [
           // { text: '專案模板', link: '/workshop/project/template' },
           { text: '側邊選單', link: '/workshop/project/template/menus' },
@@ -55,7 +55,7 @@ export default [
       },
       {
         text: '[練習] 搜尋頁面',
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: '建立頁面', link: '/workshop/project/crud/create' },
           { text: 'API管理', link: '/workshop/project/crud/api' },
@@ -71,7 +71,7 @@ export default [
       { text: '[練習] 元件製作', link: '/workshop/project/component' },
       {
         text: '[練習] 程式佈署',
-        collapsed: true,
+        collapsed: false,
         items: [
           { text: '手動佈署', link: '/workshop/project/deploy/manual' },
           { text: '自動佈署', link: '/workshop/project/deploy/cicd' },
@@ -86,7 +86,6 @@ export default [
       { text: '常用套件', link: '/workshop/other/packages' },
       // { text: '動態元件', link: '/workshop/other/dynamic' },
       { text: 'Render Function', link: '/workshop/other/render' },
-      { text: '節流與防抖', link: '/workshop/other/throttle-debounce' },
       { text: '混和式應用', link: '/workshop/other/hybrid' },
       { text: '函數式程式設計', link: '/workshop/other/functional-program' },
       { text: 'JS雜事', link: '/workshop/other/javascript' },

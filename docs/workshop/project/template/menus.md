@@ -56,7 +56,7 @@ vuetify3 下使用 `layouts`、`views` 資料夾存放寫的版面、分頁。
 activator 插槽允許你在組件中插入一個自定義元素，通常是按鈕、icon 或其他可點擊的元素，以觸發特定事件或操作(例如 VList開合、彈出 Dialog、彈出 Menu)。
 
 ## 新增 Menus
-新增 `src/components/SideMenu.js`，先不需要嘗試理解這個部分。
+新增 `src/components/SideMenu.js`，先不需要嘗試理解這個部分，有時間再講。
 ```js
 import { h } from "vue";
 import { VList, VListGroup, VListItem } from "vuetify/components";
@@ -162,13 +162,25 @@ const opened = ref(["01"]);
 P.S.需要其他現成模板可以到[Wireframes](https://vuetifyjs.com/en/getting-started/wireframes/)挑選
 
 ## 選單資料
-- 後端原則：後端回傳 raw data，不需要在後端組合目錄樹。
+- 後端原則：後端回傳 raw data，**不要**在後端組合目錄樹。
+   ::: details
+   在後端用 CTE (Database) 或 程式 (AP) 組合目錄樹也沒有錯，但是需要考量：
+    1. 會把計算開銷集中在單一主機。
+    2. 針對特定選單的後端商業邏輯需要依照每個 APP 撰寫一次。
+
+   情境：
+    1. 需要先過濾出特定資料，且資料表在 RMDBS 以 linked list 結構設計，可以考慮資料庫組裝 menu tree，大幅減少資料傳輸量，並製作快取。
+    2. 需要套用特定複雜商業邏輯才適合回傳給前端的目錄樹，適合在程式端控管。
+   :::
 - 前端原則：以 Data 控制元件表現，而不是將商業邏輯寫入元件！！！
   - 相較修改 ViewModel，使用程式控制資料（javascript 物件）的形狀容易許多。
   - 與特定商業邏輯耦合的元件也無法復用。
   - 如果是不會變動的固定選單資料，直接寫死為 javascript 物件即可。
 
-### 動態選單資料練習
+### 靜態選單資料
+選單載入之後不會改變：取得 menu 清單的時候直接把 menu tree 做出來就好，資料不需要響應性。 
+
+### 動態選單資料
 診別：`急診`、`門診`、`住院`，不同診別需要顯示不同的樹狀結構，診別樹狀結構定義儲存在資料庫。
 Raw Data: 紀載每次病人就診診別、當次就診參數。
 處理技巧：
@@ -179,7 +191,6 @@ Raw Data: 紀載每次病人就診診別、當次就診參數。
  - 善用 javascript object reference 減少 menu 大小  
 
 以病歷整合查詢選單為例：
-<!-- todo 把程式完成-->
 ```html
 <template>
   <!-- other tag -->

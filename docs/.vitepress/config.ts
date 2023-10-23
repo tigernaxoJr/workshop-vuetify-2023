@@ -12,9 +12,9 @@ export default defineConfig({
   cleanUrls: false,
   themeConfig: {
     nav: [
-      { text: '       ', link: '/workshop/workshop' },
-      // { text: '其他', link: '/other/other' },
-      // { text: 'Reference', link: '/reference/component' },
+      // { text: '       ', link: '/workshop/workshop' },
+      { text: '第一週', link: 'workshop/vue3/sfc' },
+      { text: '第二週', link: '/workshop/project/template/' },
       { text: '輸入密鑰', link: '/decrypt' },
     ],
     sidebar,

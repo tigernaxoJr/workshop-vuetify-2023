@@ -11,36 +11,44 @@ P.S. 觀察者模式和訂閱模式不同。
 #### app store
 ```js
 // app.js
-import { reactive } from "vue";
 import { defineStore } from 'pinia'
 
+const loadingTags= []
+const initProcedue = []
+const afterInitCallBack = []
 export const useAppStore = defineStore('app', {
-// 建立一個可觀察者物件，用來存放 app 的狀態和資訊
   state: () => ({
-	initialized: false, // 表示 state 是否已經初始化完畢
-	userId: null, // 存放使用者 id
-	userName: null, // 存放使用者名稱
-	observers: [], // 存放觀察者列表
+    inited: false, // 表示 state 是否已經初始化完畢
   }),
-  actions:{
-    // 定義一個方法，用來向觀察者列表中添加觀察者
-	AddObserver(observer) {
-      this.observers.push(observer);
+  getters:{
+    loading(){
+      return loadingTags.length > 0
+    }
+  },
+  actions: {
+    // 添加 app 啟動程序，用來向觀察者列表中添加觀察者
+    addInitProcedure(func) {
+      initProcedue.push(func);
     },
-    // 定義一個方法，用來通知所有的觀察者執行他們的回調函數
-	NotifyObservers() {
-      this.observers.forEach((observer) =>  observer.callback());
-    };
-	async Init() {
-      // 模擬一個非同步操作，例如取得驗證後，獲得的使用者 id 及名稱
-      const { userId, userName } = await fetchUser();
-      // 將取得的資訊存放到 app 物件中
-      this.userId = userId;
-      this.userName = userName;
+    // 啟動 app
+    async init() {
+      initProcedue.forEach(async (x) => await x());
       // 將 initialized 設為 true，表示 app 已經初始化完畢
-      this.initialized = true;
-      // 通知所有的觀察者執行他們的回調函數
-      this.notifyObservers();
+      this.inited = true;
+      afterInitCallBack.forEach((x) => x());
+    },
+    // 添加啟動 app 之後要做的事
+    onInited(func) {
+      afterInitCallBack.push(func);
+    },
+    // 加入 loading tag
+    AddLoading(key){
+      loadingTags.push(key)
+    },
+    // 移除 loading tag
+    RemoveLoading(key){
+      const idx = loadingTags.indexOf(key)
+      if(idx !== -1) loadingTags.splice(idx, 1)
     }
   }
 })
@@ -51,25 +59,31 @@ export const useAppStore = defineStore('app', {
 <script setup>
 import { onMounted } from "vue";
 import { useAppStore } from "store/app.js";
+// import { useAuthStore } from "./store/auth";
 
-const data = reactive({})
-// 定義一個方法，用來模擬頁面元件的初始化操作
-const initPage = function () {
-  // 模擬一個非同步操作，例如取得這個使用者與該頁面相關的資料
-  const result = await fetchPageData(app.userId);
-  // 將取得的資料存放到頁面元件中
-  Object.assign(data, result)
-};
+const appstore = useAppStore();
+// const authstore = useAuthStore();
 
-// 取得 appStore
-const app = useAppStore();
-// 在頁面元件掛載時執行以下邏輯
-// 判斷 app 是否已經初始化完畢 
-//  - 如果是，直接執行頁面元件的初始化操作
-//  - 如果不是，向 app 的觀察者列表中添加一個觀察者，並將頁面元件的初始化操作作為回調函數傳入
-onMounted(() => {
-  if (app.initialized) return initPage();
-  app.AddObserver(initPage);
+appstore.addInitProcedure(() => {
+  console.log("我會在 app 初始化後執行 1");
+});
+appstore.addInitProcedure(() => {
+  console.log("我會在 app 初始化後執行 2");
+});
+
+onMounted(async () => {
+  const loadingFlag = "app";
+  appstore.AddLoading(loadingFlag);
+  try {
+    // authstore.Authentication(); // 取得驗證
+    // authstore.RemoveKey(); // 移除 Key
+    appstore.init(); // 初始化 app
+  } catch (error) {
+    // handle error
+    console.error(error);
+  } finally {
+    appstore.RemoveLoading(loadingFlag);
+  }
 });
 </script>
 ```
