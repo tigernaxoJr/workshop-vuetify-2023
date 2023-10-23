@@ -36,16 +36,16 @@ const routes = [
    - FormSection：填寫資料區塊，通常被包在 Dialog 裡面，可用於新增、修改單筆資料。
   ```vue
 <template>
-  <div>
+  <v-container fluid class="fill-height align-start flex-column"> 
     <!-- 搜尋區 -->
     <SectionSearch v-model="query" @query="onQuery" />
     <!-- 搜尋結果區 -->
     <SectionTable :items="items" />
-	<!-- Dialog -->
+    <!-- Dialog -->
     <v-dialog v-model="dialog" persistent width="1024">
       <SectionForm @submit="onSubmit" />
     </v-dialog>
-  </div>
+  </v-container>
 </template>
 
 <script setup>

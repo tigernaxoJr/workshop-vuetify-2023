@@ -40,7 +40,68 @@ npm install axios
 :::
 
 ## 製作 api 庫
-<div id="swaggerUrl"></div>
+Swagger 參考頁面: <span id="swaggerUrl"></span>
+
+src/api/patient.js:
+```js
+// patient.js
+// todo 參考 swagger 頁面完成 CRUD
+export const usePatientRepo = ( api ){
+   api.AddPatient = async (item) => { }
+   api.GetPatient = async (id) => { }
+   api.GetPatientPagination = async () => { }
+   api.UpdatetPatient = async (item) => { }
+   api.DeletetPatient = async (id) => { }
+}
+```
+
+`.env.development` 設置開發環境網址
+```
+VITE_API_URL='/'
+```
+
+`.env.production` 設置正式環境網址
+```
+VITE_API_URL='https://正式上線的網址/'
+```
+
+`vite.config.js` 設置 proxy
+```js
+{
+   // ...other config
+  server: {
+    port: 3000,
+    // 加入 proxy
+    proxy: {
+      '/api': 'http://....../api'
+    }
+  },
+}
+```
+
+`src/api/index.js` 將 api lib 加到實例上
+```js
+import { usePatientRepo } from './patient'
+
+// 設置基礎網址
+const baseURL = import.meta.env.VITE_API_URL
+export const api = axios.create({ baseURL })
+
+// ...
+usePatientRepo(api)
+```
+
+## 使用 api
+```vue
+<script setup>
+import api from '@/api'
+// ...
+async function SomeFunction(){
+   const items = await api.GetPatient()
+}
+</script>
+```
+todo: 頁面透過 api lib 取得 patient
 
 <script setup>
 import crypto from 'crypto-js'
@@ -51,15 +112,10 @@ const secret = useSecret()
 const watchers = []
 const addScrete = (id, encrypted, template) => {
    watchers.push(watchEffect(()=>{
-      try{
-         const decrypted = crypto.AES.decrypt(encrypted, secret.value).toString(crypto.enc.Utf8)
-         console.log('decrypted', decrypted,decrypted.length)
-         const innerHtml = template(decrypted)
-         document.getElementById(id).innerHTML = innerHtml
-      } catch(e){
-         console.log(error, e)
-         document.getElementById(id).innerHTML = `需要正確的密鑰匙`
-      }
+      const content = crypto.AES.decrypt(encrypted, secret.value).toString(crypto.enc.Utf8)
+      const decrypted = !!content && content.length > 0 
+      const innerHtml = decrypted ? template(content) : `請輸入正確的密鑰`
+      document.getElementById(id).innerHTML = innerHtml
    }))
 }
 onMounted(()=>{
