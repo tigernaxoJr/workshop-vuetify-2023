@@ -4,7 +4,9 @@
 ## 練習
 - todo: 使用 `progress-linear` 、 `card`、`Dialog`製作 loading component
 - todo: 了解 `v-bind="$attrs"` 的意義，如何製造 wrapper component。
+
 ::: details 先練習再看答案
+```vue
 <template>
   <v-dialog v-model="dialog">
     <v-card class="mx-auto" color="primary" variant="elevated" width="300" height="70">
