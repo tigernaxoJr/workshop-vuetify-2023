@@ -8,7 +8,5 @@
 - PHP 是最好的語言(Project Beehive Forum)
   ![](/meme-php-beehive.png)
 
-共勉之
-
 ## Reference
 - [denoland/deno/issues/25](https://github.com/denoland/deno/issues/25)
