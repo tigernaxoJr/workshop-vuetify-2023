@@ -54,6 +54,7 @@ export default [
           { text: '身份驗證', link: '/workshop/project/template/auth' },
         ],
       },
+      { text: '[練習] 元件製作', link: '/workshop/project/component' },
       {
         text: '[練習] 搜尋頁面',
         collapsed: false,
@@ -69,7 +70,6 @@ export default [
           { text: '即時查詢', link: '/workshop/project/crud/throttle' },
         ],
       },
-      { text: '[練習] 元件製作', link: '/workshop/project/component' },
       {
         text: '[練習] 程式佈署',
         collapsed: false,
