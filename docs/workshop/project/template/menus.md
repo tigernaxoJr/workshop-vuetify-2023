@@ -97,7 +97,7 @@ export default component
     --parent-padding: calc(var(--indent-padding)) !important;
 }
 ```
-新增 `src/menus.js`，使用 recursive function 處理 [linked-list](https://www.google.com/search?q=linked+list&sca_esv=575995033&sxsrf=AM9HkKm00dReIXXBMjA2Jn5R_J5yHqCLaA%3A1698117314715&source=hp&ei=wjY3ZcbJKLjM2roP-qen4AE&iflsig=AO6bgOgAAAAAZTdE0gdBIyK_tjyq0aD0cpmxR5UWq5Kv&ved=0ahUKEwjGss_6242CAxU4plYBHfrTCRwQ4dUDCAw&uact=5&oq=linked+list&gs_lp=Egdnd3Mtd2l6IgtsaW5rZWQgbGlzdDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgARIhyNQwQ9YliJwAXgAkAEAmAFGoAHOBKoBAjExuAEDyAEA-AEBqAIKwgIHECMY6gIYJ8ICBxAjGIoFGCfCAgQQIxgnwgILEAAYgAQYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICCBAAGIAEGLEDwgILEC4YigUYsQMYgwHCAgsQABiKBRixAxiDAcICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYxwEY0QPCAggQLhiABBixA8ICERAuGIMBGMcBGLEDGNEDGIAEwgILEC4YgAQYxwEYrwHCAggQABjLARiABMICDRAuGIAEGMcBGNEDGArCAgUQLhiABA&sclient=gws-wiz)，製造 menuTree
+新增 `src/menus.js`，使用 recursive function 處理樹狀結構，製造 menuTree
 ```js
 // 每個物件可傳入 v-list-item 的屬性實現對 v-list-item 的控制
 export default
