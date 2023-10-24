@@ -97,7 +97,11 @@ export default component
     --parent-padding: calc(var(--indent-padding)) !important;
 }
 ```
-新增 `src/menus.js`，使用 recursive function 處理樹狀結構，製造 menuTree
+新增 `src/menus.js`，使用 recursive function 處理樹狀結構，製造 menuTree，要做的事情有：
+- 轉換為 UI 元件支援的格式
+- 製造樹狀結構
+
+最後結果會像這樣：
 ```js
 // 每個物件可傳入 v-list-item 的屬性實現對 v-list-item 的控制
 export default
