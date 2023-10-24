@@ -5,7 +5,6 @@
 - todo: 使用 `progress-linear` 、 `card`、`Dialog`製作 loading component
 - todo: 了解 `v-bind="$attrs"` 的意義，如何製造 wrapper component。
 ::: details 先練習再看答案
-```vue
 <template>
   <v-dialog v-model="dialog">
     <v-card class="mx-auto" color="primary" variant="elevated" width="300" height="70">
@@ -32,16 +31,10 @@ const props = defineProps({
 const emits = defineEmits(["update:modelValue"]);
 
 const dialog = computed({
-  get() {
-    return props.modelValue;
-  },
-  set(e) {
-    emits("update:modelValue", e);
-  },
+  get: () => props.modelValue,
+  set: (e) => emits("update:modelValue", e),
 });
 </script>
-
-<style scoped></style>
 ```
 :::
 
