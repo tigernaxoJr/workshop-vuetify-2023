@@ -167,7 +167,7 @@ const opened = ref(["01"]);
 P.S.需要其他現成模板可以到[Wireframes](https://vuetifyjs.com/en/getting-started/wireframes/)挑選
 
 ## 選單資料
-- 後端原則：後端回傳 raw data，**不要**在後端組合目錄樹。
+- 後端原則：後端回傳 raw data，在前端組合目錄樹。
    ::: details
    在後端用 CTE (Database) 或 程式 (AP) 組合目錄樹也沒有錯，但是需要考量：
     1. 會把計算開銷集中在單一主機。
