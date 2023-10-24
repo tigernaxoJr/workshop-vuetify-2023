@@ -156,7 +156,7 @@ import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.15f172dd.js";const p=
 <span class="line"><span style="color:#6A737D;">// 讓縮排較溫和</span></span>
 <span class="line"><span style="color:#6F42C1;">.v-list-group--prepend</span><span style="color:#24292E;"> {</span></span>
 <span class="line"><span style="color:#24292E;">    </span><span style="color:#E36209;">--parent-padding</span><span style="color:#24292E;">: </span><span style="color:#005CC5;">calc</span><span style="color:#24292E;">(</span><span style="color:#005CC5;">var</span><span style="color:#24292E;">(</span><span style="color:#E36209;">--indent-padding</span><span style="color:#24292E;">)) </span><span style="color:#D73A49;">!important</span><span style="color:#24292E;">;</span></span>
-<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><p>新增 <code>src/menus.js</code>，使用 recursive function 處理樹狀結構，製造 menuTree</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// 每個物件可傳入 v-list-item 的屬性實現對 v-list-item 的控制</span></span>
+<span class="line"><span style="color:#24292E;">}</span></span></code></pre></div><p>新增 <code>src/menus.js</code>，使用 recursive function 處理樹狀結構，製造 menuTree，要做的事情有：</p><ul><li>轉換為 UI 元件支援的格式</li><li>製造樹狀結構</li></ul><p>最後結果會像這樣：</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#6A737D;">// 每個物件可傳入 v-list-item 的屬性實現對 v-list-item 的控制</span></span>
 <span class="line"><span style="color:#F97583;">export</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">default</span></span>
 <span class="line"><span style="color:#E1E4E8;">[</span></span>
 <span class="line"><span style="color:#E1E4E8;">    {</span></span>
@@ -334,4 +334,4 @@ import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.15f172dd.js";const p=
 <span class="line"><span style="color:#24292E;">  })</span></span>
 <span class="line"><span style="color:#24292E;">  </span><span style="color:#6A737D;">// ...... return menus</span></span>
 <span class="line"><span style="color:#24292E;">});</span></span>
-<span class="line"><span style="color:#24292E;">&lt;/</span><span style="color:#22863A;">script</span><span style="color:#24292E;">&gt;</span></span></code></pre></div>`,26),t=[e];function c(r,E,y,i,F,u){return n(),a("div",null,t)}const q=s(o,[["render",c]]);export{m as __pageData,q as default};
+<span class="line"><span style="color:#24292E;">&lt;/</span><span style="color:#22863A;">script</span><span style="color:#24292E;">&gt;</span></span></code></pre></div>`,28),t=[e];function c(r,E,y,i,F,u){return n(),a("div",null,t)}const q=s(o,[["render",c]]);export{m as __pageData,q as default};
