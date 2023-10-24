@@ -70,16 +70,15 @@ const props = {
 const render = ( props )=>{
   const { menus, depth, opened } = props
   const el = menus.map((x)=> {
+    // VListItem 不接受 chidlren，會報錯特別排除
+    const {children, ...y} = x;
     // 沒有 children 的情況
-    if(!x.children?.length) return h( VListItem, x)
+    if(!children?.length) return h( VListItem, y)
     // 有 children 的情況
-    const y = Object.assign({}, x);
-    delete y.children; // VListItem 不接受 chidlren，會報錯特別排除
     return h( VListGroup, { value: x.id }, {
       default: () => h(component, { menus: x.children, depth: depth + 1}),
       activator: (e) => h(VListItem, { ...y, ...e.props })
     })
-
   })
   return depth === 0 ?  h( VList, { opened }, () => el ) :  el
 }
