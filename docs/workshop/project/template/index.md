@@ -17,4 +17,4 @@ git remote add origin https://gitlab.ktgh.com.tw/f734/v3app.git
 git push -u origin master
 ```
 
-或直接[下載](https://gitlab.ktgh.com.tw/f734/vuetify3/-/archive/master/vuetify3-master.zip)
+或直接[下載](https://gitlab.ktgh.com.tw/f734/vuetify3/-/archive/main/vuetify3-main.zip)
